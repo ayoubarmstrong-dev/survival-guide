@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 720" width="100%" height="100%">
+  <rect width="700" height="720" fill="#121212"/>
+  <text x="350" y="45" fill="#10B981" font-size="22" font-family="sans-serif" font-weight="bold" text-anchor="middle">ANAEROBIC BIOGAS DIGESTER SYSTEM</text>
+  <text x="350" y="70" fill="#A7F3D0" font-size="14" font-family="sans-serif" text-anchor="middle">Off-Grid Methane Generation from Organic Biomass</text>
+
+  <!-- 55 Gallon Drum Digester -->
+  <rect x="100" y="220" width="260" height="360" rx="12" fill="#1E293B" stroke="#475569" stroke-width="4"/>
+  <text x="230" y="255" fill="#E2E8F0" font-size="15" font-weight="bold" font-family="sans-serif" text-anchor="middle">55-Gallon Sealed Digester</text>
+
+  <!-- Slurry Layer -->
+  <rect x="110" y="350" width="240" height="220" rx="6" fill="#78350F" opacity="0.8"/>
+  <text x="230" y="440" fill="#FEF3C7" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">Biomass Slurry (1:1 Waste + Water)</text>
+  <text x="230" y="470" fill="#FDE68A" font-size="12" font-family="sans-serif" text-anchor="middle">Anaerobic Bacteria produces CH4</text>
+
+  <!-- Gas Headspace -->
+  <rect x="110" y="270" width="240" height="75" fill="#065F46" opacity="0.6"/>
+  <text x="230" y="315" fill="#34D399" font-size="13" font-weight="bold" font-family="sans-serif" text-anchor="middle">Methane Headspace</text>
+
+  <!-- Pipeline to Filter -->
+  <path d="M 230 220 L 230 150 L 460 150 L 460 260" fill="none" stroke="#10B981" stroke-width="6"/>
+  <text x="345" y="140" fill="#6EE7B7" font-size="12" font-weight="bold" font-family="sans-serif" text-anchor="middle">Biogas Line (CH4 + CO2 + H2S)</text>
+
+  <!-- H2S Iron Scrub Filter -->
+  <rect x="410" y="260" width="100" height="160" rx="6" fill="#1C1917" stroke="#EA580C" stroke-width="3"/>
+  <text x="460" y="310" fill="#FB923C" font-size="13" font-weight="bold" font-family="sans-serif" text-anchor="middle">H2S Iron</text>
+  <text x="460" y="330" fill="#FB923C" font-size="13" font-weight="bold" font-family="sans-serif" text-anchor="middle">Filter</text>
+  <text x="460" y="360" fill="#A8A29E" font-size="11" font-family="sans-serif" text-anchor="middle">Steel Wool</text>
+  <text x="460" y="380" fill="#A8A29E" font-size="10" font-family="sans-serif" text-anchor="middle">(Scrubs Odor)</text>
+
+  <!-- Outflow line to Stove -->
+  <path d="M 460 420 L 460 520 L 580 520" fill="none" stroke="#22C55E" stroke-width="5"/>
+
+  <!-- Burner / Flame -->
+  <ellipse cx="610" cy="520" rx="20" ry="10" fill="#334155"/>
+  <polygon points="600,515 620,515 610,470" fill="#38BDF8"/>
+  <text x="610" y="460" fill="#38BDF8" font-size="12" font-weight="bold" font-family="sans-serif" text-anchor="middle">Clean Blue</text>
+  <text x="610" y="475" fill="#38BDF8" font-size="12" font-weight="bold" font-family="sans-serif" text-anchor="middle">Cooking Flame</text>
+
+  <!-- Operational Specs -->
+  <rect x="70" y="610" width="560" height="80" rx="8" fill="#18181B" stroke="#27272A"/>
+  <text x="350" y="638" fill="#34D399" font-size="13" font-weight="bold" font-family="sans-serif" text-anchor="middle">OPERATIONAL PARAMETERS</text>
+  <text x="350" y="660" fill="#D4D4D8" font-size="12" font-family="sans-serif" text-anchor="middle">Optimal Fermentation Temp: 25°C to 35°C | Full Yield Cycle: 14 to 21 Days</text>
+</svg>

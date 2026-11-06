@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 850" width="100%" height="100%">
+  <rect width="700" height="850" fill="#121212"/>
+  <text x="350" y="45" fill="#4CAF50" font-size="22" font-family="sans-serif" font-weight="bold" text-anchor="middle">5-GALLON SEALED FOOD STORAGE SYSTEM</text>
+  <text x="350" y="70" fill="#81C784" font-size="14" font-family="sans-serif" text-anchor="middle">Long-Term Storage (25+ Year Shelf Life Protocol)</text>
+
+  <!-- Outer HDPE Bucket -->
+  <path d="M 180 130 L 520 130 L 470 720 L 230 720 Z" fill="#1E293B" stroke="#64748B" stroke-width="4"/>
+  <rect x="160" y="105" width="380" height="35" rx="8" fill="#334155" stroke="#94A3B8" stroke-width="3"/>
+  <text x="350" y="128" fill="#F8FAFC" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">Food-Grade HDPE Outer Pail (Airtight Gasket Lid)</text>
+
+  <!-- Mylar Bag Liner -->
+  <path d="M 195 150 L 505 150 L 460 705 L 240 705 Z" fill="#94A3B8" opacity="0.35" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="560" y="240" fill="#CBD5E1" font-size="13" font-family="sans-serif" font-weight="bold">7-Mil Mylar Bag</text>
+  <line x1="550" y1="240" x2="480" y2="240" stroke="#CBD5E1" stroke-width="2"/>
+
+  <!-- Food Bulk Layers (Rice / Grain) -->
+  <polygon points="205,270 495,270 460,700 240,700" fill="#F1F5F9" opacity="0.85"/>
+  <text x="350" y="490" fill="#0F172A" font-size="18" font-weight="bold" font-family="sans-serif" text-anchor="middle">Polished White Rice / Dried Beans</text>
+  <text x="350" y="520" fill="#334155" font-size="14" font-family="sans-serif" text-anchor="middle">(Moisture content &lt; 10%)</text>
+
+  <!-- Oxygen Absorber -->
+  <rect x="275" y="290" width="150" height="45" rx="6" fill="#DC2626" stroke="#F87171" stroke-width="2"/>
+  <text x="350" y="318" fill="#FFFFFF" font-size="13" font-weight="bold" font-family="sans-serif" text-anchor="middle">2000cc O2 Absorber</text>
+  <text x="560" y="315" fill="#EF4444" font-size="13" font-family="sans-serif" font-weight="bold">Absorbs 99.9% Oxygen</text>
+  <line x1="550" y1="315" x2="430" y2="315" stroke="#EF4444" stroke-width="2"/>
+
+  <!-- Heat Seal Indicator -->
+  <rect x="210" y="170" width="280" height="20" fill="#F59E0B" rx="4"/>
+  <text x="350" y="185" fill="#000000" font-size="12" font-weight="bold" font-family="sans-serif" text-anchor="middle">Hermetic Heat-Sealed Seam (375°F / 190°C)</text>
+
+  <!-- Bottom Elevation note -->
+  <rect x="100" y="760" width="500" height="60" rx="8" fill="#1E1E1E" stroke="#333" stroke-width="2"/>
+  <text x="350" y="785" fill="#E2E8F0" font-size="13" font-family="sans-serif" text-anchor="middle">Store off concrete floors on wood pallets to prevent condensation.</text>
+  <text x="350" y="805" fill="#38BDF8" font-size="12" font-family="sans-serif" text-anchor="middle">Ideal Temperature: 50°F - 65°F (10°C - 18°C) in total darkness.</text>
+</svg>
