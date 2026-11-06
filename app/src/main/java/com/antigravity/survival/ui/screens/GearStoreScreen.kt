@@ -20,6 +20,7 @@ import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Security
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.WifiOff
@@ -33,6 +34,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.antigravity.survival.data.entity.AffiliateGearEntity
+import com.antigravity.survival.ui.components.openPrivacyPolicy
 import com.antigravity.survival.ui.theme.*
 import com.antigravity.survival.ui.viewmodel.SurvivalViewModel
 import kotlinx.coroutines.launch
@@ -134,6 +136,13 @@ fun GearStoreScreen(
                     }
                 },
                 actions = {
+                    IconButton(onClick = { openPrivacyPolicy(context) }) {
+                        Icon(
+                            imageVector = Icons.Default.Security,
+                            contentDescription = "Privacy Policy & Disclosure",
+                            tint = TacticalCyan
+                        )
+                    }
                     IconButton(onClick = {
                         viewModel.syncGearRemote()
                         scope.launch {

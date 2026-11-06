@@ -10,16 +10,19 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowForwardIos
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.antigravity.survival.data.entity.CategoryEntity
+import com.antigravity.survival.ui.components.FirstLaunchDisclaimerDialog
+import com.antigravity.survival.ui.components.LegalAndPrivacyDialog
+import com.antigravity.survival.ui.components.hasAcceptedDisclaimer
+import com.antigravity.survival.ui.components.openPrivacyPolicy
 import com.antigravity.survival.ui.theme.*
 import com.antigravity.survival.ui.viewmodel.SurvivalViewModel
 
@@ -33,8 +36,12 @@ fun HomeScreen(
     onStoreClick: () -> Unit,
     onArticleClick: (String) -> Unit
 ) {
+    val context = LocalContext.current
     val categories by viewModel.categories.collectAsState()
     val highPriorityArticles by viewModel.highPriorityArticles.collectAsState()
+
+    var showFirstLaunchDisclaimer by remember { mutableStateOf(!hasAcceptedDisclaimer(context)) }
+    var showLegalDialog by remember { mutableStateOf(false) }
 
     Scaffold(
         topBar = {
@@ -42,13 +49,13 @@ fun HomeScreen(
                 title = {
                     Column {
                         Text(
-                            text = "Survival & Preparedness Guide",
+                            text = "Aegis Survival",
                             fontWeight = FontWeight.Bold,
                             color = TextPrimary,
                             fontSize = 19.sp
                         )
                         Text(
-                            text = "Tactical Survival Field Manual • Offline v1.0",
+                            text = "Field Manual & Emergency Preparedness • Offline",
                             color = TextSecondary,
                             fontSize = 11.sp
                         )
@@ -58,6 +65,13 @@ fun HomeScreen(
                     containerColor = DarkSurface
                 ),
                 actions = {
+                    IconButton(onClick = { showLegalDialog = true }) {
+                        Icon(
+                            imageVector = Icons.Default.Info,
+                            contentDescription = "Medical & Legal Disclaimer",
+                            tint = TextSecondary
+                        )
+                    }
                     IconButton(onClick = onStoreClick) {
                         Icon(
                             imageVector = Icons.Default.ShoppingCart,
@@ -253,8 +267,53 @@ fun HomeScreen(
             }
 
             item {
-                Spacer(modifier = Modifier.height(24.dp))
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 12.dp),
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = "Privacy Policy",
+                        color = TacticalCyan,
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(4.dp))
+                            .clickable { openPrivacyPolicy(context) }
+                            .padding(4.dp)
+                    )
+                    Text(
+                        text = " • ",
+                        color = TextMuted,
+                        fontSize = 12.sp
+                    )
+                    Text(
+                        text = "Medical & Legal Disclaimer",
+                        color = TextSecondary,
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(4.dp))
+                            .clickable { showLegalDialog = true }
+                            .padding(4.dp)
+                    )
+                }
+                Spacer(modifier = Modifier.height(16.dp))
             }
+        }
+
+        if (showFirstLaunchDisclaimer) {
+            FirstLaunchDisclaimerDialog(
+                onAccepted = { showFirstLaunchDisclaimer = false }
+            )
+        }
+
+        if (showLegalDialog) {
+            LegalAndPrivacyDialog(
+                onDismiss = { showLegalDialog = false }
+            )
         }
     }
 }
