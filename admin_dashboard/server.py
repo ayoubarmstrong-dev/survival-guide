@@ -253,6 +253,58 @@ class AdminHandler(SimpleHTTPRequestHandler):
                 self.wfile.write(json.dumps({"status": "error", "message": str(e)}).encode("utf-8"))
             return
 
+        if parsed.path == "/api/publish_github":
+            content_length = int(self.headers.get("Content-Length", 0))
+            post_data = self.rfile.read(content_length).decode("utf-8")
+            try:
+                if post_data:
+                    data = json.loads(post_data)
+                else:
+                    with open(JSON_PATH, "r", encoding="utf-8") as f:
+                        data = json.load(f)
+
+                # 1. Update docs/api/gear.json
+                api_dir = os.path.join(PROJECT_ROOT, "docs", "api")
+                os.makedirs(api_dir, exist_ok=True)
+                gear_file = os.path.join(api_dir, "gear.json")
+                gear_list = data.get("affiliate_gear", [])
+                with open(gear_file, "w", encoding="utf-8") as f:
+                    json.dump(gear_list, f, indent=2, ensure_ascii=False)
+
+                # 2. Also ensure assets JSON & SQLite DB are in sync
+                with open(JSON_PATH, "w", encoding="utf-8") as f:
+                    json.dump(data, f, indent=2, ensure_ascii=False)
+                rebuild_sqlite_database(data)
+
+                # 3. Commit and push to git
+                import subprocess
+                git_log = []
+                try:
+                    p1 = subprocess.run(["git", "add", "docs/api/gear.json", "docs/", "app/src/main/assets/"], cwd=PROJECT_ROOT, capture_output=True, text=True)
+                    p2 = subprocess.run(["git", "commit", "-m", "feat: publish updated gear catalog to API endpoint"], cwd=PROJECT_ROOT, capture_output=True, text=True)
+                    p3 = subprocess.run(["git", "push", "origin", "main"], cwd=PROJECT_ROOT, capture_output=True, text=True)
+                    git_log = [p1.stdout.strip(), p2.stdout.strip(), p3.stdout.strip(), p3.stderr.strip()]
+                except Exception as ge:
+                    git_log.append(f"Git execution note: {ge}")
+
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json; charset=utf-8")
+                self.end_headers()
+                resp = {
+                    "status": "success",
+                    "message": f"Successfully published {len(gear_list)} items to /docs/api/gear.json and pushed to GitHub Pages!",
+                    "endpoint": "https://ayoubarmstrong-dev.github.io/survival-guide/api/gear.json",
+                    "gear_count": len(gear_list),
+                    "git_log": [l for l in git_log if l]
+                }
+                self.wfile.write(json.dumps(resp).encode("utf-8"))
+            except Exception as e:
+                self.send_response(500)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"status": "error", "message": str(e)}).encode("utf-8"))
+            return
+
 def run_server(port=8080):
     server_address = ('', port)
     httpd = HTTPServer(server_address, AdminHandler)

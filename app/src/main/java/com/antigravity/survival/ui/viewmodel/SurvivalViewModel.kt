@@ -12,6 +12,7 @@ import com.antigravity.survival.data.entity.ArticleEntity
 import com.antigravity.survival.data.entity.CategoryEntity
 import com.antigravity.survival.data.entity.ChecklistEntity
 import com.antigravity.survival.data.repository.SurvivalRepository
+import com.antigravity.survival.data.sync.DataSyncWorker
 import com.antigravity.survival.data.util.JsonDataLoader
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -149,9 +150,25 @@ class SurvivalViewModel(application: Application) : AndroidViewModel(application
                     }
                 }
 
+                // Step 3: Trigger Remote Sync & Periodic Worker (GitHub Pages API)
+                try {
+                    DataSyncWorker.schedule(application)
+                    DataSyncWorker.syncImmediately(application)
+                } catch (e: Exception) {
+                    Log.w(tag, "Failed to schedule remote data sync worker", e)
+                }
+
             } catch (e: Exception) {
                 Log.e(tag, "Room database init failed, continuing in JSON mode", e)
             }
+        }
+    }
+
+    fun syncGearRemote() {
+        try {
+            DataSyncWorker.syncImmediately(getApplication())
+        } catch (e: Exception) {
+            Log.w(tag, "Manual remote sync trigger failed", e)
         }
     }
 

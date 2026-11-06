@@ -107,6 +107,24 @@
       background: var(--primary-hover);
       box-shadow: 0 0 14px rgba(46, 160, 67, 0.4);
     }
+    .btn-publish {
+      background: #1f6feb;
+      color: #fff;
+      border: none;
+      padding: 9px 18px;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .btn-publish:hover {
+      background: #388bfd;
+      box-shadow: 0 0 14px rgba(56, 139, 253, 0.4);
+    }
 
     /* Main Container: Split View */
     .studio-container {
@@ -521,6 +539,14 @@
           <polyline points="7 3 7 8 15 8"></polyline>
         </svg>
         Save to App Assets &amp; Rebuild DB
+      </button>
+      <button class="btn-publish" id="btnPublishApi" onclick="publishToGithubApi()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+          <polyline points="16 6 12 2 8 6"></polyline>
+          <line x1="12" y1="2" x2="12" y2="15"></line>
+        </svg>
+        Publish to GitHub API
       </button>
     </div>
   </header>
@@ -1156,6 +1182,35 @@ ${escapeHtml(art.content_markdown || '')}
         }
       } catch (err) {
         alert('Connection error while saving: ' + err.message);
+      } finally {
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+      }
+    }
+
+    // ==========================================
+    // PUBLISH TO GITHUB API
+    // ==========================================
+    async function publishToGithubApi() {
+      const btn = document.getElementById('btnPublishApi');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '🚀 Publishing to GitHub...';
+      btn.disabled = true;
+
+      try {
+        const res = await fetch('/api/publish_github', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(appData)
+        });
+        const result = await res.json();
+        if (result.status === 'success') {
+          showToast('Published to GitHub Pages API (/docs/api/gear.json)!');
+        } else {
+          alert('Publish failed: ' + result.message);
+        }
+      } catch (err) {
+        alert('Connection error while publishing: ' + err.message);
       } finally {
         btn.innerHTML = originalText;
         btn.disabled = false;

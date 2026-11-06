@@ -35,4 +35,8 @@ class SurvivalRepository(private val database: SurvivalDatabase) {
 
     fun getAllGear(): Flow<List<AffiliateGearEntity>> =
         database.affiliateGearDao().getAllGear()
+
+    suspend fun upsertGear(gear: List<AffiliateGearEntity>) {
+        database.affiliateGearDao().upsertAll(gear)
+    }
 }

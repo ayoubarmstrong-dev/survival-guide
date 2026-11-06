@@ -1559,10 +1559,17 @@ vercel_config = {
 with open(os.path.join(DOCS_DIR, "vercel.json"), "w", encoding="utf-8") as f:
     json.dump(vercel_config, f, indent=2)
 
+# Export API endpoint for Android Remote Sync
+API_DIR = os.path.join(DOCS_DIR, "api")
+os.makedirs(API_DIR, exist_ok=True)
+with open(os.path.join(API_DIR, "gear.json"), "w", encoding="utf-8") as f:
+    json.dump(gear_list, f, indent=2, ensure_ascii=False)
+
 print(f"Generated static website in {DOCS_DIR}:")
 print(f"  - index.html (Homepage with 8 articles & gear showcase)")
 print(f"  - 8 individual article pages in docs/articles/")
 print(f"  - gear.html (Dedicated Tactical Gear store with Amazon CTAs)")
+print(f"  - api/gear.json (Hosted JSON endpoint for Android app sync)")
 print(f"  - about.html (Trust & Editorial Standards)")
 print(f"  - privacy-policy.html (Mandatory Amazon Associates disclosure & cookies)")
 print(f"  - contact.html (Direct contact portal)")

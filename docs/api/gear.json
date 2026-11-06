@@ -1,0 +1,101 @@
+[
+  {
+    "id": "gear_sawyer_mini",
+    "article_id": "art_water_purification",
+    "name": "Sawyer Products MINI Water Filtration System",
+    "spec_summary": "0.1 Micron absolute hollow fiber membrane filter rated for up to 100,000 gallons. Eliminates 99.99999% of bacteria (Salmonella, Cholera, E. coli) and 99.9999% of protozoa (Giardia, Cryptosporidium). Weight: 2 oz.",
+    "offline_specs": "0.1 Micron Absolute Hollow Fiber Membrane | 100,000 Gallon Lifespan | Weight: 2 oz (57g) | Exceeds EPA drinking water standards | Includes 16oz squeeze pouch & cleaning plunger.",
+    "amazon_asin": "B00FA2RLX2",
+    "affiliate_url_template": "https://www.amazon.com/dp/B00FA2RLX2?tag=aegissurvival-20",
+    "estimated_price_usd": 24.95,
+    "importance_rating": 5
+  },
+  {
+    "id": "gear_aquatabs_tablets",
+    "article_id": "art_water_purification",
+    "name": "Aquatabs 49mg Water Purification Tablets (100-Pack)",
+    "spec_summary": "US EPA-registered effervescent water disinfectant (NaDCC). Destroys 99.9999% of bacteria, 99.99% of viruses, and 99.9% of cysts. Treats 1 to 2 liters per tablet within 30 minutes. 5-year hermetic foil shelf life.",
+    "offline_specs": "Active Ingredient: Sodium Dichloroisocyanurate (NaDCC 49mg) | Quantity: 100 foil-wrapped tablets | Dosage: 1 tab per 1-2L (turbid) or 4L (clear) | Reaction Time: 30 minutes | WHO / EPA compliant.",
+    "amazon_asin": "B00T72BFM6",
+    "affiliate_url_template": "https://www.amazon.com/dp/B00T72BFM6?tag=aegissurvival-20",
+    "estimated_price_usd": 13.99,
+    "importance_rating": 5
+  },
+  {
+    "id": "gear_cat_tourniquet",
+    "article_id": "art_urban_combat_earthquake",
+    "name": "North American Rescue Combat Application Tourniquet (CAT Gen 7)",
+    "spec_summary": "Official CoTCCC-recommended arterial occlusion tourniquet. Engineered with a single-routing buckle, high-strength windlass rod, and dedicated white time-strap to halt life-threatening limb hemorrhage in under 60 seconds.",
+    "offline_specs": "Windlass Arterial Occlusion System | Official CoTCCC Approved | White Writeable Time Strap (TIME: HH:MM) | Weight: 2.9 oz | True one-handed operational deployment.",
+    "amazon_asin": "B01ITAKG6A",
+    "affiliate_url_template": "https://www.amazon.com/dp/B01ITAKG6A?tag=aegissurvival-20",
+    "estimated_price_usd": 29.99,
+    "importance_rating": 5
+  },
+  {
+    "id": "gear_quikclot_gauze",
+    "article_id": "art_urban_combat_earthquake",
+    "name": "QuikClot Advanced Clotting Gauze (3 in x 24 in, 2-Pack)",
+    "spec_summary": "Kaolin-infused z-folded hemostatic gauze engineered to accelerate the natural clotting cascade without generating exothermic heat. Designed for deep wound packing in junctional groin and axillary trauma.",
+    "offline_specs": "Active Agent: Inert Inorganic Kaolin | Size: 3 in x 24 in (7.6 cm x 61 cm) Z-Fold | Compression Time: 3 minutes direct manual pressure | Non-allergenic, non-exothermic | Vacuum sealed.",
+    "amazon_asin": "B00HJTH506",
+    "affiliate_url_template": "https://www.amazon.com/dp/B00HJTH506?tag=aegissurvival-20",
+    "estimated_price_usd": 19.99,
+    "importance_rating": 5
+  },
+  {
+    "id": "gear_crank_radio",
+    "article_id": "art_nuclear_war",
+    "name": "Emergency Hand Crank Solar Radio with NOAA/AM/FM & Flashlight",
+    "spec_summary": "Autonomous multi-band emergency communications receiver featuring NOAA weather alerts, hand-crank dynamo, solar charging cell, 5,000mAh device power bank, and 3-mode LED tactical flashlight.",
+    "offline_specs": "Bands: NOAA Weather (7 channels auto-alert), AM (520-1710 KHz), FM (87-108 MHz) | Power: Dynamo Crank, Solar, USB-C, 5000mAh Battery | 3W LED Flashlight & SOS Siren.",
+    "amazon_asin": "B08CZFWJVT",
+    "affiliate_url_template": "https://www.amazon.com/dp/B08CZFWJVT?tag=aegissurvival-20",
+    "estimated_price_usd": 35.5,
+    "importance_rating": 4
+  },
+  {
+    "id": "gear_potassium_iodide",
+    "article_id": "art_nuclear_war",
+    "name": "iOSAT Potassium Iodide Tablets 130 mg (14-Count Pack)",
+    "spec_summary": "FDA-approved thyroid blocking agent preventing internal absorption of radioactive iodine-131 downwind of nuclear detonation or reactor breach. Single daily adult dosage provides full 24-hour thyroid saturation.",
+    "offline_specs": "Dosage: 130 mg Potassium Iodide per tablet (FDA NDA 18-664) | Adult Dose: 1 tablet daily (130 mg) | Pediatric Dose: 65 mg (3-18 yrs), 32 mg (1 mo-3 yrs) | Shelf Life: 10+ years hermetic foil.",
+    "amazon_asin": "B000068336",
+    "affiliate_url_template": "https://www.amazon.com/dp/B000068336?tag=aegissurvival-20",
+    "estimated_price_usd": 14.99,
+    "importance_rating": 5
+  },
+  {
+    "id": "gear_mylar_bags",
+    "article_id": "art_food_storage",
+    "name": "5-Gallon Mylar Food Storage Bags (7-Mil Thick) + 2000cc Absorbers",
+    "spec_summary": "Military-grade puncture-resistant 7-mil aluminum-laminated barrier bags paired with high-capacity 2,000cc oxygen absorbers. Guarantees zero oxygen transmission (OTR < 0.001) for 25+ year food stability.",
+    "offline_specs": "Thickness: 7 Mil (180 microns) heavy-duty aluminum barrier | Dimensions: 19.5 x 28.5 inches | Oxygen Absorbers: 2,000cc iron-based scavengers | Target Residual O2: < 0.1% | Heat sealable at 375°F.",
+    "amazon_asin": "B089CVRPK3",
+    "affiliate_url_template": "https://www.amazon.com/dp/B089CVRPK3?tag=aegissurvival-20",
+    "estimated_price_usd": 39.99,
+    "importance_rating": 5
+  },
+  {
+    "id": "gear_readywise_72h_kit",
+    "article_id": "art_food_storage",
+    "name": "ReadyWise Emergency Food Supply 72-Hour Survival Kit (32 Servings)",
+    "spec_summary": "Nutrient-dense emergency ration bucket providing 32 servings of freeze-dried and dehydrated meals. Delivers approx. 1,800–2,000 kcal per day for 72 hours. Stackable, grab-and-go water-resistant container with 25-year shelf life.",
+    "offline_specs": "Servings: 32 Total Servings | Caloric Delivery: ~1,800 - 2,000 kcal/day | Preparation: Just add hot or room-temp water | Shelf Life: 25 Years unopened | Grab-and-go waterproof bucket.",
+    "amazon_asin": "B00G8S15B6",
+    "affiliate_url_template": "https://www.amazon.com/dp/B00G8S15B6?tag=aegissurvival-20",
+    "estimated_price_usd": 38.99,
+    "importance_rating": 4
+  },
+  {
+    "id": "gear_swiss_safe_blanket",
+    "article_id": "art_forest_wilderness",
+    "name": "Swiss Safe Emergency Mylar Thermal Blankets (Dual-Sided, 4-Pack)",
+    "spec_summary": "Dual-sided aluminized space blankets engineered to reflect up to 90% of radiated body heat. Essential for preventing hypothermia in traumatic shock victims, extreme wilderness bivouacs, and emergency shelter insulation.",
+    "offline_specs": "Material: Dual-Sided 12-Micron Metalized Polyethylene Mylar | Dimensions: 52 x 82 inches (132 x 208 cm) | Thermal Retention: 90% body heat reflection | Weight: 2 oz each | Hazard orange backing.",
+    "amazon_asin": "B01BW4KWW8",
+    "affiliate_url_template": "https://www.amazon.com/dp/B01BW4KWW8?tag=aegissurvival-20",
+    "estimated_price_usd": 12.99,
+    "importance_rating": 5
+  }
+]
