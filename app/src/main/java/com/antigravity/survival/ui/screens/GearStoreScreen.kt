@@ -7,13 +7,19 @@ import android.net.Uri
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.WifiOff
@@ -41,6 +47,42 @@ fun GearStoreScreen(
     val scope = rememberCoroutineScope()
     val snackbarHostState = remember { SnackbarHostState() }
     val gearList by viewModel.allGear.collectAsState()
+
+    var searchQuery by remember { mutableStateOf("") }
+    var selectedPriority by remember { mutableStateOf<String?>(null) }
+    var selectedCategory by remember { mutableStateOf<String?>(null) }
+
+    // Derive unique categories dynamically
+    val categories = remember(gearList) {
+        listOf("All Categories") + gearList.map { it.category }.distinct().sorted()
+    }
+
+    val priorities = listOf(
+        "All Priorities" to null,
+        "Life-Critical" to "Life-Critical",
+        "Field Ops" to "Field Ops",
+        "Sustainability" to "Sustainability"
+    )
+
+    // Filtered items
+    val filteredGear = remember(gearList, searchQuery, selectedPriority, selectedCategory) {
+        gearList.filter { gear ->
+            val matchesSearch = searchQuery.isBlank() ||
+                    gear.nameEn.contains(searchQuery, ignoreCase = true) ||
+                    gear.specSummaryAr.contains(searchQuery, ignoreCase = true) ||
+                    (gear.amazonAsin?.contains(searchQuery, ignoreCase = true) == true) ||
+                    gear.category.contains(searchQuery, ignoreCase = true)
+
+            val matchesPriority = selectedPriority == null ||
+                    gear.priorityTier.equals(selectedPriority, ignoreCase = true)
+
+            val matchesCategory = selectedCategory == null ||
+                    selectedCategory == "All Categories" ||
+                    gear.category.equals(selectedCategory, ignoreCase = true)
+
+            matchesSearch && matchesPriority && matchesCategory
+        }
+    }
 
     Scaffold(
         snackbarHost = {
@@ -70,13 +112,13 @@ fun GearStoreScreen(
                 title = {
                     Column {
                         Text(
-                            text = "Emergency Gear Store",
+                            text = "Tactical Gear Catalog (100 Core)",
                             fontWeight = FontWeight.Bold,
                             color = TextPrimary,
-                            fontSize = 18.sp
+                            fontSize = 17.sp
                         )
                         Text(
-                            text = "Tactical & Survival Hardware • Dropship & Affiliate Hub",
+                            text = "12 Mission Tiers • Offline-Ready Field Hardware",
                             color = TextSecondary,
                             fontSize = 11.sp
                         )
@@ -96,7 +138,7 @@ fun GearStoreScreen(
                         viewModel.syncGearRemote()
                         scope.launch {
                             snackbarHostState.showSnackbar(
-                                if (isOnline(context)) "Syncing latest catalog with remote server..."
+                                if (isOnline(context)) "Syncing 100-item catalog with remote GitHub endpoint..."
                                 else "Offline: Serving cached hardware specifications"
                             )
                         }
@@ -119,51 +161,209 @@ fun GearStoreScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
-                .padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+                .padding(horizontal = 14.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
+            // Search Bar & Filter Header
             item {
-                Card(
-                    modifier = Modifier.fillMaxWidth(),
-                    colors = CardDefaults.cardColors(containerColor = TacticalOlive.copy(alpha = 0.15f)),
-                    shape = RoundedCornerShape(12.dp)
-                ) {
-                    Column(
+                Spacer(modifier = Modifier.height(6.dp))
+                OutlinedTextField(
+                    value = searchQuery,
+                    onValueChange = { searchQuery = it },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clip(RoundedCornerShape(8.dp)),
+                    placeholder = {
+                        Text(
+                            "Search 100 tactical items, ASIN, specs...",
+                            color = TextMuted,
+                            fontSize = 13.sp
+                        )
+                    },
+                    leadingIcon = {
+                        Icon(
+                            imageVector = Icons.Default.Search,
+                            contentDescription = "Search",
+                            tint = TacticalOlive
+                        )
+                    },
+                    trailingIcon = {
+                        if (searchQuery.isNotBlank()) {
+                            IconButton(onClick = { searchQuery = "" }) {
+                                Icon(
+                                    imageVector = Icons.Default.Close,
+                                    contentDescription = "Clear",
+                                    tint = TextSecondary
+                                )
+                            }
+                        }
+                    },
+                    singleLine = true,
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedContainerColor = DarkCard,
+                        unfocusedContainerColor = DarkCard,
+                        focusedBorderColor = TacticalGreen,
+                        unfocusedBorderColor = DarkBorder,
+                        focusedTextColor = TextPrimary,
+                        unfocusedTextColor = TextPrimary
+                    )
+                )
+            }
+
+            // Priority Tier Filter Chips (Life-Critical, Field Ops, Sustainability)
+            item {
+                Column(modifier = Modifier.fillMaxWidth()) {
+                    Text(
+                        text = "MISSION PRIORITY TIER:",
+                        fontSize = 11.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = TextSecondary,
+                        letterSpacing = 0.5.sp,
+                        modifier = Modifier.padding(bottom = 6.dp)
+                    )
+                    Row(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(14.dp)
+                            .horizontalScroll(rememberScrollState()),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
+                        priorities.forEach { (label, value) ->
+                            val isSelected = selectedPriority == value
+                            val pillBg = when (value) {
+                                "Life-Critical" -> if (isSelected) DangerRed else DangerRed.copy(alpha = 0.15f)
+                                "Field Ops" -> if (isSelected) HazardAmber else HazardAmber.copy(alpha = 0.15f)
+                                "Sustainability" -> if (isSelected) TacticalGreen else TacticalGreen.copy(alpha = 0.15f)
+                                else -> if (isSelected) TacticalCyan else DarkCard
+                            }
+                            val pillTextColor = if (isSelected) AmoledBlack else TextPrimary
+                            val borderColor = when (value) {
+                                "Life-Critical" -> DangerRed
+                                "Field Ops" -> HazardAmber
+                                "Sustainability" -> TacticalGreen
+                                else -> DarkBorder
+                            }
+
+                            Box(
+                                modifier = Modifier
+                                    .clip(RoundedCornerShape(20.dp))
+                                    .background(pillBg)
+                                    .border(1.dp, borderColor, RoundedCornerShape(20.dp))
+                                    .clickable { selectedPriority = value }
+                                    .padding(horizontal = 14.dp, vertical = 7.dp)
+                            ) {
+                                Text(
+                                    text = label,
+                                    fontSize = 12.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    color = pillTextColor
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Category Chips Row (12 Mission-Critical Tiers)
+            item {
+                Column(modifier = Modifier.fillMaxWidth()) {
+                    Text(
+                        text = "12 MISSION CATEGORIES:",
+                        fontSize = 11.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = TextSecondary,
+                        letterSpacing = 0.5.sp,
+                        modifier = Modifier.padding(bottom = 6.dp)
+                    )
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .horizontalScroll(rememberScrollState()),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        categories.forEach { catName ->
+                            val isSelected = (selectedCategory == catName) || (selectedCategory == null && catName == "All Categories")
+                            val chipBg = if (isSelected) TacticalOlive else DarkCard
+                            val chipTextColor = if (isSelected) TextPrimary else TextSecondary
+
+                            Box(
+                                modifier = Modifier
+                                    .clip(RoundedCornerShape(6.dp))
+                                    .background(chipBg)
+                                    .border(1.dp, if (isSelected) TacticalGreen else DarkBorder, RoundedCornerShape(6.dp))
+                                    .clickable {
+                                        selectedCategory = if (catName == "All Categories") null else catName
+                                    }
+                                    .padding(horizontal = 12.dp, vertical = 6.dp)
+                            ) {
+                                Text(
+                                    text = catName,
+                                    fontSize = 11.5.sp,
+                                    fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
+                                    color = chipTextColor
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Results count badge
+            item {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = "Showing ${filteredGear.size} of ${gearList.size} Tactical Items",
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = TextSecondary
+                    )
+                    if (selectedPriority != null || selectedCategory != null || searchQuery.isNotBlank()) {
                         Text(
-                            text = "Curated Field Gear Spec Sheet",
+                            text = "Reset Filters",
+                            fontSize = 12.sp,
                             fontWeight = FontWeight.Bold,
                             color = TacticalGreen,
-                            fontSize = 15.sp
-                        )
-                        Spacer(modifier = Modifier.height(4.dp))
-                        Text(
-                            text = "All product specifications are permanently cached on-device for offline review. Purchase links require an active internet connection.",
-                            color = TextSecondary,
-                            fontSize = 12.sp,
-                            lineHeight = 18.sp
+                            modifier = Modifier.clickable {
+                                selectedPriority = null
+                                selectedCategory = null
+                                searchQuery = ""
+                            }
                         )
                     }
                 }
             }
 
-            if (gearList.isEmpty()) {
+            // Empty state or list
+            if (filteredGear.isEmpty()) {
                 item {
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(32.dp),
+                            .padding(48.dp),
                         contentAlignment = Alignment.Center
                     ) {
-                        CircularProgressIndicator(color = TacticalGreen)
+                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                            Icon(
+                                imageVector = Icons.Default.FilterList,
+                                contentDescription = null,
+                                tint = TextMuted,
+                                modifier = Modifier.size(40.dp)
+                            )
+                            Spacer(modifier = Modifier.height(10.dp))
+                            Text(
+                                text = "No survival gear matches the current filters",
+                                color = TextMuted,
+                                fontSize = 13.sp
+                            )
+                        }
                     }
                 }
             } else {
-                items(gearList) { gear ->
-                    StoreProductCard(
+                items(filteredGear, key = { it.id }) { gear ->
+                    EnhancedProductCard(
                         gear = gear,
                         onOrderClick = { url ->
                             if (isOnline(context)) {
@@ -188,22 +388,64 @@ fun GearStoreScreen(
 }
 
 @Composable
-fun StoreProductCard(
+fun EnhancedProductCard(
     gear: AffiliateGearEntity,
     onOrderClick: (String) -> Unit
 ) {
     Card(
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(containerColor = DarkCard),
-        shape = RoundedCornerShape(12.dp),
-        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+        shape = RoundedCornerShape(10.dp),
+        border = CardDefaults.outlinedCardBorder().copy(
+            brush = androidx.compose.ui.graphics.SolidColor(DarkBorder)
+        )
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(16.dp)
+                .padding(14.dp)
         ) {
-            // Header: Name and Price
+            // Top Row: Category Pill & Priority Badge
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                // Category Pill
+                Text(
+                    text = gear.category.uppercase(),
+                    fontSize = 10.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = TacticalCyan,
+                    letterSpacing = 0.5.sp,
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(4.dp))
+                        .background(TacticalCyan.copy(alpha = 0.12f))
+                        .padding(horizontal = 7.dp, vertical = 3.dp)
+                )
+
+                // Priority Badge
+                val (prioBg, prioColor) = when (gear.priorityTier) {
+                    "Life-Critical" -> DangerRed.copy(alpha = 0.2f) to DangerRed
+                    "Sustainability" -> TacticalGreen.copy(alpha = 0.2f) to TacticalGreen
+                    else -> HazardAmber.copy(alpha = 0.2f) to HazardAmber
+                }
+
+                Text(
+                    text = "● ${gear.priorityTier.uppercase()}",
+                    fontSize = 10.5.sp,
+                    fontWeight = FontWeight.ExtraBold,
+                    color = prioColor,
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(4.dp))
+                        .background(prioBg)
+                        .padding(horizontal = 7.dp, vertical = 3.dp)
+                )
+            }
+
+            Spacer(modifier = Modifier.height(10.dp))
+
+            // Name and Price Row
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -213,23 +455,23 @@ fun StoreProductCard(
                     text = gear.nameEn,
                     fontWeight = FontWeight.Bold,
                     color = TextPrimary,
-                    fontSize = 16.sp,
-                    lineHeight = 22.sp,
+                    fontSize = 15.sp,
+                    lineHeight = 20.sp,
                     modifier = Modifier.weight(1f)
                 )
-                Spacer(modifier = Modifier.width(8.dp))
+                Spacer(modifier = Modifier.width(10.dp))
                 if (gear.estimatedPriceUsd != null) {
                     Box(
                         modifier = Modifier
                             .clip(RoundedCornerShape(6.dp))
-                            .background(TacticalGreen.copy(alpha = 0.2f))
+                            .background(TacticalGreen.copy(alpha = 0.15f))
                             .padding(horizontal = 8.dp, vertical = 4.dp)
                     ) {
                         Text(
                             text = "$${String.format(java.util.Locale.US, "%.2f", gear.estimatedPriceUsd)}",
                             fontWeight = FontWeight.ExtraBold,
                             color = TacticalGreen,
-                            fontSize = 15.sp
+                            fontSize = 14.sp
                         )
                     }
                 }
@@ -237,27 +479,26 @@ fun StoreProductCard(
 
             Spacer(modifier = Modifier.height(8.dp))
 
-            // Rating & ASIN Row
+            // Rating Stars & ASIN
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                // Star rating
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     repeat(gear.importanceRating.coerceIn(1, 5)) {
                         Icon(
                             imageVector = Icons.Default.Star,
                             contentDescription = null,
                             tint = HazardAmber,
-                            modifier = Modifier.size(16.dp)
+                            modifier = Modifier.size(14.dp)
                         )
                     }
-                    Spacer(modifier = Modifier.width(6.dp))
+                    Spacer(modifier = Modifier.width(4.dp))
                     Text(
-                        text = "${gear.importanceRating}-Star Critical",
-                        fontWeight = FontWeight.SemiBold,
+                        text = "(${gear.importanceRating}.0)",
+                        fontSize = 11.sp,
                         color = HazardAmber,
-                        fontSize = 12.sp
+                        fontWeight = FontWeight.SemiBold
                     )
                 }
 
@@ -273,51 +514,65 @@ fun StoreProductCard(
 
             Spacer(modifier = Modifier.height(10.dp))
 
-            // Specification Summary
+            // Spec Summary
             Text(
                 text = gear.specSummaryAr,
-                color = TextPrimary,
-                fontSize = 13.sp,
-                lineHeight = 20.sp
+                color = TextSecondary,
+                fontSize = 12.5.sp,
+                lineHeight = 18.sp
             )
 
-            Spacer(modifier = Modifier.height(14.dp))
+            Spacer(modifier = Modifier.height(12.dp))
 
-            // Action Button
+            // Action Button: Order on Amazon
             Button(
                 onClick = { onOrderClick(gear.affiliateUrlTemplate) },
-                colors = ButtonDefaults.buttonColors(containerColor = TacticalOlive),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(42.dp),
                 shape = RoundedCornerShape(8.dp),
-                modifier = Modifier.fillMaxWidth()
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = TacticalOlive,
+                    contentColor = TextPrimary
+                )
             ) {
-                Icon(
-                    imageVector = Icons.Default.ShoppingCart,
-                    contentDescription = null,
-                    modifier = Modifier.size(18.dp)
-                )
-                Spacer(modifier = Modifier.width(8.dp))
-                Text(
-                    text = "Order / Check Price",
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 14.sp
-                )
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Center
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.ShoppingCart,
+                        contentDescription = null,
+                        modifier = Modifier.size(16.dp),
+                        tint = TextPrimary
+                    )
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text(
+                        text = "Check Price on Amazon",
+                        fontSize = 13.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
             }
         }
     }
 }
 
 private fun isOnline(context: Context): Boolean {
-    val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as? ConnectivityManager ?: return false
-    val network = connectivityManager.activeNetwork ?: return false
-    val capabilities = connectivityManager.getNetworkCapabilities(network) ?: return false
-    return capabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
+    val cm = context.getSystemService(Context.CONNECTIVITY_SERVICE) as? ConnectivityManager ?: return false
+    val network = cm.activeNetwork ?: return false
+    val caps = cm.getNetworkCapabilities(network) ?: return false
+    return caps.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
 }
 
 private fun openStoreUrl(context: Context, url: String) {
     try {
-        val customTabsIntent = CustomTabsIntent.Builder().build()
-        customTabsIntent.launchUrl(context, Uri.parse(url))
-    } catch (_: Exception) {
+        val uri = Uri.parse(url)
+        val customTabsIntent = CustomTabsIntent.Builder()
+            .setShowTitle(true)
+            .build()
+        customTabsIntent.launchUrl(context, uri)
+    } catch (e: Exception) {
         val intent = android.content.Intent(android.content.Intent.ACTION_VIEW, Uri.parse(url))
         context.startActivity(intent)
     }

@@ -162,6 +162,9 @@ class DataSyncWorker(
                 item.optString("image_asset").takeIf { it.isNotBlank() }
             } else null
 
+            val category = item.optString("category", "Tactical Gear")
+            val priorityTier = item.optString("priority_tier", "Field Ops")
+
             result.add(
                 AffiliateGearEntity(
                     id = id,
@@ -173,7 +176,9 @@ class DataSyncWorker(
                     affiliateUrlTemplate = url,
                     estimatedPriceUsd = price,
                     imageAsset = imgAsset,
-                    importanceRating = rating
+                    importanceRating = rating,
+                    category = category,
+                    priorityTier = priorityTier
                 )
             )
         }

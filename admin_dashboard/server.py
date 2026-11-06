@@ -80,6 +80,8 @@ def rebuild_sqlite_database(data):
             estimated_price_usd REAL, 
             image_asset TEXT, 
             importance_rating INTEGER NOT NULL, 
+            category TEXT NOT NULL, 
+            priority_tier TEXT NOT NULL, 
             PRIMARY KEY(id), 
             FOREIGN KEY(article_id) REFERENCES articles(id) ON UPDATE NO ACTION ON DELETE SET NULL
         )''')
@@ -87,7 +89,7 @@ def rebuild_sqlite_database(data):
         
         # 5. Room Master Table
         cur.execute('CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)')
-        cur.execute("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '386002bdff532341de1ef6a4d2d37a4b')")
+        cur.execute("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'dcf5e87a6ab3a69072871ab6888acd31')")
         
         # Insert Categories
         for cat in data.get('categories', []):
@@ -138,8 +140,8 @@ def rebuild_sqlite_database(data):
             name = gear.get('name', gear.get('name_en', ''))
             cur.execute(
                 '''INSERT INTO affiliate_gear 
-                   (id, article_id, name_ar, name_en, spec_summary_ar, amazon_asin, affiliate_url_template, estimated_price_usd, image_asset, importance_rating) 
-                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)''',
+                   (id, article_id, name_ar, name_en, spec_summary_ar, amazon_asin, affiliate_url_template, estimated_price_usd, image_asset, importance_rating, category, priority_tier) 
+                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)''',
                 (
                     gear['id'],
                     gear.get('article_id'),
@@ -150,7 +152,9 @@ def rebuild_sqlite_database(data):
                     gear.get('affiliate_url_template', ''),
                     gear.get('estimated_price_usd'),
                     gear.get('image_asset'),
-                    gear.get('importance_rating', 5)
+                    gear.get('importance_rating', 5),
+                    gear.get('category', 'Tactical Gear'),
+                    gear.get('priority_tier', 'Field Ops')
                 )
             )
             

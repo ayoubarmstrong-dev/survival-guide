@@ -48,5 +48,11 @@ data class AffiliateGearEntity(
     val imageAsset: String? = null,
 
     @ColumnInfo(name = "importance_rating")
-    val importanceRating: Int = 5
+    val importanceRating: Int = 5,
+
+    @ColumnInfo(name = "category")
+    val category: String = "Tactical Gear",
+
+    @ColumnInfo(name = "priority_tier")
+    val priorityTier: String = "Field Ops"
 )
