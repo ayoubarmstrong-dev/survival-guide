@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survival Master - Content Studio & Live Mobile Simulator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #090D11;
+      --bg-card: #121820;
+      --bg-surface: #1A222D;
+      --border: #263242;
+      --primary: #2EA043;
+      --primary-hover: #3FB950;
+      --amber: #D29922;
+      --red: #F85149;
+      --cyan: #58A6FF;
+      --text: #F0F6FC;
+      --text-muted: #8B949E;
+      --phone-w: 380px;
+      --phone-h: 780px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Top Navigation Header */
+    header {
+      background: #0D1117;
+      border-bottom: 1px solid var(--border);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      flex-shrink: 0;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-badge {
+      background: rgba(46, 160, 67, 0.2);
+      color: var(--primary);
+      border: 1px solid var(--primary);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+    }
+    .brand-title {
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+    .brand-subtitle {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .sync-status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 8px var(--primary);
+    }
+    .btn-save {
+      background: var(--primary);
+      color: #000;
+      border: none;
+      padding: 9px 18px;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .btn-save:hover {
+      background: var(--primary-hover);
+      box-shadow: 0 0 14px rgba(46, 160, 67, 0.4);
+    }
+
+    /* Main Container: Split View */
+    .studio-container {
+      display: flex;
+      flex: 1;
+      height: calc(100vh - 60px);
+      overflow: hidden;
+    }
+
+    /* Left Side: Editor Panel */
+    .editor-panel {
+      flex: 1;
+      min-width: 480px;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--border);
+      background: var(--bg-dark);
+      overflow: hidden;
+    }
+    .editor-tabs {
+      display: flex;
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+      padding: 0 16px;
+    }
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 14px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .tab-btn.active {
+      color: var(--text);
+    }
+    .tab-btn.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--primary);
+    }
+    .tab-badge {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      padding: 2px 6px;
+      border-radius: 10px;
+      font-size: 11px;
+    }
+
+    .editor-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+    }
+
+    /* Form & Card Styles */
+    .section-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .btn-primary {
+      background: rgba(46, 160, 67, 0.2);
+      color: var(--primary);
+      border: 1px solid var(--primary);
+      padding: 7px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: 0.2s;
+    }
+    .btn-primary:hover {
+      background: var(--primary);
+      color: #000;
+    }
+    .btn-danger {
+      background: rgba(248, 81, 73, 0.15);
+      color: var(--red);
+      border: 1px solid var(--red);
+      padding: 6px 10px;
+      font-size: 11px;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .btn-danger:hover {
+      background: var(--red);
+      color: #fff;
+    }
+
+    .card-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .item-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      transition: border-color 0.2s;
+    }
+    .item-card:hover {
+      border-color: #3A4758;
+    }
+    .item-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+    .item-card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .item-card-price {
+      background: rgba(46, 160, 67, 0.2);
+      color: var(--primary);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 13px;
+    }
+    .field-group {
+      margin-bottom: 14px;
+    }
+    .field-group label {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+    .input-text, .input-select, .input-textarea {
+      width: 100%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 9px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .input-text:focus, .input-select:focus, .input-textarea:focus {
+      border-color: var(--cyan);
+    }
+    .input-textarea {
+      min-height: 90px;
+      resize: vertical;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .row-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .row-grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+    }
+
+    /* Right Side: Virtual Mobile Simulator */
+    .simulator-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at center, #151C24 0%, #0A0D12 100%);
+      padding: 20px;
+      position: relative;
+    }
+    .simulator-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 4px;
+    }
+    .screen-tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .screen-tab-btn.active {
+      background: var(--primary);
+      color: #000;
+    }
+
+    /* Virtual Phone Frame */
+    .phone-mockup {
+      width: var(--phone-w);
+      height: var(--phone-h);
+      background: #000;
+      border-radius: 46px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 0 12px #22272E, 0 0 0 14px #374151;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border: 3px solid #000;
+    }
+
+    /* Phone Status Bar */
+    .phone-status-bar {
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      position: relative;
+      z-index: 10;
+      background: #0D1117;
+    }
+    .phone-notch {
+      width: 90px;
+      height: 18px;
+      background: #000;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+
+    /* Phone App Bar */
+    .phone-app-bar {
+      height: 48px;
+      background: #0D1117;
+      border-bottom: 1px solid #1E2631;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      flex-shrink: 0;
+    }
+    .phone-app-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text);
+    }
+    .phone-app-sub {
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+
+    /* Phone Scrollable Screen Area */
+    .phone-screen {
+      flex: 1;
+      overflow-y: auto;
+      background: #000000;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .phone-screen::-webkit-scrollbar {
+      width: 4px;
+    }
+    .phone-screen::-webkit-scrollbar-thumb {
+      background: #222;
+      border-radius: 2px;
+    }
+
+    /* Phone Navigation Bar */
+    .phone-nav-bar {
+      height: 52px;
+      background: #0D1117;
+      border-top: 1px solid #1E2631;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-shrink: 0;
+    }
+    .phone-nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      font-size: 10px;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+    .phone-nav-item.active {
+      color: var(--primary);
+    }
+    .phone-nav-item svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    /* Mobile Screen Components */
+    .sim-card {
+      background: #161B22;
+      border: 1px solid #30363D;
+      border-radius: 10px;
+      padding: 12px;
+    }
+    .sim-badge {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .sim-badge-danger { background: rgba(248, 81, 73, 0.2); color: var(--red); }
+    .sim-badge-amber { background: rgba(210, 153, 34, 0.2); color: var(--amber); }
+    .sim-badge-green { background: rgba(46, 160, 67, 0.2); color: var(--primary); }
+    .sim-badge-cyan { background: rgba(88, 166, 255, 0.2); color: var(--cyan); }
+
+    .sim-btn {
+      background: #4E7055;
+      color: #fff;
+      border: none;
+      width: 100%;
+      padding: 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 8px;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+    }
+    .sim-btn:hover { background: #5D8566; }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #161B22;
+      border: 1px solid var(--primary);
+      color: var(--text);
+      padding: 12px 20px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      z-index: 1000;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top App Bar -->
+  <header>
+    <div class="brand">
+      <span class="brand-badge">STUDIO v1.0</span>
+      <div>
+        <div class="brand-title">SURVIVAL MASTER CONTENT STUDIO</div>
+        <div class="brand-subtitle">Visual Content Manager &amp; Live Mobile Preview</div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <div class="sync-status">
+        <div class="status-dot"></div>
+        <span id="syncStatusText">Synced with App Assets</span>
+      </div>
+      <button class="btn-save" id="btnSaveAll" onclick="saveAllContent()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+          <polyline points="17 21 17 13 7 13 7 21"></polyline>
+          <polyline points="7 3 7 8 15 8"></polyline>
+        </svg>
+        Save to App Assets &amp; Rebuild DB
+      </button>
+    </div>
+  </header>
+
+  <!-- Studio Split Container -->
+  <div class="studio-container">
+
+    <!-- Left Editor Panel -->
+    <div class="editor-panel">
+      <div class="editor-tabs">
+        <button class="tab-btn active" id="tabGearBtn" onclick="switchEditorTab('gear')">
+          🛒 Tactical Gear Store
+          <span class="tab-badge" id="gearCountBadge">5</span>
+        </button>
+        <button class="tab-btn" id="tabArticlesBtn" onclick="switchEditorTab('articles')">
+          📄 Articles &amp; Procedures
+          <span class="tab-badge" id="articleCountBadge">8</span>
+        </button>
+        <button class="tab-btn" id="tabChecklistsBtn" onclick="switchEditorTab('checklists')">
+          ☑️ Checklists
+          <span class="tab-badge" id="chkCountBadge">9</span>
+        </button>
+      </div>
+
+      <div class="editor-content" id="editorContent">
+        <!-- Injected via JavaScript based on selected tab -->
+      </div>
+    </div>
+
+    <!-- Right Live Phone Simulator -->
+    <div class="simulator-panel">
+      <div class="simulator-controls">
+        <button class="screen-tab-btn active" id="simTabStore" onclick="switchSimScreen('store')">🛒 Gear Store</button>
+        <button class="screen-tab-btn" id="simTabArticle" onclick="switchSimScreen('article')">📄 Article Detail</button>
+        <button class="screen-tab-btn" id="simTabHome" onclick="switchSimScreen('home')">🏠 Home Feed</button>
+      </div>
+
+      <!-- Phone Frame -->
+      <div class="phone-mockup">
+        <!-- Status Bar -->
+        <div class="phone-status-bar">
+          <span id="phoneClock">14:30</span>
+          <div class="phone-notch"></div>
+          <span>5G • 100%</span>
+        </div>
+
+        <!-- App Bar -->
+        <div class="phone-app-bar">
+          <div>
+            <div class="phone-app-title" id="simHeaderTitle">Emergency Gear Store</div>
+            <div class="phone-app-sub" id="simHeaderSub">Tactical &amp; Survival Hardware</div>
+          </div>
+          <span class="sim-badge sim-badge-green" id="simHeaderBadge">OFFLINE</span>
+        </div>
+
+        <!-- Dynamic Screen View -->
+        <div class="phone-screen" id="simScreenContainer">
+          <!-- Dynamic live mobile content injected here -->
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="phone-nav-bar">
+          <div class="phone-nav-item" id="simNavHome" onclick="switchSimScreen('home')">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>Guides</span>
+          </div>
+          <div class="phone-nav-item active" id="simNavStore" onclick="switchSimScreen('store')">
+            <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+            <span>Store</span>
+          </div>
+          <div class="phone-nav-item" id="simNavArticle" onclick="switchSimScreen('article')">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            <span>Manual</span>
+          </div>
+          <div class="phone-nav-item" onclick="alert('Flashlight SOS Beacon Active')">
+            <svg viewBox="0 0 24 24"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+            <span>HUD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toastNotification">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2EA043" stroke-width="2.5">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <span id="toastMessage">App Assets &amp; Room DB Synced Successfully!</span>
+  </div>
+
+  <script>
+    // State
+    let appData = {
+      categories: [],
+      articles: [],
+      checklists: [],
+      affiliate_gear: [],
+      ration_formulas: {}
+    };
+    let activeEditorTab = 'gear';
+    let activeSimScreen = 'store';
+    let selectedArticleId = 'art_food_storage';
+
+    // Update Phone Clock
+    setInterval(() => {
+      const now = new Date();
+      document.getElementById('phoneClock').innerText = 
+        String(now.getHours()).padStart(2, '0') + ':' + String(now.getMinutes()).padStart(2, '0');
+    }, 1000);
+
+    // Initial Load
+    async function loadData() {
+      try {
+        const res = await fetch('/api/content');
+        appData = await res.json();
+        updateBadges();
+        renderEditor();
+        renderSim();
+      } catch (err) {
+        console.error('Error fetching data:', err);
+      }
+    }
+
+    function updateBadges() {
+      document.getElementById('gearCountBadge').innerText = (appData.affiliate_gear || []).length;
+      document.getElementById('articleCountBadge').innerText = (appData.articles || []).length;
+      document.getElementById('chkCountBadge').innerText = (appData.checklists || []).length;
+    }
+
+    function switchEditorTab(tab) {
+      activeEditorTab = tab;
+      document.getElementById('tabGearBtn').classList.toggle('active', tab === 'gear');
+      document.getElementById('tabArticlesBtn').classList.toggle('active', tab === 'articles');
+      document.getElementById('tabChecklistsBtn').classList.toggle('active', tab === 'checklists');
+      
+      // Auto-switch simulator screen to match
+      if (tab === 'gear') switchSimScreen('store');
+      if (tab === 'articles' || tab === 'checklists') switchSimScreen('article');
+
+      renderEditor();
+    }
+
+    function switchSimScreen(screen) {
+      activeSimScreen = screen;
+      document.getElementById('simTabStore').classList.toggle('active', screen === 'store');
+      document.getElementById('simTabArticle').classList.toggle('active', screen === 'article');
+      document.getElementById('simTabHome').classList.toggle('active', screen === 'home');
+
+      document.getElementById('simNavStore').classList.toggle('active', screen === 'store');
+      document.getElementById('simNavArticle').classList.toggle('active', screen === 'article');
+      document.getElementById('simNavHome').classList.toggle('active', screen === 'home');
+
+      if (screen === 'store') {
+        document.getElementById('simHeaderTitle').innerText = 'Emergency Gear Store';
+        document.getElementById('simHeaderSub').innerText = 'Tactical & Survival Hardware';
+      } else if (screen === 'article') {
+        const art = appData.articles.find(a => a.id === selectedArticleId) || appData.articles[0];
+        document.getElementById('simHeaderTitle').innerText = art ? art.title : 'Field Manual';
+        document.getElementById('simHeaderSub').innerText = 'Operational Procedure Guide';
+      } else if (screen === 'home') {
+        document.getElementById('simHeaderTitle').innerText = 'Survival Master';
+        document.getElementById('simHeaderSub').innerText = 'Tactical Field Manual • Offline v1.0';
+      }
+
+      renderSim();
+    }
+
+    // ==========================================
+    // RENDER LEFT SIDE EDITOR
+    // ==========================================
+    function renderEditor() {
+      const container = document.getElementById('editorContent');
+      if (activeEditorTab === 'gear') {
+        renderGearEditor(container);
+      } else if (activeEditorTab === 'articles') {
+        renderArticlesEditor(container);
+      } else if (activeEditorTab === 'checklists') {
+        renderChecklistsEditor(container);
+      }
+    }
+
+    // 1. GEAR EDITOR
+    function renderGearEditor(container) {
+      let html = `
+        <div class="section-toolbar">
+          <div>
+            <h2 style="font-size: 16px; font-weight: 800;">Affiliate &amp; Dropshipping Gear Hub</h2>
+            <p style="font-size: 12px; color: var(--text-muted);">Manage product listings, pricing, and affiliate tracking links.</p>
+          </div>
+          <button class="btn-primary" onclick="addNewProduct()">＋ Add New Product</button>
+        </div>
+        <div class="card-list">
+      `;
+
+      (appData.affiliate_gear || []).forEach((gear, idx) => {
+        html += `
+          <div class="item-card">
+            <div class="item-card-header">
+              <div>
+                <span style="font-size: 11px; color: var(--amber); font-weight: 700;">★ ${gear.importance_rating || 5}-Star Rating</span>
+                <div class="item-card-title">${escapeHtml(gear.name || '')}</div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="item-card-price">$${Number(gear.estimated_price_usd || 0).toFixed(2)}</span>
+                <button class="btn-danger" onclick="deleteProduct(${idx})">Delete</button>
+              </div>
+            </div>
+
+            <div class="row-grid-2">
+              <div class="field-group">
+                <label>Product Name</label>
+                <input class="input-text" type="text" value="${escapeHtml(gear.name || '')}" oninput="updateGearField(${idx}, 'name', this.value)">
+              </div>
+              <div class="field-group">
+                <label>Amazon ASIN</label>
+                <input class="input-text" type="text" value="${escapeHtml(gear.amazon_asin || '')}" oninput="updateGearField(${idx}, 'amazon_asin', this.value)">
+              </div>
+            </div>
+
+            <div class="row-grid-3">
+              <div class="field-group">
+                <label>Estimated Price ($ USD)</label>
+                <input class="input-text" type="number" step="0.01" value="${gear.estimated_price_usd || 0}" oninput="updateGearField(${idx}, 'estimated_price_usd', parseFloat(this.value) || 0)">
+              </div>
+              <div class="field-group">
+                <label>Rating (1 to 5)</label>
+                <select class="input-select" onchange="updateGearField(${idx}, 'importance_rating', parseInt(this.value))">
+                  <option value="5" ${gear.importance_rating === 5 ? 'selected' : ''}>5 - Critical</option>
+                  <option value="4" ${gear.importance_rating === 4 ? 'selected' : ''}>4 - Highly Recommended</option>
+                  <option value="3" ${gear.importance_rating === 3 ? 'selected' : ''}>3 - Standard Prep</option>
+                </select>
+              </div>
+              <div class="field-group">
+                <label>Associated Article</label>
+                <select class="input-select" onchange="updateGearField(${idx}, 'article_id', this.value)">
+                  ${appData.articles.map(a => `<option value="${a.id}" ${gear.article_id === a.id ? 'selected' : ''}>${a.title}</option>`).join('')}
+                </select>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label>Affiliate URL / Purchase Link Template</label>
+              <input class="input-text" type="text" value="${escapeHtml(gear.affiliate_url_template || '')}" oninput="updateGearField(${idx}, 'affiliate_url_template', this.value)">
+            </div>
+
+            <div class="field-group">
+              <label>Specification Summary (Offline Cached Text)</label>
+              <textarea class="input-textarea" oninput="updateGearField(${idx}, 'spec_summary', this.value)">${escapeHtml(gear.spec_summary || '')}</textarea>
+            </div>
+          </div>
+        `;
+      });
+
+      html += `</div>`;
+      container.innerHTML = html;
+    }
+
+    function updateGearField(idx, field, value) {
+      appData.affiliate_gear[idx][field] = value;
+      renderSim();
+    }
+
+    function addNewProduct() {
+      const newId = 'gear_' + Date.now();
+      appData.affiliate_gear.unshift({
+        id: newId,
+        article_id: appData.articles[0] ? appData.articles[0].id : 'art_food_storage',
+        name: 'New Tactical Survival Equipment',
+        spec_summary: 'Comprehensive military-grade survival specification outline.',
+        amazon_asin: 'B0EXAMPLE',
+        affiliate_url_template: 'https://www.amazon.com/dp/B0EXAMPLE?tag=PREP_TAG-20',
+        estimated_price_usd: 29.99,
+        importance_rating: 5
+      });
+      updateBadges();
+      renderEditor();
+      renderSim();
+    }
+
+    function deleteProduct(idx) {
+      if (confirm('Delete this product from catalog?')) {
+        appData.affiliate_gear.splice(idx, 1);
+        updateBadges();
+        renderEditor();
+        renderSim();
+      }
+    }
+
+    // 2. ARTICLES EDITOR
+    function renderArticlesEditor(container) {
+      const art = appData.articles.find(a => a.id === selectedArticleId) || appData.articles[0];
+      if (!art) {
+        container.innerHTML = '<p>No articles available.</p>';
+        return;
+      }
+
+      let html = `
+        <div class="section-toolbar">
+          <div>
+            <h2 style="font-size: 16px; font-weight: 800;">Articles &amp; Field Guides Editor</h2>
+            <p style="font-size: 12px; color: var(--text-muted);">Edit technical manuals, markdown instructions, and assigned schematics.</p>
+          </div>
+          <select class="input-select" style="width: 260px;" onchange="selectedArticleId = this.value; renderEditor(); renderSim();">
+            ${appData.articles.map(a => `<option value="${a.id}" ${a.id === art.id ? 'selected' : ''}>${a.title}</option>`).join('')}
+          </select>
+        </div>
+
+        <div class="item-card">
+          <div class="row-grid-2">
+            <div class="field-group">
+              <label>Article Title (English)</label>
+              <input class="input-text" type="text" value="${escapeHtml(art.title || '')}" oninput="art.title = this.value; renderSim();">
+            </div>
+            <div class="field-group">
+              <label>Priority Level</label>
+              <select class="input-select" onchange="art.priority_level = this.value; renderSim();">
+                <option value="CRITICAL" ${art.priority_level === 'CRITICAL' ? 'selected' : ''}>CRITICAL</option>
+                <option value="HIGH" ${art.priority_level === 'HIGH' ? 'selected' : ''}>HIGH</option>
+                <option value="NORMAL" ${art.priority_level === 'NORMAL' ? 'selected' : ''}>NORMAL</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row-grid-2">
+            <div class="field-group">
+              <label>Module Category</label>
+              <select class="input-select" onchange="art.category_id = this.value; renderSim();">
+                ${appData.categories.map(c => `<option value="${c.id}" ${c.id === art.category_id ? 'selected' : ''}>${c.name}</option>`).join('')}
+              </select>
+            </div>
+            <div class="field-group">
+              <label>Technical Diagram Asset (SVG)</label>
+              <select class="input-select" onchange="art.diagram_asset = this.value; renderSim();">
+                <option value="food_storage_bucket.svg" ${art.diagram_asset === 'food_storage_bucket.svg' ? 'selected' : ''}>food_storage_bucket.svg</option>
+                <option value="water_filtration.svg" ${art.diagram_asset === 'water_filtration.svg' ? 'selected' : ''}>water_filtration.svg</option>
+                <option value="nuclear_fallout_shelter.svg" ${art.diagram_asset === 'nuclear_fallout_shelter.svg' ? 'selected' : ''}>nuclear_fallout_shelter.svg</option>
+                <option value="urban_safety_triangles.svg" ${art.diagram_asset === 'urban_safety_triangles.svg' ? 'selected' : ''}>urban_safety_triangles.svg</option>
+                <option value="gray_man_tactics.svg" ${art.diagram_asset === 'gray_man_tactics.svg' ? 'selected' : ''}>gray_man_tactics.svg</option>
+                <option value="wilderness_shelter.svg" ${art.diagram_asset === 'wilderness_shelter.svg' ? 'selected' : ''}>wilderness_shelter.svg</option>
+                <option value="heirloom_seed_vault.svg" ${art.diagram_asset === 'heirloom_seed_vault.svg' ? 'selected' : ''}>heirloom_seed_vault.svg</option>
+                <option value="biogas_diagram.svg" ${art.diagram_asset === 'biogas_diagram.svg' ? 'selected' : ''}>biogas_diagram.svg</option>
+                <option value="tourniquet_application.svg" ${art.diagram_asset === 'tourniquet_application.svg' ? 'selected' : ''}>tourniquet_application.svg</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>Field Summary</label>
+            <textarea class="input-textarea" style="min-height: 60px;" oninput="art.summary = this.value; renderSim();">${escapeHtml(art.summary || '')}</textarea>
+          </div>
+
+          <div class="field-group">
+            <label>Operational Procedures (Markdown Content)</label>
+            <textarea class="input-textarea" style="min-height: 220px;" oninput="art.content_markdown = this.value; renderSim();">${escapeHtml(art.content_markdown || '')}</textarea>
+          </div>
+        </div>
+      `;
+
+      container.innerHTML = html;
+    }
+
+    // 3. CHECKLISTS EDITOR
+    function renderChecklistsEditor(container) {
+      let html = `
+        <div class="section-toolbar">
+          <div>
+            <h2 style="font-size: 16px; font-weight: 800;">Interactive Field Checklists</h2>
+            <p style="font-size: 12px; color: var(--text-muted);">Manage standard gear requirements, dosages, and quantities.</p>
+          </div>
+          <button class="btn-primary" onclick="addNewChecklist()">＋ Add Checklist Item</button>
+        </div>
+        <div class="card-list">
+      `;
+
+      (appData.checklists || []).forEach((chk, idx) => {
+        html += `
+          <div class="item-card">
+            <div class="item-card-header">
+              <div class="item-card-title">${escapeHtml(chk.title || 'Checklist Item')}</div>
+              <button class="btn-danger" onclick="deleteChecklist(${idx})">Delete</button>
+            </div>
+            <div class="row-grid-2">
+              <div class="field-group">
+                <label>Item Name / Title</label>
+                <input class="input-text" type="text" value="${escapeHtml(chk.title || '')}" oninput="appData.checklists[${idx}].title = this.value; renderSim();">
+              </div>
+              <div class="field-group">
+                <label>Assigned Article</label>
+                <select class="input-select" onchange="appData.checklists[${idx}].article_id = this.value; renderSim();">
+                  ${appData.articles.map(a => `<option value="${a.id}" ${chk.article_id === a.id ? 'selected' : ''}>${a.title}</option>`).join('')}
+                </select>
+              </div>
+            </div>
+            <div class="row-grid-2">
+              <div class="field-group">
+                <label>Quantity / Standard Formula</label>
+                <input class="input-text" type="text" value="${escapeHtml(chk.quantity_formula || '')}" oninput="appData.checklists[${idx}].quantity_formula = this.value; renderSim();">
+              </div>
+              <div class="field-group">
+                <label>Specification / Requirement Details</label>
+                <input class="input-text" type="text" value="${escapeHtml(chk.specification || '')}" oninput="appData.checklists[${idx}].specification = this.value; renderSim();">
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      html += `</div>`;
+      container.innerHTML = html;
+    }
+
+    function addNewChecklist() {
+      appData.checklists.push({
+        id: 'chk_' + Date.now(),
+        article_id: selectedArticleId,
+        title: 'New Emergency Requirement',
+        specification: 'Sealed airtight package standard',
+        quantity_formula: '1 unit per person',
+        is_mandatory: 1
+      });
+      updateBadges();
+      renderEditor();
+      renderSim();
+    }
+
+    function deleteChecklist(idx) {
+      if (confirm('Delete this checklist item?')) {
+        appData.checklists.splice(idx, 1);
+        updateBadges();
+        renderEditor();
+        renderSim();
+      }
+    }
+
+    // ==========================================
+    // RENDER RIGHT SIDE PHONE SIMULATOR
+    // ==========================================
+    function renderSim() {
+      const container = document.getElementById('simScreenContainer');
+      if (activeSimScreen === 'store') {
+        renderSimStore(container);
+      } else if (activeSimScreen === 'article') {
+        renderSimArticle(container);
+      } else if (activeSimScreen === 'home') {
+        renderSimHome(container);
+      }
+    }
+
+    // SIMULATOR: STORE
+    function renderSimStore(container) {
+      let html = `
+        <div style="background: rgba(78, 112, 85, 0.2); border: 1px solid #263242; border-radius: 8px; padding: 10px; margin-bottom: 8px;">
+          <div style="color: #2EA043; font-weight: 800; font-size: 11px;">CURATED FIELD GEAR SPEC SHEET</div>
+          <div style="color: #8B949E; font-size: 9px; margin-top: 3px;">All hardware specifications permanently cached on-device for offline review.</div>
+        </div>
+      `;
+
+      (appData.affiliate_gear || []).forEach(gear => {
+        html += `
+          <div class="sim-card">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+              <div style="font-weight: 800; font-size: 13px; line-height: 1.3; color: #F0F6FC;">
+                ${escapeHtml(gear.name || '')}
+              </div>
+              <span class="sim-badge sim-badge-green" style="font-size: 11px;">$${Number(gear.estimated_price_usd || 0).toFixed(2)}</span>
+            </div>
+            
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 6px;">
+              <span style="color: #D29922; font-size: 10px; font-weight: 700;">
+                ${'★'.repeat(gear.importance_rating || 5)} (${gear.importance_rating || 5}-Star Critical)
+              </span>
+              ${gear.amazon_asin ? `<span style="color: #6E7681; font-size: 9px;">ASIN: ${gear.amazon_asin}</span>` : ''}
+            </div>
+
+            <div style="color: #C9D1D9; font-size: 10px; line-height: 1.4; margin-top: 8px;">
+              ${escapeHtml(gear.spec_summary || '')}
+            </div>
+
+            <a class="sim-btn" href="${escapeHtml(gear.affiliate_url_template || '#')}" target="_blank">
+              🛒 Order / Check Price
+            </a>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    // SIMULATOR: ARTICLE DETAIL
+    function renderSimArticle(container) {
+      const art = appData.articles.find(a => a.id === selectedArticleId) || appData.articles[0];
+      if (!art) {
+        container.innerHTML = '<p style="color: #888;">No article selected.</p>';
+        return;
+      }
+
+      const pColor = art.priority_level === 'CRITICAL' ? 'sim-badge-danger' : 
+                     (art.priority_level === 'HIGH' ? 'sim-badge-amber' : 'sim-badge-green');
+
+      const matchingChecklists = (appData.checklists || []).filter(c => c.article_id === art.id);
+      const matchingGear = (appData.affiliate_gear || []).filter(g => g.article_id === art.id);
+
+      let html = `
+        <!-- Header -->
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <span class="sim-badge ${pColor}">PRIORITY: ${art.priority_level || 'NORMAL'}</span>
+            <span style="color: #2EA043; font-size: 9px; font-weight: 700;">OFFLINE CACHED ⚡</span>
+          </div>
+          <div style="font-size: 16px; font-weight: 800; color: #F0F6FC; line-height: 1.3;">
+            ${escapeHtml(art.title || '')}
+          </div>
+          <div style="background: #161B22; border-radius: 6px; padding: 8px; margin-top: 8px; font-size: 10px; color: #8B949E; line-height: 1.4;">
+            ${escapeHtml(art.summary || '')}
+          </div>
+        </div>
+
+        <!-- Technical SVG Diagram Preview -->
+        ${art.diagram_asset ? `
+          <div class="sim-card" style="padding: 10px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+              <span style="color: #58A6FF; font-size: 10px; font-weight: 700;">Technical Field Schematic (SVG):</span>
+              <span style="color: #8B949E; font-size: 9px;">${art.diagram_asset}</span>
+            </div>
+            <div style="background: #090D11; border-radius: 6px; border: 1px solid #263242; padding: 6px; display: flex; align-items: center; justify-content: center; height: 180px; overflow: hidden;">
+              <img src="/diagrams/${art.diagram_asset}" alt="${art.title}" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+            </div>
+          </div>
+        ` : ''}
+
+        <!-- Markdown Section -->
+        <div class="sim-card">
+          <div style="color: #D29922; font-size: 11px; font-weight: 800; margin-bottom: 6px;">FIELD OPERATIONAL PROCEDURES</div>
+          <div style="font-size: 10px; color: #F0F6FC; line-height: 1.5; white-space: pre-wrap; font-family: sans-serif;">
+${escapeHtml(art.content_markdown || '')}
+          </div>
+        </div>
+
+        <!-- Checklists -->
+        ${matchingChecklists.length > 0 ? `
+          <div>
+            <div style="color: #2EA043; font-size: 11px; font-weight: 800; margin-bottom: 6px;">FIELD READINESS CHECKLIST</div>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+              ${matchingChecklists.map(c => `
+                <div style="background: #161B22; border: 1px solid #30363D; border-radius: 6px; padding: 8px; display: flex; gap: 8px; align-items: center;">
+                  <span style="color: #2EA043; font-size: 14px;">☑</span>
+                  <div>
+                    <div style="font-size: 10px; font-weight: 700; color: #F0F6FC;">${escapeHtml(c.title)}</div>
+                    <div style="font-size: 9px; color: #8B949E;">${escapeHtml(c.specification || '')}</div>
+                    ${c.quantity_formula ? `<div style="font-size: 8px; color: #D29922;">Standard: ${escapeHtml(c.quantity_formula)}</div>` : ''}
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        <!-- Matching Gear -->
+        ${matchingGear.length > 0 ? `
+          <div>
+            <div style="color: #58A6FF; font-size: 11px; font-weight: 800; margin-bottom: 6px;">RECOMMENDED GEAR</div>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+              ${matchingGear.map(g => `
+                <div class="sim-card">
+                  <div style="display: flex; justify-content: space-between; font-size: 11px; font-weight: 700;">
+                    <span>${escapeHtml(g.name)}</span>
+                    <span style="color: #2EA043;">$${Number(g.estimated_price_usd || 0).toFixed(2)}</span>
+                  </div>
+                  <div style="font-size: 9px; color: #8B949E; margin-top: 4px;">${escapeHtml(g.spec_summary)}</div>
+                  <a class="sim-btn" href="${escapeHtml(g.affiliate_url_template || '#')}" target="_blank">Acquisition Link</a>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+      `;
+
+      container.innerHTML = html;
+    }
+
+    // SIMULATOR: HOME
+    function renderSimHome(container) {
+      let html = `
+        <div style="background: rgba(248, 81, 73, 0.15); border: 1px solid #F85149; border-radius: 8px; padding: 10px;">
+          <div style="font-size: 11px; font-weight: 800; color: #F85149;">🚨 TACTICAL EMERGENCY HUD</div>
+          <div style="font-size: 9px; color: #F0F6FC; margin-top: 2px;">Flashlight strobe, SOS Morse beacon &amp; immediate triage</div>
+        </div>
+
+        <div style="background: rgba(46, 160, 67, 0.15); border: 1px solid #2EA043; border-radius: 8px; padding: 10px; cursor: pointer;" onclick="switchSimScreen('store')">
+          <div style="font-size: 11px; font-weight: 800; color: #2EA043;">🛒 EMERGENCY GEAR STORE</div>
+          <div style="font-size: 9px; color: #F0F6FC; margin-top: 2px;">Curated offline specs for filters, CAT tourniquets &amp; supplies</div>
+        </div>
+
+        <div style="color: #D29922; font-size: 11px; font-weight: 800; margin-top: 6px;">TACTICAL READINESS MODULES</div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          ${(appData.categories || []).map(cat => `
+            <div class="sim-card" style="padding: 10px; display: flex; align-items: center; justify-content: space-between; cursor: pointer;" onclick="switchSimScreen('article')">
+              <div>
+                <div style="font-size: 11px; font-weight: 700; color: #F0F6FC;">${escapeHtml(cat.name)}</div>
+                <div style="font-size: 9px; color: #8B949E;">Offline Field Manual • Complete Protocol</div>
+              </div>
+              <span style="color: #6E7681; font-size: 12px;">›</span>
+            </div>
+          `).join('')}
+        </div>
+      `;
+      container.innerHTML = html;
+    }
+
+    // ==========================================
+    // SAVE ACTION
+    // ==========================================
+    async function saveAllContent() {
+      const btn = document.getElementById('btnSaveAll');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '⏳ Syncing Assets &amp; Rebuilding DB...';
+      btn.disabled = true;
+
+      try {
+        const res = await fetch('/api/save', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(appData)
+        });
+        const result = await res.json();
+        if (result.status === 'success') {
+          showToast('App Assets & Room DB Updated Successfully!');
+        } else {
+          alert('Save failed: ' + result.message);
+        }
+      } catch (err) {
+        alert('Connection error while saving: ' + err.message);
+      } finally {
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toastNotification');
+      document.getElementById('toastMessage').innerText = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3500);
+    }
+
+    function escapeHtml(text) {
+      if (typeof text !== 'string') return text;
+      return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    // Launch
+    loadData();
+  </script>
+</body>
+</html>

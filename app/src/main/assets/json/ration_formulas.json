@@ -1,0 +1,19 @@
+{
+  "engine_name": "DynamicSurvivalRationCalculator",
+  "version": "1.0.0",
+  "parameters": {
+    "adult_water_liters_day": 3.5,
+    "child_water_liters_day": 2.2,
+    "adult_calories_day": 2200,
+    "child_calories_day": 1500,
+    "daily_breakdown_grams": {
+      "white_rice": 250,
+      "dry_beans_lentils": 120,
+      "rolled_oats": 80,
+      "cooking_oil": 30,
+      "iodized_or_rock_salt": 10,
+      "sugar_or_honey": 35
+    }
+  },
+  "formula_logic": "TotalRequirement(item) = persons_count * daily_grams(item) * days_duration / 1000 [kg]"
+}

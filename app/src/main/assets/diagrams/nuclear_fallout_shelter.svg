@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" width="100%" height="100%">
+  <rect width="700" height="700" fill="#121212"/>
+  <text x="350" y="45" fill="#FACC15" font-size="22" font-family="sans-serif" font-weight="bold" text-anchor="middle">NUCLEAR FALLOUT SHIELDING COEFFICIENT</text>
+  <text x="350" y="70" fill="#FEF08A" font-size="14" font-family="sans-serif" text-anchor="middle">Radiation Protection Factor (PF) by Shelter Architecture</text>
+
+  <!-- Ground surface -->
+  <rect x="40" y="170" width="620" height="15" fill="#78350F"/>
+  <text x="640" y="160" fill="#A16207" font-size="13" font-family="sans-serif" font-weight="bold" text-anchor="end">Ground Surface (Fallout Accumulation Layer)</text>
+
+  <!-- Above Ground Danger Zone -->
+  <circle cx="120" cy="110" r="30" fill="#EAB308" opacity="0.25"/>
+  <text x="120" y="115" fill="#FACC15" font-size="13" font-weight="bold" font-family="sans-serif" text-anchor="middle">100% EXPOSURE</text>
+
+  <!-- Wood Frame House (PF = 2-3) -->
+  <g transform="translate(60, 210)">
+    <rect width="160" height="150" rx="4" fill="#451A03" stroke="#9A3412" stroke-width="2"/>
+    <text x="80" y="50" fill="#FFFFFF" font-size="15" font-weight="bold" font-family="sans-serif" text-anchor="middle">Wood House</text>
+    <text x="80" y="80" fill="#F87171" font-size="13" font-weight="bold" font-family="sans-serif" text-anchor="middle">Shields: ~50%</text>
+    <text x="80" y="110" fill="#FECACA" font-size="11" font-family="sans-serif" text-anchor="middle">Dose Rate: 1/2</text>
+    <text x="80" y="130" fill="#FCA5A5" font-size="11" font-family="sans-serif" text-anchor="middle">POOR SHIELDING</text>
+  </g>
+
+  <!-- Brick / Concrete Residential (PF = 10) -->
+  <g transform="translate(260, 210)">
+    <rect width="180" height="180" rx="4" fill="#1E293B" stroke="#64748B" stroke-width="2"/>
+    <text x="90" y="55" fill="#FFFFFF" font-size="15" font-weight="bold" font-family="sans-serif" text-anchor="middle">Masonry / Brick</text>
+    <text x="90" y="85" fill="#38BDF8" font-size="13" font-weight="bold" font-family="sans-serif" text-anchor="middle">Shields: ~90%</text>
+    <text x="90" y="115" fill="#BAE6FD" font-size="11" font-family="sans-serif" text-anchor="middle">Dose Rate: 1/10</text>
+    <text x="90" y="145" fill="#7DD3FC" font-size="11" font-family="sans-serif" text-anchor="middle">MODERATE DEFENSE</text>
+  </g>
+
+  <!-- Subterranean Concrete Basement (PF = 100+) -->
+  <g transform="translate(480, 260)">
+    <rect width="170" height="260" rx="6" fill="#052E16" stroke="#22C55E" stroke-width="3"/>
+    <text x="85" y="70" fill="#4ADE80" font-size="16" font-weight="bold" font-family="sans-serif" text-anchor="middle">Underground</text>
+    <text x="85" y="95" fill="#4ADE80" font-size="16" font-weight="bold" font-family="sans-serif" text-anchor="middle">Basement</text>
+    <text x="85" y="140" fill="#FFFFFF" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">Shields: 99.9%+</text>
+    <text x="85" y="170" fill="#BBF7D0" font-size="12" font-family="sans-serif" text-anchor="middle">Dose Rate: &lt;1/100</text>
+    <text x="85" y="210" fill="#86EFAC" font-size="12" font-family="sans-serif" text-anchor="middle">CRITICAL REFUGE</text>
+    <text x="85" y="230" fill="#FFFFFF" font-size="11" font-family="sans-serif" text-anchor="middle">First 48-72 Hours</text>
+  </g>
+
+  <!-- Radiation decay note -->
+  <rect x="50" y="580" width="600" height="80" rx="8" fill="#1C1917" stroke="#44403C" stroke-width="2"/>
+  <text x="350" y="610" fill="#FACC15" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">RULE OF 7/10: Radiation drops 10x for every 7-fold increase in time</text>
+  <text x="350" y="635" fill="#E7E5E4" font-size="12" font-family="sans-serif" text-anchor="middle">7 Hours = 1/10th dose | 49 Hours = 1/100th dose | 2 Weeks = 1/1000th dose</text>
+</svg>

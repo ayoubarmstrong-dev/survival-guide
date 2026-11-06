@@ -1,0 +1,308 @@
+{
+  "metadata": {
+    "app_name": "Aegis Survival: Ready & Rebuild",
+    "language": "en",
+    "version": "1.0.0",
+    "generated_for": "Antigravity Project Integration"
+  },
+  "categories": [
+    {
+      "id": "pre_disaster",
+      "name": "Pre-Disaster & Readiness",
+      "icon_name": "ic_shield_check",
+      "sort_order": 1
+    },
+    {
+      "id": "post_disaster",
+      "name": "Post-Disaster Protocols",
+      "icon_name": "ic_alert_triangle",
+      "sort_order": 2
+    },
+    {
+      "id": "biomes_survival",
+      "name": "Survival by Biome",
+      "icon_name": "ic_compass",
+      "sort_order": 3
+    },
+    {
+      "id": "rebuilding_civ",
+      "name": "Rebuilding Civilization",
+      "icon_name": "ic_anvil",
+      "sort_order": 4
+    },
+    {
+      "id": "emergency_hud",
+      "name": "Tactical Emergency HUD",
+      "icon_name": "ic_flashlight",
+      "sort_order": 5
+    }
+  ],
+  "articles": [
+    {
+      "id": "art_food_storage",
+      "category_id": "pre_disaster",
+      "title": "Long-Term Food Storage (The 90-Day Rule)",
+      "summary": "Non-refrigerated dry food storage strategy, caloric rationing, and shelf-life preservation.",
+      "priority_level": "HIGH",
+      "diagram_asset": "food_storage_bucket.svg",
+      "content_markdown": "### Long-Term Strategic Food Reserve (FEMA & WHO Nutrition Doctrine)\nWhen modern electrical grids and municipal supply chains fail, strategic survival relies strictly on non-perishable, low-moisture (<10%) nutrient-dense staples.\n\n#### 1. WHO & FEMA Daily Caloric Baselines:\n* **Base Sedentary Survival:** **2,100 kcal per person per day** (sheltered adult baseline).\n* **Heavy Manual Labor & Freezing Weather:** **2,400 to 2,800 kcal per person per day** (debris clearing, patrol, structural repairs).\n* **Strategic Macronutrient Balance:**\n  * **Carbohydrates (55%–60%):** White rice, rolled oats, hard red wheat (stable glycogen maintenance).\n  * **Proteins (15%–20%):** Dried pinto beans, lentils, chickpeas, freeze-dried meats.\n  * **Lipids / Fats (25%–30%):** Coconut oil, canned ghee, peanut butter (dense 9 kcal/gram energy).\n\n#### 2. Professional Packaging Protocol (Mylar + Oxygen Scavengers):\n1. **Pail Setup:** Use food-grade 5-gallon (20-liter) HDPE plastic containers.\n2. **Heavy-Duty Barrier:** Insert a 7-mil aluminum-laminated Mylar bag (moisture and oxygen transmission rate < 0.001 cc/m²/day).\n3. **Fill Density:** Fill dry grains to within 2 inches of the rim.\n4. **Oxygen Scavenging:** Drop a **2,000cc iron-based oxygen absorber** into the top layer immediately before heat sealing. Absorbs up to 400 mL of residual gaseous oxygen, bringing chamber levels below 0.1% to eliminate insect larvae and lipid rancidity.\n5. **Hermetic Heat Seal:** Seal bag lip using a 375°F (190°C) iron, leaving a 1-inch vent to expel remaining air before final closure.\n6. **Contingency Evacuation (72-Hour Grab Kits):** Maintain ready-to-eat freeze-dried meal pouches (e.g. ReadyWise 72-Hour Kits) providing instant 1,800+ kcal/day without requiring cooking fuel."
+    },
+    {
+      "id": "art_water_purification",
+      "category_id": "pre_disaster",
+      "title": "Emergency Water Procurement & Multi-Stage Filtration",
+      "summary": "Field filtration, chemical treatment, boiling protocols, and daily per-capita requirements.",
+      "priority_level": "CRITICAL",
+      "diagram_asset": "water_filtration.svg",
+      "content_markdown": "### Emergency Hydration Standards (WHO & FEMA Protocols)\nThe human body can survive no longer than 3 days without potable water. The non-negotiable operational baseline is **3.5 to 4.0 liters per person per day** (2.0 liters for metabolic hydration, 1.5 to 2.0 liters for medical rehydration and sanitation).\n\n#### 1. Multi-Stage Water Purification Sequence:\n1. **Sediment Pre-Filtration:** Clarify turbid water by passing it through tightly folded cloth or cotton bandannas to remove suspended debris, silt, and macro-parasites.\n2. **0.1 Micron Hollow-Fiber Microfiltration (Sawyer MINI Protocol):**\n   * Forces water through U-shaped micro-tubes with absolute 0.1-micron pores.\n   * Eliminates 99.99999% of pathogenic bacteria (*E. coli*, *Salmonella*, *Vibrio cholerae*) and 99.9999% of protozoan cysts (*Giardia lamblia*, *Cryptosporidium*).\n   * Note: Microfilters do not eliminate dissolved heavy metals, chemical agro-toxins, or viral particles (requires secondary disinfection).\n3. **Bio-Sand & Hardwood Activated Charcoal Filtration:** Layer fine silica sand (10 cm), crushed hardwood activated charcoal (5 cm for pesticide and odor adsorption), and coarse quartz gravel.\n\n#### 2. Chemical Disinfection & Dosages (FEMA & CDC Standards):\n* **FEMA Unscented Household Bleach (5%–6% Sodium Hypochlorite):**\n  * **Clear Water:** Add **8 drops** per gallon (or **2 drops per liter** / approx. 0.5 mL).\n  * **Turbid / Cold Water:** Add **16 drops** per gallon (or **4 drops per liter** / approx. 1.0 mL).\n  * **Reaction Window:** Agitate thoroughly and leave undisturbed for **exactly 30 minutes**. A faint chlorine odor must be detectable. If absent, repeat the exact dosage and wait an additional **15 minutes**.\n* **EPA / WHO Sodium Dichloroisocyanurate (NaDCC - Aquatabs 49mg):**\n  * Dissolve **1 tablet per 1 to 2 liters** of clear water.\n  * Wait **30 minutes** before consumption to achieve a 99.99% log-4 reduction of waterborne viruses and bacteria.\n* **Thermal Disinfection (Rolling Boil):**\n  * Maintain a vigorous rolling boil for **1 full minute** at sea level.\n  * Maintain for **3 full minutes** at elevations exceeding 2,000 meters (6,500 feet)."
+    },
+    {
+      "id": "art_nuclear_war",
+      "category_id": "post_disaster",
+      "title": "Nuclear Detonation & Radioactive Fallout Protocol",
+      "summary": "Immediate flash action, the 7/10 radiation decay rule, and subterranean sheltering.",
+      "priority_level": "CRITICAL",
+      "diagram_asset": "nuclear_fallout_shelter.svg",
+      "content_markdown": "### CBRN Defense: Nuclear Detonation & Ionizing Fallout Protocol\nFollowing a tactical or strategic nuclear surface burst, particulate fallout descending downwind between 15 minutes and 2 hours represents the primary fatal hazard for non-blast survivors.\n\n#### 1. Immediate Flash & Blast Reaction:\n* **Never look at the fireball:** Instantaneous retinal thermal burns and flash blindness occur at up to 50 miles.\n* **Immediate Prone Dive:** Drop flat behind reinforced masonry or earth depressions, facing away from the epicenter. Cover head and neck, tuck thumbs into ears, and keep mouth open to equalize atmospheric overpressure across eardrums.\n\n#### 2. The Exponential 7/10 Rule of Radiation Decay:\nFallout fission products decay exponentially following the formula: **$R_t = R_1 \\times t^{-1.2}$**. For every 7-fold increase in elapsed time, radiological exposure decreases by a factor of 10:\n* **Hour 1 ($t = 1$ hr):** Peak baseline exposure rate $R_1$ (e.g., lethal 100 R/hr).\n* **Hour 7 ($t = 7$ hr):** Radiation rate drops to **$1/10$** of baseline (10 R/hr).\n* **Hour 49 (~2 days, $7 \\times 7$ hr):** Radiation drops to **$1/100$** of baseline (1 R/hr) — brief mission-critical exterior sorties permissible.\n* **Hour 343 (~2 weeks, $7 \\times 49$ hr):** Radiation drops to **$1/1,000$** of baseline (0.1 R/hr) — standard civil shelter egress threshold.\n\n#### 3. Radiation Shielding & Halving-Thickness Values:\nTo cut gamma and neutron dose rates in half, establish barriers meeting these minimum thickness thresholds:\n* **Lead ($Pb$):** 1.0 cm (0.4 inches)\n* **Structural Steel:** 2.5 cm (1.0 inch)\n* **Poured Solid Concrete:** 6.0 cm (2.4 inches)\n* **Packed Earth / Sand:** 9.0 cm (3.6 inches)\n* **Water:** 18.0 cm (7.2 inches)\n* *Doctrine:* Subterranean basements with 2 feet of concrete/earth overhead provide a Protection Factor (PF) of 40 to 100+.\n\n#### 4. FDA Potassium Iodide (iOSAT KI) Dosage Protocol:\nAdminister **only** upon emergency broadcast alert of approaching radioiodine ($^{131}\\text{I}$) fallout plume. Saturates the thyroid gland to prevent radioactive isotope absorption:\n* **Adults (18+ years) & Pregnant/Lactating:** **130 mg** (1 full tablet) once daily.\n* **Children (3 to 18 years, < 150 lbs):** **65 mg** (1/2 tablet) once daily.\n* **Infants & Toddlers (1 month to 3 years):** **32 mg** (1/4 tablet) once daily.\n* **Neonates (Birth to 1 month):** **16 mg** single dose dissolved in liquid.\n* *Critical Medical Notice:* KI protects **only** against thyroid cancer from ingested/inhaled $^{131}\\text{I}$. It offers zero protection against external penetrating gamma or neutron radiation."
+    },
+    {
+      "id": "art_urban_combat_earthquake",
+      "category_id": "post_disaster",
+      "title": "Urban Shelling, Artillery & Structural Collapse",
+      "summary": "Structural shelter architecture, post-blast rubble survival, and acoustic signaling.",
+      "priority_level": "HIGH",
+      "diagram_asset": "urban_safety_triangles.svg",
+      "content_markdown": "### Structural Collapse & TCCC Massive Hemorrhage Doctrine\nDuring urban artillery bombardment and structural earthquakes, blunt trauma, blast shrapnel, and arterial exsanguination account for over 85% of preventable field mortalities.\n\n#### 1. Tactical Combat Casualty Care (TCCC) - MARCH Protocol:\n* **M - Massive Hemorrhage Control (Under 60 Seconds):**\n  * **Arterial Limb Bleeding:** Immediately apply a genuine **Combat Application Tourniquet (CAT Gen 7)** directly over bare skin 2 to 3 inches above the wound (or \"high and tight\" in low-visibility combat environments).\n  * **Windlass Tightening:** Rotate the rigid windlass rod until bright red pulsatile bleeding ceases completely AND distal pulse is palpably absent. Secure the rod within the windlass clip.\n  * **Mandatory Timestamping:** Write the exact time of application directly onto the white writeable time-strap using permanent marker (**TIME: HH:MM**).\n  * **Golden Rule:** **NEVER loosen, release, or intermittently cycle a tourniquet** in the field. Safe window is up to 2 hours. Release must be performed exclusively by surgical trauma personnel to prevent fatal reperfusion acidosis, hyperkalemia, and shock.\n  * **Junctional Hemorrhage (Groin / Armpit / Neck):** Tourniquets cannot occlude junctional vessels. Firmly pack the cavity with **QuikClot Kaolin Hemostatic Gauze** directly against the hemorrhaging vessel. Maintain continuous direct manual pressure for **3 full minutes** before applying a pressure bandage.\n* **A - Airway Management:** Clear rubble and blood; position unconscious casualties in the lateral recovery position.\n* **R - Respiration:** Seal sucking chest wounds immediately with vented chest seals.\n* **C - Circulation:** Reassess tourniquets and distal extremity perfusion.\n* **H - Hypothermia Prevention:** Prevent the lethal trauma triad (hypothermia, coagulopathy, acidosis). Encase the casualty in an aluminized **Swiss Safe Mylar Thermal Blanket** to conserve metabolic heat immediately, even in warm environments.\n\n#### 2. Structural Void Geometry & Rubble Entrapment:\n* **Survival Triangles:** Lie adjacent to reinforced load-bearing concrete pillars or heavy solid-wood furniture. Avoid door frames and center spans.\n* **Dust Mitigation:** Filter air through damp cloth to avoid lethal acute silica/pulverized concrete lung trauma.\n* **Acoustic Rescue Signaling:** Conserve vocal energy; strike metal structural rebar or plumbing pipes with stones in **3 distinct rhythmic pulses every 60 seconds** to trigger rescue seismic geophones."
+    },
+    {
+      "id": "art_urban_grayman",
+      "category_id": "biomes_survival",
+      "title": "Urban Survival & The 'Gray Man' Doctrine",
+      "summary": "Civil breakdown mobility, low-signature navigation, and covert water harvesting.",
+      "priority_level": "HIGH",
+      "diagram_asset": "gray_man_tactics.svg",
+      "content_markdown": "### Operating in Collapsed Municipal Environments\nDuring prolonged civil collapse, drawing attention is fatal. Overt tactical equipment (camo fatigues, military plate carriers, tactical packs) signals resource possession and invites targeted ambush.\n\n#### 1. Core Principles of Low-Signature Movement (The Gray Man):\n* Wear nondescript, weathered everyday apparel in neutral tones (gray, navy, worn denim, muted brown).\n* Conceal survival gear inside standard urban daypacks (school or commuter bags), avoiding MOLLE webbing systems.\n* Walk along building peripheries and shadowed margins; avoid crossing open intersections or public squares during daylight.\n\n#### 2. Urban Resource Extraction:\n* Residential and commercial water heaters (hot water tanks) hold 40 to 120 gallons of potable water accessible via the bottom drain valve even after municipal pressure fails.\n* Commercial building roof tanks frequently hold filtered reserves; access via internal service ladders."
+    },
+    {
+      "id": "art_forest_wilderness",
+      "category_id": "biomes_survival",
+      "title": "Wilderness Survival: Shelter, Friction Fire & Foraging",
+      "summary": "The Rule of 3s, debris hut insulation, and the universal plant edibility test.",
+      "priority_level": "NORMAL",
+      "diagram_asset": "wilderness_shelter.svg",
+      "content_markdown": "### Wilderness Survival Priorities (The Rule of 3s)\n* 3 Minutes without oxygen.\n* 3 Hours without regulated thermal core shelter in harsh weather (hypothermia is the primary wilderness killer).\n* 3 Days without water.\n* 3 Weeks without food.\n\n#### 1. Thermal Insulation & Debris Huts:\n* Never sleep directly on bare ground; conductive ground contact drains core body temperature rapidly.\n* Construct an insulating bedding layer of dry leaves, pine needles, and brush at least 30 cm (12 inches) thick before laying down.\n* Form a low-profile A-frame structure piled with 60 cm of dry forest debris to trap body heat naturally.\n\n#### 2. Universal Edibility Testing for Unknown Vegetation:\n* Test one specific plant part (leaf, root, or stem) at a time.\n* Rub crushed plant matter against the sensitive inside skin of the wrist; wait 15 minutes for rash or burning.\n* Touch a trace amount to the outer lip for 15 minutes.\n* Place a small sample on the tongue without chewing or swallowing; spit out immediately if intense bitterness, burning, or soapy tastes occur."
+    },
+    {
+      "id": "art_heirloom_agriculture",
+      "category_id": "rebuilding_civ",
+      "title": "Sustainable Agriculture & Heirloom Seed Preservation",
+      "summary": "Non-hybrid seed vaults, soil regeneration, and petrochemical-free crop cycling.",
+      "priority_level": "NORMAL",
+      "diagram_asset": "heirloom_seed_vault.svg",
+      "content_markdown": "### Securing Multi-Year Post-Crisis Nutrition\nCommercial agricultural seeds (F1 Hybrids) produce sterile or genetically unstable second-generation crops. Post-crisis survival hinges exclusively on Heirloom (Open-Pollinated, Non-GMO) seed varieties.\n\n#### 1. Long-Term Seed Vault Maintenance:\n* Dry harvested seeds until they shatter rather than bend (moisture content below 8%).\n* Seal inside airtight glass mason jars with crushed charcoal packets to absorb ambient humidity; store subterraneanly at stable temperatures below 10°C (50°F).\n\n#### 2. Biological Soil Regeneration:\n* Maintain hot compost piles: 2 parts carbon-rich brown material (straw, dry foliage) to 1 part nitrogen-rich green matter (crop trimmings, safe manure).\n* Implement nitrogen-fixing crop rotation (legumes, clover, field peas) alternating with caloric grains to preserve topsoil viability without industrial fertilizers."
+    },
+    {
+      "id": "art_offgrid_energy_mechanical",
+      "category_id": "rebuilding_civ",
+      "title": "Off-Grid Energy Generation & Anaerobic Biogas",
+      "summary": "Methane generation from biological waste and mechanical alternator conversion.",
+      "priority_level": "NORMAL",
+      "diagram_asset": "biogas_diagram.svg",
+      "content_markdown": "### Decentralized Energy Production\nIn post-grid civilization, electrical generation is utilized for high-utility tasks: radio communications, ultraviolet water sterilizers, and perimeter security lighting.\n\n#### 1. Continuous Anaerobic Biogas Digesters:\n* Inoculate a sealed 55-gallon drum with equal parts organic waste and water (slurry consistency).\n* Anaerobic bacteria break down cellulose, generating combustible methane (CH4) gas within 14 to 21 days at ambient temperatures between 25°C and 35°C.\n* Filter raw gas through steel wool (iron shavings) to scrub corrosive and toxic hydrogen sulfide (H2S) prior to cooking burner intake.\n\n#### 2. Mechanical Hydro and Wind Dynamos:\n* Standard 12-volt automotive alternators can be driven by small stream waterwheels or geared bicycle pedals to maintain 12V deep-cycle battery banks continuously."
+    }
+  ],
+  "checklists": [
+    {
+      "id": "chk_1",
+      "article_id": "art_food_storage",
+      "title": "Dry Staple Reserve - Polished White Rice",
+      "specification": "White rice sealed in 5-gallon Mylar bags with 2000cc O2 scavengers",
+      "quantity_formula": "15 kg per person / month",
+      "is_mandatory": 1
+    },
+    {
+      "id": "chk_2",
+      "article_id": "art_food_storage",
+      "title": "Protein Reserve - Dried Legumes",
+      "specification": "Mixed dry lentils, chickpeas, and black beans",
+      "quantity_formula": "8 kg per person / month",
+      "is_mandatory": 1
+    },
+    {
+      "id": "chk_3",
+      "article_id": "art_food_storage",
+      "title": "Preservative & Electrolytes - Mineral Rock Salt",
+      "specification": "Coarse non-iodized mineral salt for food preservation",
+      "quantity_formula": "1 kg per person / 3 months",
+      "is_mandatory": 1
+    },
+    {
+      "id": "chk_4",
+      "article_id": "art_water_purification",
+      "title": "Sub-Micron Portable Water Purifier",
+      "specification": "Sawyer MINI or LifeStraw (0.1 micron absolute hollow fiber)",
+      "quantity_formula": "1 unit per person minimum",
+      "is_mandatory": 1
+    },
+    {
+      "id": "chk_5",
+      "article_id": "art_water_purification",
+      "title": "Chemical Water Disinfection Tablets",
+      "specification": "Sodium Dichloroisocyanurate (NaDCC) emergency water tablets",
+      "quantity_formula": "100 tablets per household",
+      "is_mandatory": 1
+    },
+    {
+      "id": "chk_6",
+      "article_id": "art_nuclear_war",
+      "title": "Thyroid Radiation Shield - Potassium Iodide",
+      "specification": "iOSAT Potassium Iodide (130mg pharmaceutical grade)",
+      "quantity_formula": "14-day supply per person",
+      "is_mandatory": 1
+    },
+    {
+      "id": "chk_7",
+      "article_id": "art_nuclear_war",
+      "title": "Emergency Crank Radio & Power Bank",
+      "specification": "Solar/Hand-crank radio with AM/FM/SW bands and 5000mAh battery",
+      "quantity_formula": "1 unit per household",
+      "is_mandatory": 1
+    },
+    {
+      "id": "chk_8",
+      "article_id": "art_urban_combat_earthquake",
+      "title": "Hands-Free Tactical Headlamp",
+      "specification": "Waterproof LED headlamp with white and red night-vision modes",
+      "quantity_formula": "1 unit per person + extra lithium cells",
+      "is_mandatory": 1
+    },
+    {
+      "id": "chk_9",
+      "article_id": "art_urban_combat_earthquake",
+      "title": "Combat Application Tourniquet (CAT)",
+      "specification": "Authentic CAT Gen 7 or SOFTT-W tourniquet",
+      "quantity_formula": "2 units per individual IFAK",
+      "is_mandatory": 1
+    }
+  ],
+  "affiliate_gear": [
+    {
+      "id": "gear_sawyer_mini",
+      "article_id": "art_water_purification",
+      "name": "Sawyer Products MINI Water Filtration System",
+      "spec_summary": "0.1 Micron absolute hollow fiber membrane filter rated for up to 100,000 gallons. Eliminates 99.99999% of bacteria (Salmonella, Cholera, E. coli) and 99.9999% of protozoa (Giardia, Cryptosporidium). Weight: 2 oz.",
+      "offline_specs": "0.1 Micron Absolute Hollow Fiber Membrane | 100,000 Gallon Lifespan | Weight: 2 oz (57g) | Exceeds EPA drinking water standards | Includes 16oz squeeze pouch & cleaning plunger.",
+      "amazon_asin": "B00FA2RLX2",
+      "affiliate_url_template": "https://www.amazon.com/dp/B00FA2RLX2?tag=aegissurvival-20",
+      "estimated_price_usd": 24.95,
+      "importance_rating": 5
+    },
+    {
+      "id": "gear_aquatabs_tablets",
+      "article_id": "art_water_purification",
+      "name": "Aquatabs 49mg Water Purification Tablets (100-Pack)",
+      "spec_summary": "US EPA-registered effervescent water disinfectant (NaDCC). Destroys 99.9999% of bacteria, 99.99% of viruses, and 99.9% of cysts. Treats 1 to 2 liters per tablet within 30 minutes. 5-year hermetic foil shelf life.",
+      "offline_specs": "Active Ingredient: Sodium Dichloroisocyanurate (NaDCC 49mg) | Quantity: 100 foil-wrapped tablets | Dosage: 1 tab per 1-2L (turbid) or 4L (clear) | Reaction Time: 30 minutes | WHO / EPA compliant.",
+      "amazon_asin": "B00T72BFM6",
+      "affiliate_url_template": "https://www.amazon.com/dp/B00T72BFM6?tag=aegissurvival-20",
+      "estimated_price_usd": 13.99,
+      "importance_rating": 5
+    },
+    {
+      "id": "gear_cat_tourniquet",
+      "article_id": "art_urban_combat_earthquake",
+      "name": "North American Rescue Combat Application Tourniquet (CAT Gen 7)",
+      "spec_summary": "Official CoTCCC-recommended arterial occlusion tourniquet. Engineered with a single-routing buckle, high-strength windlass rod, and dedicated white time-strap to halt life-threatening limb hemorrhage in under 60 seconds.",
+      "offline_specs": "Windlass Arterial Occlusion System | Official CoTCCC Approved | White Writeable Time Strap (TIME: HH:MM) | Weight: 2.9 oz | True one-handed operational deployment.",
+      "amazon_asin": "B01ITAKG6A",
+      "affiliate_url_template": "https://www.amazon.com/dp/B01ITAKG6A?tag=aegissurvival-20",
+      "estimated_price_usd": 29.99,
+      "importance_rating": 5
+    },
+    {
+      "id": "gear_quikclot_gauze",
+      "article_id": "art_urban_combat_earthquake",
+      "name": "QuikClot Advanced Clotting Gauze (3 in x 24 in, 2-Pack)",
+      "spec_summary": "Kaolin-infused z-folded hemostatic gauze engineered to accelerate the natural clotting cascade without generating exothermic heat. Designed for deep wound packing in junctional groin and axillary trauma.",
+      "offline_specs": "Active Agent: Inert Inorganic Kaolin | Size: 3 in x 24 in (7.6 cm x 61 cm) Z-Fold | Compression Time: 3 minutes direct manual pressure | Non-allergenic, non-exothermic | Vacuum sealed.",
+      "amazon_asin": "B00HJTH506",
+      "affiliate_url_template": "https://www.amazon.com/dp/B00HJTH506?tag=aegissurvival-20",
+      "estimated_price_usd": 19.99,
+      "importance_rating": 5
+    },
+    {
+      "id": "gear_crank_radio",
+      "article_id": "art_nuclear_war",
+      "name": "Emergency Hand Crank Solar Radio with NOAA/AM/FM & Flashlight",
+      "spec_summary": "Autonomous multi-band emergency communications receiver featuring NOAA weather alerts, hand-crank dynamo, solar charging cell, 5,000mAh device power bank, and 3-mode LED tactical flashlight.",
+      "offline_specs": "Bands: NOAA Weather (7 channels auto-alert), AM (520-1710 KHz), FM (87-108 MHz) | Power: Dynamo Crank, Solar, USB-C, 5000mAh Battery | 3W LED Flashlight & SOS Siren.",
+      "amazon_asin": "B08CZFWJVT",
+      "affiliate_url_template": "https://www.amazon.com/dp/B08CZFWJVT?tag=aegissurvival-20",
+      "estimated_price_usd": 35.5,
+      "importance_rating": 4
+    },
+    {
+      "id": "gear_potassium_iodide",
+      "article_id": "art_nuclear_war",
+      "name": "iOSAT Potassium Iodide Tablets 130 mg (14-Count Pack)",
+      "spec_summary": "FDA-approved thyroid blocking agent preventing internal absorption of radioactive iodine-131 downwind of nuclear detonation or reactor breach. Single daily adult dosage provides full 24-hour thyroid saturation.",
+      "offline_specs": "Dosage: 130 mg Potassium Iodide per tablet (FDA NDA 18-664) | Adult Dose: 1 tablet daily (130 mg) | Pediatric Dose: 65 mg (3-18 yrs), 32 mg (1 mo-3 yrs) | Shelf Life: 10+ years hermetic foil.",
+      "amazon_asin": "B000068336",
+      "affiliate_url_template": "https://www.amazon.com/dp/B000068336?tag=aegissurvival-20",
+      "estimated_price_usd": 14.99,
+      "importance_rating": 5
+    },
+    {
+      "id": "gear_mylar_bags",
+      "article_id": "art_food_storage",
+      "name": "5-Gallon Mylar Food Storage Bags (7-Mil Thick) + 2000cc Absorbers",
+      "spec_summary": "Military-grade puncture-resistant 7-mil aluminum-laminated barrier bags paired with high-capacity 2,000cc oxygen absorbers. Guarantees zero oxygen transmission (OTR < 0.001) for 25+ year food stability.",
+      "offline_specs": "Thickness: 7 Mil (180 microns) heavy-duty aluminum barrier | Dimensions: 19.5 x 28.5 inches | Oxygen Absorbers: 2,000cc iron-based scavengers | Target Residual O2: < 0.1% | Heat sealable at 375°F.",
+      "amazon_asin": "B089CVRPK3",
+      "affiliate_url_template": "https://www.amazon.com/dp/B089CVRPK3?tag=aegissurvival-20",
+      "estimated_price_usd": 39.99,
+      "importance_rating": 5
+    },
+    {
+      "id": "gear_readywise_72h_kit",
+      "article_id": "art_food_storage",
+      "name": "ReadyWise Emergency Food Supply 72-Hour Survival Kit (32 Servings)",
+      "spec_summary": "Nutrient-dense emergency ration bucket providing 32 servings of freeze-dried and dehydrated meals. Delivers approx. 1,800–2,000 kcal per day for 72 hours. Stackable, grab-and-go water-resistant container with 25-year shelf life.",
+      "offline_specs": "Servings: 32 Total Servings | Caloric Delivery: ~1,800 - 2,000 kcal/day | Preparation: Just add hot or room-temp water | Shelf Life: 25 Years unopened | Grab-and-go waterproof bucket.",
+      "amazon_asin": "B00G8S15B6",
+      "affiliate_url_template": "https://www.amazon.com/dp/B00G8S15B6?tag=aegissurvival-20",
+      "estimated_price_usd": 38.99,
+      "importance_rating": 4
+    },
+    {
+      "id": "gear_swiss_safe_blanket",
+      "article_id": "art_forest_wilderness",
+      "name": "Swiss Safe Emergency Mylar Thermal Blankets (Dual-Sided, 4-Pack)",
+      "spec_summary": "Dual-sided aluminized space blankets engineered to reflect up to 90% of radiated body heat. Essential for preventing hypothermia in traumatic shock victims, extreme wilderness bivouacs, and emergency shelter insulation.",
+      "offline_specs": "Material: Dual-Sided 12-Micron Metalized Polyethylene Mylar | Dimensions: 52 x 82 inches (132 x 208 cm) | Thermal Retention: 90% body heat reflection | Weight: 2 oz each | Hazard orange backing.",
+      "amazon_asin": "B01BW4KWW8",
+      "affiliate_url_template": "https://www.amazon.com/dp/B01BW4KWW8?tag=aegissurvival-20",
+      "estimated_price_usd": 12.99,
+      "importance_rating": 5
+    }
+  ],
+  "ration_formulas": {
+    "engine_name": "DynamicSurvivalRationCalculator",
+    "version": "1.0.0",
+    "parameters": {
+      "adult_water_liters_day": 3.5,
+      "child_water_liters_day": 2.2,
+      "adult_calories_day": 2200,
+      "child_calories_day": 1500,
+      "daily_breakdown_grams": {
+        "white_rice": 250,
+        "dry_beans_lentils": 120,
+        "rolled_oats": 80,
+        "cooking_oil": 30,
+        "iodized_or_rock_salt": 10,
+        "sugar_or_honey": 35
+      }
+    },
+    "formula_logic": "TotalRequirement(item) = persons_count * daily_grams(item) * days_duration / 1000 [kg]"
+  }
+}

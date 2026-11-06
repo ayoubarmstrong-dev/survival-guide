@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 650" width="100%" height="100%">
+  <rect width="600" height="650" fill="#121212"/>
+  <text x="300" y="45" fill="#FF5252" font-size="22" font-family="sans-serif" font-weight="bold" text-anchor="middle">دليل تطبيق عاصبة النزيف التكتيكية (CAT Tourniquet)</text>
+  
+  <g transform="translate(50, 80)">
+    <rect width="500" height="110" fill="#1E1E1E" rx="8" stroke="#333"/>
+    <circle cx="40" cy="55" r="20" fill="#FF5252"/>
+    <text x="40" y="62" fill="#FFF" font-weight="bold" font-size="16" text-anchor="middle">1</text>
+    <text x="80" y="45" fill="#FFF" font-weight="bold" font-size="16">الموضع الصحيح</text>
+    <text x="80" y="75" fill="#AAA" font-size="13">ضع العاصبة على بُعد 5 إلى 7 سم فوق موقع الجرح النازف باتجاه القلب، وتجنب المفاصل.</text>
+  </g>
+
+  <g transform="translate(50, 210)">
+    <rect width="500" height="110" fill="#1E1E1E" rx="8" stroke="#333"/>
+    <circle cx="40" cy="55" r="20" fill="#FF5252"/>
+    <text x="40" y="62" fill="#FFF" font-weight="bold" font-size="16" text-anchor="middle">2</text>
+    <text x="80" y="45" fill="#FFF" font-weight="bold" font-size="16">الشد الأولي للشريط</text>
+    <text x="80" y="75" fill="#AAA" font-size="13">اسحب حزام الفيلكرو بأقصى قوة ممكنة قبل البدء في تدوير عصا التدوير (العصا لا تعوض الارتخاء).</text>
+  </g>
+
+  <g transform="translate(50, 340)">
+    <rect width="500" height="110" fill="#1E1E1E" rx="8" stroke="#333"/>
+    <circle cx="40" cy="55" r="20" fill="#FF5252"/>
+    <text x="40" y="62" fill="#FFF" font-weight="bold" font-size="16" text-anchor="middle">3</text>
+    <text x="80" y="45" fill="#FFF" font-weight="bold" font-size="16">تدوير العصا وتثبيتها</text>
+    <text x="80" y="75" fill="#AAA" font-size="13">قم بلف العصا حتى يتوقف النزيف الشرياني والنبض القاصي تماماً، ثم ثبت العصا داخل المشبك المخصص.</text>
+  </g>
+
+  <g transform="translate(50, 470)">
+    <rect width="500" height="110" fill="#1E1E1E" rx="8" stroke="#FF5252" stroke-width="1.5"/>
+    <circle cx="40" cy="55" r="20" fill="#D32F2F"/>
+    <text x="40" y="62" fill="#FFF" font-weight="bold" font-size="16" text-anchor="middle">4</text>
+    <text x="80" y="45" fill="#FF8A80" font-weight="bold" font-size="16">توثيق وقت التثبيت (Time T)</text>
+    <text x="80" y="75" fill="#AAA" font-size="13">اكتب الوقت الدقيق لتطبيق العاصبة على الشريط الأبيض أو على جبهة المصاب (مثال: T 14:30) فوراً.</text>
+  </g>
+</svg>

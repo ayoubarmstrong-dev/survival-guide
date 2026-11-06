@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Survival Master</string>
+    <string name="pre_disaster">Pre-Disaster &amp; Readiness</string>
+    <string name="post_disaster">Post-Disaster Protocols</string>
+    <string name="biomes_survival">Survival by Biome</string>
+    <string name="rebuilding_civ">Rebuilding Civilization</string>
+    <string name="emergency_hud">Tactical Emergency HUD</string>
+</resources>

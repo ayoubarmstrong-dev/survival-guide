@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 820" width="100%" height="100%">
+  <rect width="650" height="820" fill="#121212"/>
+  <text x="325" y="45" fill="#00E5FF" font-size="22" font-family="sans-serif" font-weight="bold" text-anchor="middle">BIO-SAND &amp; CHARCOAL WATER PURIFIER</text>
+  <text x="325" y="70" fill="#80DEEA" font-size="14" font-family="sans-serif" text-anchor="middle">Emergency Multi-Stage Gravity Filtration Chamber</text>
+
+  <!-- Main Vessel Tube -->
+  <path d="M 210 110 L 440 110 L 390 620 L 260 620 Z" fill="#1E293B" stroke="#475569" stroke-width="3"/>
+
+  <!-- Raw Water Reservoir -->
+  <polygon points="215,115 435,115 420,190 230,190" fill="#78716C" opacity="0.75"/>
+  <text x="325" y="155" fill="#FFFFFF" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">RAW / UNFILTERED WATER</text>
+
+  <!-- Fine Sand Layer -->
+  <polygon points="230,190 420,190 405,310 245,310" fill="#FEF08A" opacity="0.9"/>
+  <text x="325" y="245" fill="#854D0E" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">FINE WASHED SAND (10 cm)</text>
+  <text x="325" y="268" fill="#A16207" font-size="12" font-family="sans-serif" text-anchor="middle">Traps micro-particulates &amp; pathogens</text>
+
+  <!-- Coarse Sand Layer -->
+  <polygon points="245,310 405,310 390,400 260,400" fill="#E2E8F0" opacity="0.8"/>
+  <text x="325" y="355" fill="#1E293B" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">COARSE SAND (5 cm)</text>
+
+  <!-- Activated Charcoal Layer -->
+  <polygon points="260,400 390,400 375,510 275,510" fill="#09090B"/>
+  <text x="325" y="450" fill="#22C55E" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">CRUSHED CHARCOAL (8 cm)</text>
+  <text x="325" y="475" fill="#86EFAC" font-size="12" font-family="sans-serif" text-anchor="middle">Absorbs chemicals, heavy metals &amp; odors</text>
+
+  <!-- Small River Gravel Layer -->
+  <polygon points="275,510 375,510 365,580 285,580" fill="#64748B"/>
+  <text x="325" y="550" fill="#F8FAFC" font-size="13" font-weight="bold" font-family="sans-serif" text-anchor="middle">SMALL PEBBLES (5 cm)</text>
+
+  <!-- Gauze / Cotton Plug -->
+  <rect x="280" y="580" width="90" height="35" fill="#E2E8F0" stroke="#94A3B8"/>
+  <text x="325" y="602" fill="#0F172A" font-size="11" font-weight="bold" font-family="sans-serif" text-anchor="middle">STERILE GAUZE</text>
+
+  <!-- Clean Water Drips -->
+  <line x1="325" y1="620" x2="325" y2="670" stroke="#38BDF8" stroke-width="4" stroke-dasharray="6,4"/>
+
+  <!-- Catchment Jug -->
+  <rect x="250" y="670" width="150" height="90" rx="12" fill="#0369A1" opacity="0.75" stroke="#38BDF8" stroke-width="2"/>
+  <text x="325" y="710" fill="#FFFFFF" font-size="15" font-weight="bold" font-family="sans-serif" text-anchor="middle">CLARIFIED WATER</text>
+  <text x="325" y="735" fill="#BAE6FD" font-size="12" font-family="sans-serif" text-anchor="middle">Must boil 1 min prior to drinking</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="100%" height="100%">
+  <rect width="600" height="800" fill="#121212"/>
+  <text x="300" y="45" fill="#4CAF50" font-size="22" font-family="sans-serif" font-weight="bold" text-anchor="middle">نظام ترشيح وتنقية المياه البدائي (Bio-Sand Filter)</text>
+  <path d="M 200 80 L 400 80 L 360 620 L 240 620 Z" fill="#1E1E1E" stroke="#555555" stroke-width="3"/>
+  <rect x="235" y="620" width="130" height="40" fill="#333333" stroke="#555" stroke-width="2"/>
+  <text x="300" y="645" fill="#AAAAAA" font-size="12" text-anchor="middle">قطن طبي أو شاش نقي</text>
+  <polygon points="205,90 395,90 380,180 220,180" fill="#B0BEC5" opacity="0.6"/>
+  <text x="300" y="140" fill="#000000" font-size="14" font-weight="bold" text-anchor="middle">مياه ملوثة مراد ترشيحها</text>
+  <polygon points="220,180 380,180 365,290 235,290" fill="#ECEFF1"/>
+  <text x="300" y="240" fill="#37474F" font-size="14" font-weight="bold" text-anchor="middle">رمل ناعم مغسول (10 سم)</text>
+  <polygon points="235,290 365,290 350,400 250,400" fill="#78909C"/>
+  <text x="300" y="350" fill="#FFFFFF" font-size="14" font-weight="bold" text-anchor="middle">رمل خشن (5 سم)</text>
+  <polygon points="250,400 350,400 335,510 265,510" fill="#212121"/>
+  <text x="300" y="460" fill="#00E676" font-size="14" font-weight="bold" text-anchor="middle">فحم خشبي نشط مطحون (عزل الروائح والسموم)</text>
+  <polygon points="265,510 335,510 325,580 275,580" fill="#9E9E9E"/>
+  <text x="300" y="550" fill="#FFFFFF" font-size="13" font-weight="bold" text-anchor="middle">حصى نهري صغير (5 سم)</text>
+  <polygon points="275,580 325,580 320,620 280,620" fill="#616161"/>
+  <rect x="240" y="690" width="120" height="80" fill="#1A237E" opacity="0.5" stroke="#3D5AFE" stroke-width="2" rx="10"/>
+  <text x="300" y="735" fill="#E0F7FA" font-size="14" font-weight="bold" text-anchor="middle">مياه مصفاة</text>
+  <text x="300" y="755" fill="#80DEEA" font-size="11" text-anchor="middle">(تتطلب الغلي 3 دقائق قبل الشرب)</text>
+  <line x1="300" y1="660" x2="300" y2="690" stroke="#00E5FF" stroke-width="3" stroke-dasharray="4"/>
+</svg>

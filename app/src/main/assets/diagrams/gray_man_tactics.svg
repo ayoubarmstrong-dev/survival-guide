@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" width="100%" height="100%">
+  <rect width="700" height="700" fill="#121212"/>
+  <text x="350" y="45" fill="#94A3B8" font-size="22" font-family="sans-serif" font-weight="bold" text-anchor="middle">THE 'GRAY MAN' SIGNATURE REDUCTION</text>
+  <text x="350" y="70" fill="#64748B" font-size="14" font-family="sans-serif" text-anchor="middle">Urban Survival Discretion vs. High-Target Profile</text>
+
+  <!-- Target Profile (Wrong) -->
+  <g transform="translate(60, 110)">
+    <rect width="260" height="460" rx="8" fill="#1E1E1E" stroke="#EF4444" stroke-width="2"/>
+    <text x="130" y="40" fill="#EF4444" font-size="16" font-weight="bold" font-family="sans-serif" text-anchor="middle">HIGH-RISK PROFILE</text>
+    
+    <rect x="25" y="70" width="210" height="70" rx="6" fill="#292524" stroke="#78716C"/>
+    <text x="130" y="95" fill="#F87171" font-size="13" font-weight="bold" font-family="sans-serif" text-anchor="middle">Camo / Military Apparel</text>
+    <text x="130" y="120" fill="#A8A29E" font-size="11" font-family="sans-serif" text-anchor="middle">Signals armed status to gangs</text>
+
+    <rect x="25" y="160" width="210" height="70" rx="6" fill="#292524" stroke="#78716C"/>
+    <text x="130" y="185" fill="#F87171" font-size="13" font-weight="bold" font-family="sans-serif" text-anchor="middle">MOLLE Tactical Backpack</text>
+    <text x="130" y="210" fill="#A8A29E" font-size="11" font-family="sans-serif" text-anchor="middle">High-value target for looters</text>
+
+    <rect x="25" y="250" width="210" height="70" rx="6" fill="#292524" stroke="#78716C"/>
+    <text x="130" y="275" fill="#F87171" font-size="13" font-weight="bold" font-family="sans-serif" text-anchor="middle">Tactical Posture / Direct Gaze</text>
+    <text x="130" y="300" fill="#A8A29E" font-size="11" font-family="sans-serif" text-anchor="middle">Draws confrontation</text>
+
+    <rect x="25" y="340" width="210" height="90" rx="6" fill="#450A0A" stroke="#DC2626"/>
+    <text x="130" y="375" fill="#FEF2F2" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">TARGET RESULT:</text>
+    <text x="130" y="405" fill="#FCA5A5" font-size="12" font-family="sans-serif" text-anchor="middle">Targeted Ambush &amp; Robbery</text>
+  </g>
+
+  <!-- Gray Man Profile (Correct) -->
+  <g transform="translate(380, 110)">
+    <rect width="260" height="460" rx="8" fill="#1E1E1E" stroke="#22C55E" stroke-width="2"/>
+    <text x="130" y="40" fill="#22C55E" font-size="16" font-weight="bold" font-family="sans-serif" text-anchor="middle">GRAY MAN PROFILE</text>
+
+    <rect x="25" y="70" width="210" height="70" rx="6" fill="#1E293B" stroke="#475569"/>
+    <text x="130" y="95" fill="#38BDF8" font-size="13" font-weight="bold" font-family="sans-serif" text-anchor="middle">Muted Civilian Garb</text>
+    <text x="130" y="120" fill="#94A3B8" font-size="11" font-family="sans-serif" text-anchor="middle">Worn denim, neutral gray tones</text>
+
+    <rect x="25" y="160" width="210" height="70" rx="6" fill="#1E293B" stroke="#475569"/>
+    <text x="130" y="185" fill="#38BDF8" font-size="13" font-weight="bold" font-family="sans-serif" text-anchor="middle">Worn Student / City Bag</text>
+    <text x="130" y="210" fill="#94A3B8" font-size="11" font-family="sans-serif" text-anchor="middle">Conceals vital tools seamlessly</text>
+
+    <rect x="25" y="250" width="210" height="70" rx="6" fill="#1E293B" stroke="#475569"/>
+    <text x="130" y="275" fill="#38BDF8" font-size="13" font-weight="bold" font-family="sans-serif" text-anchor="middle">Peripheral Awareness</text>
+    <text x="130" y="300" fill="#94A3B8" font-size="11" font-family="sans-serif" text-anchor="middle">Calm pacing, avoid eye contact</text>
+
+    <rect x="25" y="340" width="210" height="90" rx="6" fill="#052E16" stroke="#16A34A"/>
+    <text x="130" y="375" fill="#F0FDF4" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">TARGET RESULT:</text>
+    <text x="130" y="405" fill="#86EFAC" font-size="12" font-family="sans-serif" text-anchor="middle">Zero Recollection by Observers</text>
+  </g>
+
+  <!-- Doctrine rule -->
+  <rect x="60" y="590" width="580" height="70" rx="6" fill="#0F172A" stroke="#334155"/>
+  <text x="350" y="618" fill="#F8FAFC" font-size="13" font-weight="bold" font-family="sans-serif" text-anchor="middle">"The best combat encounter is the one that never happened."</text>
+  <text x="350" y="642" fill="#94A3B8" font-size="12" font-family="sans-serif" text-anchor="middle">Move along shadows, alleys, and building edges. Avoid open avenues.</text>
+</svg>

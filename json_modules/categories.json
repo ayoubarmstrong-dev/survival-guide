@@ -1,0 +1,37 @@
+[
+  {
+    "id": "pre_disaster",
+    "name_ar": "إجراءات ما قبل الكارثة (التجهيز والمؤن)",
+    "name_en": "Pre-Disaster & Readiness",
+    "icon_name": "ic_shield_check",
+    "sort_order": 1
+  },
+  {
+    "id": "post_disaster",
+    "name_ar": "بروتوكولات ما بعد الكارثة والحروب",
+    "name_en": "Post-Disaster Protocols",
+    "icon_name": "ic_alert_triangle",
+    "sort_order": 2
+  },
+  {
+    "id": "biomes_survival",
+    "name_ar": "البقاء والتكيف حسب التضاريس والبيئة",
+    "name_en": "Survival by Biome",
+    "icon_name": "ic_compass",
+    "sort_order": 3
+  },
+  {
+    "id": "rebuilding_civ",
+    "name_ar": "إعادة بناء المجتمع والحضارة",
+    "name_en": "Rebuilding Civilization",
+    "icon_name": "ic_anvil",
+    "sort_order": 4
+  },
+  {
+    "id": "emergency_hud",
+    "name_ar": "أدوات الطوارئ اللحظية والاستغاثة",
+    "name_en": "Emergency Tactical HUD",
+    "icon_name": "ic_flashlight",
+    "sort_order": 5
+  }
+]

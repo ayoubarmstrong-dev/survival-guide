@@ -1,0 +1,20 @@
+# Gradle / Android
+.gradle/
+build/
+**/build/
+local.properties
+*.apk
+*.aab
+
+# OS / IDE
+.DS_Store
+.idea/
+*.iml
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+
+# Temporary / Large Archives
+survival_app_content_and_db.zip

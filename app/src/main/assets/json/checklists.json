@@ -1,0 +1,74 @@
+[
+  {
+    "id": "chk_1",
+    "article_id": "art_food_storage",
+    "title_ar": "المؤونة الجافة - أرز مصقول عالي الجودة",
+    "item_ar": "أرز أبيض في أكياس مايلر محكمة",
+    "quantity_formula": "15 كغ لكل فرد / شهر",
+    "is_mandatory": 1
+  },
+  {
+    "id": "chk_2",
+    "article_id": "art_food_storage",
+    "title_ar": "المؤونة الجافة - عدس وفاصولياء",
+    "item_ar": "بقوليات مجففة منوعة",
+    "quantity_formula": "8 كغ لكل فرد / شهر",
+    "is_mandatory": 1
+  },
+  {
+    "id": "chk_3",
+    "article_id": "art_food_storage",
+    "title_ar": "المؤونة الجافة - ملح صخري طبيعي",
+    "item_ar": "ملح طعام غير مضاف إليه يود للتخليل والتعقيم",
+    "quantity_formula": "1 كغ لكل فرد / 3 أشهر",
+    "is_mandatory": 1
+  },
+  {
+    "id": "chk_4",
+    "article_id": "art_water_purification",
+    "title_ar": "أدوات مائية - فلتر محمول فائق الدقة",
+    "item_ar": "فلتر مياه أنبوبي (Sawyer أو LifeStraw)",
+    "quantity_formula": "فلتر واحد لكل فرد",
+    "is_mandatory": 1
+  },
+  {
+    "id": "chk_5",
+    "article_id": "art_water_purification",
+    "title_ar": "معقم كيميائي - أقراص تنقية أو كلور",
+    "item_ar": "أقراص NaDCC أو كلور منزلي نقي بدون معطرات",
+    "quantity_formula": "عبوة 100 قرص",
+    "is_mandatory": 1
+  },
+  {
+    "id": "chk_6",
+    "article_id": "art_nuclear_war",
+    "title_ar": "وقاية نووية - يوديد البوتاسيوم",
+    "item_ar": "أقراص Potassium Iodide (130mg)",
+    "quantity_formula": "شريط 14 قرص لكل فرد",
+    "is_mandatory": 1
+  },
+  {
+    "id": "chk_7",
+    "article_id": "art_nuclear_war",
+    "title_ar": "راديو طوارئ متعدد الموجات",
+    "item_ar": "راديو يدوي (Hand-crank) مع شاحن شمسي ومستقبل SW/AM",
+    "quantity_formula": "جهاز واحد للمجموعة",
+    "is_mandatory": 1
+  },
+  {
+    "id": "chk_8",
+    "article_id": "art_urban_combat_earthquake",
+    "title_ar": "مصباح رأسي تكتيكي (Headlamp)",
+    "item_ar": "مصباح بإضاءة بيضاء وحمراء لتقليل الرؤية الليلية",
+    "quantity_formula": "مصباح لكل فرد + بطاريات احتياطية",
+    "is_mandatory": 1
+  },
+  {
+    "id": "chk_9",
+    "article_id": "art_urban_combat_earthquake",
+    "title_ar": "عاصبة نزيف عسكرية معتمدة",
+    "item_ar": "Combat Application Tourniquet (CAT Gen 7)",
+    "quantity_formula": "عاصبتان لكل فرد في الحقيبة",
+    "is_mandatory": 1
+  }
+]
