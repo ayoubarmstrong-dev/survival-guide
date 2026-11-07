@@ -54,5 +54,8 @@ data class AffiliateGearEntity(
     val category: String = "Tactical Gear",
 
     @ColumnInfo(name = "priority_tier")
-    val priorityTier: String = "Field Ops"
+    val priorityTier: String = "Field Ops",
+
+    @ColumnInfo(name = "image_url")
+    val imageUrl: String? = null
 )

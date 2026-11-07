@@ -162,6 +162,10 @@ class DataSyncWorker(
                 item.optString("image_asset").takeIf { it.isNotBlank() }
             } else null
 
+            val imgUrl = item.optString("image_url", "").let {
+                if (it.isBlank() || it == "null") null else it
+            }
+
             val category = item.optString("category", "Tactical Gear")
             val priorityTier = item.optString("priority_tier", "Field Ops")
 
@@ -178,7 +182,8 @@ class DataSyncWorker(
                     imageAsset = imgAsset,
                     importanceRating = rating,
                     category = category,
-                    priorityTier = priorityTier
+                    priorityTier = priorityTier,
+                    imageUrl = imgUrl
                 )
             )
         }

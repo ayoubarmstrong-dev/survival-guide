@@ -29,10 +29,14 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import coil.compose.SubcomposeAsyncImage
+import coil.request.CachePolicy
+import coil.request.ImageRequest
 import com.antigravity.survival.data.entity.AffiliateGearEntity
 import com.antigravity.survival.ui.components.openPrivacyPolicy
 import com.antigravity.survival.ui.theme.*
@@ -401,6 +405,8 @@ fun EnhancedProductCard(
     gear: AffiliateGearEntity,
     onOrderClick: (String) -> Unit
 ) {
+    val context = LocalContext.current
+
     Card(
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(containerColor = DarkCard),
@@ -454,70 +460,121 @@ fun EnhancedProductCard(
 
             Spacer(modifier = Modifier.height(10.dp))
 
-            // Name and Price Row
+            // Middle: Thumbnail + Product Info Split
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.Top
             ) {
-                Text(
-                    text = gear.nameEn,
-                    fontWeight = FontWeight.Bold,
-                    color = TextPrimary,
-                    fontSize = 15.sp,
-                    lineHeight = 20.sp,
-                    modifier = Modifier.weight(1f)
+                // Coil Cached Product Image Thumbnail with loading/error states
+                val imageModel = gear.imageUrl ?: gear.imageAsset
+                SubcomposeAsyncImage(
+                    model = ImageRequest.Builder(context)
+                        .data(imageModel)
+                        .crossfade(true)
+                        .diskCachePolicy(CachePolicy.ENABLED)
+                        .memoryCachePolicy(CachePolicy.ENABLED)
+                        .build(),
+                    contentDescription = gear.nameEn,
+                    loading = {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .background(DarkSurface),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            CircularProgressIndicator(
+                                color = TacticalGreen,
+                                strokeWidth = 2.dp,
+                                modifier = Modifier.size(18.dp)
+                            )
+                        }
+                    },
+                    error = {
+                        // Tactical fallback placeholder with shield emblem
+                        Box(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .background(DarkSurface),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.Security,
+                                contentDescription = null,
+                                tint = TacticalOlive,
+                                modifier = Modifier.size(32.dp)
+                            )
+                        }
+                    },
+                    contentScale = ContentScale.Fit,
+                    modifier = Modifier
+                        .size(92.dp)
+                        .clip(RoundedCornerShape(8.dp))
+                        .background(DarkSurface)
+                        .border(1.dp, DarkBorder, RoundedCornerShape(8.dp))
+                        .padding(4.dp)
                 )
-                Spacer(modifier = Modifier.width(10.dp))
-                if (gear.estimatedPriceUsd != null) {
-                    Box(
-                        modifier = Modifier
-                            .clip(RoundedCornerShape(6.dp))
-                            .background(TacticalGreen.copy(alpha = 0.15f))
-                            .padding(horizontal = 8.dp, vertical = 4.dp)
-                    ) {
+
+                Spacer(modifier = Modifier.width(12.dp))
+
+                // Product Title, Price & Ratings Column
+                Column(
+                    modifier = Modifier.weight(1f)
+                ) {
+                    Text(
+                        text = gear.nameEn,
+                        fontWeight = FontWeight.Bold,
+                        color = TextPrimary,
+                        fontSize = 14.5.sp,
+                        lineHeight = 19.sp,
+                        maxLines = 2
+                    )
+
+                    Spacer(modifier = Modifier.height(6.dp))
+
+                    if (gear.estimatedPriceUsd != null) {
+                        Box(
+                            modifier = Modifier
+                                .clip(RoundedCornerShape(4.dp))
+                                .background(TacticalGreen.copy(alpha = 0.15f))
+                                .padding(horizontal = 7.dp, vertical = 3.dp)
+                        ) {
+                            Text(
+                                text = "$${String.format(java.util.Locale.US, "%.2f", gear.estimatedPriceUsd)}",
+                                fontWeight = FontWeight.ExtraBold,
+                                color = TacticalGreen,
+                                fontSize = 13.5.sp
+                            )
+                        }
+                    }
+
+                    Spacer(modifier = Modifier.height(6.dp))
+
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        repeat(gear.importanceRating.coerceIn(1, 5)) {
+                            Icon(
+                                imageVector = Icons.Default.Star,
+                                contentDescription = null,
+                                tint = HazardAmber,
+                                modifier = Modifier.size(13.dp)
+                            )
+                        }
+                        Spacer(modifier = Modifier.width(4.dp))
                         Text(
-                            text = "$${String.format(java.util.Locale.US, "%.2f", gear.estimatedPriceUsd)}",
-                            fontWeight = FontWeight.ExtraBold,
-                            color = TacticalGreen,
-                            fontSize = 14.sp
+                            text = "(${gear.importanceRating}.0)",
+                            fontSize = 11.sp,
+                            color = HazardAmber,
+                            fontWeight = FontWeight.SemiBold
                         )
+
+                        if (!gear.amazonAsin.isNullOrBlank()) {
+                            Spacer(modifier = Modifier.width(8.dp))
+                            Text(
+                                text = "• ${gear.amazonAsin}",
+                                color = TextMuted,
+                                fontSize = 10.5.sp
+                            )
+                        }
                     }
-                }
-            }
-
-            Spacer(modifier = Modifier.height(8.dp))
-
-            // Rating Stars & ASIN
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    repeat(gear.importanceRating.coerceIn(1, 5)) {
-                        Icon(
-                            imageVector = Icons.Default.Star,
-                            contentDescription = null,
-                            tint = HazardAmber,
-                            modifier = Modifier.size(14.dp)
-                        )
-                    }
-                    Spacer(modifier = Modifier.width(4.dp))
-                    Text(
-                        text = "(${gear.importanceRating}.0)",
-                        fontSize = 11.sp,
-                        color = HazardAmber,
-                        fontWeight = FontWeight.SemiBold
-                    )
-                }
-
-                if (!gear.amazonAsin.isNullOrBlank()) {
-                    Spacer(modifier = Modifier.weight(1f))
-                    Text(
-                        text = "ASIN: ${gear.amazonAsin}",
-                        color = TextMuted,
-                        fontSize = 11.sp
-                    )
                 }
             }
 
@@ -527,13 +584,14 @@ fun EnhancedProductCard(
             Text(
                 text = gear.specSummaryAr,
                 color = TextSecondary,
-                fontSize = 12.5.sp,
-                lineHeight = 18.sp
+                fontSize = 12.sp,
+                lineHeight = 17.sp,
+                maxLines = 3
             )
 
             Spacer(modifier = Modifier.height(12.dp))
 
-            // Action Button: Order on Amazon
+            // Action Button: Order on Amazon via CustomTabs
             Button(
                 onClick = { onOrderClick(gear.affiliateUrlTemplate) },
                 modifier = Modifier

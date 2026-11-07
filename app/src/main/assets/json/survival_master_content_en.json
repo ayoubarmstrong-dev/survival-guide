@@ -197,7 +197,8 @@
       "importance_rating": 5,
       "spec_summary": "0.1 Micron absolute hollow fiber membrane filter rated for 100,000 gallons. Eliminates 99.99999% bacteria & cysts.",
       "offline_specs": "Category: Water Procurement & Filtration | Priority: Life-Critical | Rating: 5-Star | ASIN: B00FA2RLX2 | Spec: 0.1 Micron absolute hollow fiber membrane filter rated for 100,000 gallons. Eliminates 99.99999% bacteria & cysts.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B00FA2RLX2?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B00FA2RLX2?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B00FA2RLX2.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_aquatabs_100",
@@ -210,7 +211,8 @@
       "importance_rating": 5,
       "spec_summary": "US EPA-approved effervescent water disinfectant (NaDCC). Destroys 99.9999% bacteria & viruses in 30 minutes.",
       "offline_specs": "Category: Water Procurement & Filtration | Priority: Life-Critical | Rating: 5-Star | ASIN: B00T72BFM6 | Spec: US EPA-approved effervescent water disinfectant (NaDCC). Destroys 99.9999% bacteria & viruses in 30 minutes.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B00T72BFM6?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B00T72BFM6?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B00T72BFM6.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_lifestraw_peak",
@@ -223,7 +225,8 @@
       "importance_rating": 5,
       "spec_summary": "Ultralight sub-micron straw filter. Filters up to 1,000 gallons with enhanced flow rate and re-engineered micro-membrane.",
       "offline_specs": "Category: Water Procurement & Filtration | Priority: Life-Critical | Rating: 5-Star | ASIN: B09VVM27MD | Spec: Ultralight sub-micron straw filter. Filters up to 1,000 gallons with enhanced flow rate and re-engineered micro-membrane.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B09VVM27MD?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B09VVM27MD?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B09VVM27MD.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_grayl_geopress",
@@ -236,7 +239,8 @@
       "importance_rating": 5,
       "spec_summary": "One-press electroadsorptive purifier. Removes viruses (Rotavirus, Norovirus), bacteria, cysts, heavy metals & microplastics in 8 seconds.",
       "offline_specs": "Category: Water Procurement & Filtration | Priority: Life-Critical | Rating: 5-Star | ASIN: B07H9Z9V3X | Spec: One-press electroadsorptive purifier. Removes viruses (Rotavirus, Norovirus), bacteria, cysts, heavy metals & microplastics in 8 seconds.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B07H9Z9V3X?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B07H9Z9V3X?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B07H9Z9V3X.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_katadyn_hiker",
@@ -249,7 +253,8 @@
       "importance_rating": 4,
       "spec_summary": "Field-maintainable pump filter with 0.2 micron glassfiber and active carbon core. 1 Liter/min pump rate.",
       "offline_specs": "Category: Water Procurement & Filtration | Priority: Field Ops | Rating: 4-Star | ASIN: B0007U019M | Spec: Field-maintainable pump filter with 0.2 micron glassfiber and active carbon core. 1 Liter/min pump rate.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B0007U019M?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B0007U019M?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B0007U019M.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_platypus_gravity",
@@ -262,7 +267,8 @@
       "importance_rating": 5,
       "spec_summary": "High-capacity gravity filtration delivering 4 liters of potable water in 2.5 minutes without manual pumping.",
       "offline_specs": "Category: Water Procurement & Filtration | Priority: Sustainability | Rating: 5-Star | ASIN: B00AWN48UY | Spec: High-capacity gravity filtration delivering 4 liters of potable water in 2.5 minutes without manual pumping.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B00AWN48UY?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B00AWN48UY?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B00AWN48UY.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_water_storage_brick",
@@ -275,7 +281,8 @@
       "importance_rating": 4,
       "spec_summary": "Food-grade BPA-free high-density polyethylene interlocking blocks for discreet indoor water caching.",
       "offline_specs": "Category: Water Procurement & Filtration | Priority: Sustainability | Rating: 4-Star | ASIN: B0053GVRJA | Spec: Food-grade BPA-free high-density polyethylene interlocking blocks for discreet indoor water caching.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B0053GVRJA?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B0053GVRJA?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B0053GVRJA.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_silcock_key",
@@ -288,7 +295,8 @@
       "importance_rating": 4,
       "spec_summary": "Heavy-duty steel 4-way cross wrench to access commercial municipal water spigots during urban blackout events.",
       "offline_specs": "Category: Water Procurement & Filtration | Priority: Field Ops | Rating: 4-Star | ASIN: B07PBWMBP3 | Spec: Heavy-duty steel 4-way cross wrench to access commercial municipal water spigots during urban blackout events.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B07PBWMBP3?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B07PBWMBP3?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B07PBWMBP3.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_cat_tourniquet",
@@ -301,7 +309,8 @@
       "importance_rating": 5,
       "spec_summary": "Official CoTCCC arterial occlusion tourniquet. Windlass rod with writeable time band to halt massive limb exsanguination.",
       "offline_specs": "Category: Tactical Trauma & First Aid (TCCC) | Priority: Life-Critical | Rating: 5-Star | ASIN: B01ITAKG6A | Spec: Official CoTCCC arterial occlusion tourniquet. Windlass rod with writeable time band to halt massive limb exsanguination.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B01ITAKG6A?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B01ITAKG6A?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B01ITAKG6A.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_quikclot_gauze",
@@ -314,7 +323,8 @@
       "importance_rating": 5,
       "spec_summary": "Kaolin-infused z-folded hemostatic gauze accelerating intrinsic clotting cascade for junctional groin and axillary trauma.",
       "offline_specs": "Category: Tactical Trauma & First Aid (TCCC) | Priority: Life-Critical | Rating: 5-Star | ASIN: B00HJTH506 | Spec: Kaolin-infused z-folded hemostatic gauze accelerating intrinsic clotting cascade for junctional groin and axillary trauma.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B00HJTH506?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B00HJTH506?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B00HJTH506.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_israeli_bandage",
@@ -327,7 +337,8 @@
       "importance_rating": 5,
       "spec_summary": "Sterile pressure dressing with patented pressure applicator bar providing 30+ lbs direct focused compression on wounds.",
       "offline_specs": "Category: Tactical Trauma & First Aid (TCCC) | Priority: Life-Critical | Rating: 5-Star | ASIN: B003DPVERM | Spec: Sterile pressure dressing with patented pressure applicator bar providing 30+ lbs direct focused compression on wounds.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B003DPVERM?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B003DPVERM?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B003DPVERM.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_hyfin_chest_seal",
@@ -340,7 +351,8 @@
       "importance_rating": 5,
       "spec_summary": "3-channel vented occlusive dressing designed to evacuate air and blood preventing tension pneumothorax from penetrating thoracic wounds.",
       "offline_specs": "Category: Tactical Trauma & First Aid (TCCC) | Priority: Life-Critical | Rating: 5-Star | ASIN: B00KQS2NGK | Spec: 3-channel vented occlusive dressing designed to evacuate air and blood preventing tension pneumothorax from penetrating thoracic wounds.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B00KQS2NGK?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B00KQS2NGK?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B00KQS2NGK.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_sam_splint",
@@ -353,7 +365,8 @@
       "importance_rating": 4,
       "spec_summary": "Malleable thin aluminum alloy core encased between closed-cell foam layers to immobilize bone fractures in field conditions.",
       "offline_specs": "Category: Tactical Trauma & First Aid (TCCC) | Priority: Field Ops | Rating: 4-Star | ASIN: B001J5H92C | Spec: Malleable thin aluminum alloy core encased between closed-cell foam layers to immobilize bone fractures in field conditions.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B001J5H92C?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B001J5H92C?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B001J5H92C.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_npa_airway",
@@ -366,7 +379,8 @@
       "importance_rating": 5,
       "spec_summary": "Soft flexible PVC airway adjunct to maintain open respiratory pathway in semi-conscious or trauma casualties.",
       "offline_specs": "Category: Tactical Trauma & First Aid (TCCC) | Priority: Life-Critical | Rating: 5-Star | ASIN: B00AE4J814 | Spec: Soft flexible PVC airway adjunct to maintain open respiratory pathway in semi-conscious or trauma casualties.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B00AE4J814?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B00AE4J814?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B00AE4J814.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_trauma_shears",
@@ -379,7 +393,8 @@
       "importance_rating": 4,
       "spec_summary": "Hardened stainless steel shears capable of slicing through combat boots, kevlar webbing, heavy leather, and denim.",
       "offline_specs": "Category: Tactical Trauma & First Aid (TCCC) | Priority: Field Ops | Rating: 4-Star | ASIN: B079Z5J7K5 | Spec: Hardened stainless steel shears capable of slicing through combat boots, kevlar webbing, heavy leather, and denim.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B079Z5J7K5?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B079Z5J7K5?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B079Z5J7K5.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_burntec_dressing",
@@ -392,7 +407,8 @@
       "importance_rating": 4,
       "spec_summary": "Medical-grade hydrogel sheet providing cooling pain relief, preventing tissue desiccation, and stopping deep burn progression.",
       "offline_specs": "Category: Tactical Trauma & First Aid (TCCC) | Priority: Field Ops | Rating: 4-Star | ASIN: B00C12C81M | Spec: Medical-grade hydrogel sheet providing cooling pain relief, preventing tissue desiccation, and stopping deep burn progression.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B00C12C81M?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B00C12C81M?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B00C12C81M.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_potassium_iodide",
@@ -405,7 +421,8 @@
       "importance_rating": 5,
       "spec_summary": "FDA-approved thyroid blocking agent preventing internal absorption of radioactive iodine-131 downwind of nuclear detonation.",
       "offline_specs": "Category: CBRN & Radiological Defense | Priority: Life-Critical | Rating: 5-Star | ASIN: B000068336 | Spec: FDA-approved thyroid blocking agent preventing internal absorption of radioactive iodine-131 downwind of nuclear detonation.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B000068336?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B000068336?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B000068336.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_mira_cm6m",
@@ -418,7 +435,8 @@
       "importance_rating": 5,
       "spec_summary": "Full-face bromobutyl respirator offering 24h+ impermeable resistance against chemical blister agents, aerosolized anthrax, and fallout particulate.",
       "offline_specs": "Category: CBRN & Radiological Defense | Priority: Life-Critical | Rating: 5-Star | ASIN: B07N8DFFM6 | Spec: Full-face bromobutyl respirator offering 24h+ impermeable resistance against chemical blister agents, aerosolized anthrax, and fallout particulate.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B07N8DFFM6?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B07N8DFFM6?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B07N8DFFM6.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_mira_nbc77",
@@ -431,7 +449,8 @@
       "importance_rating": 5,
       "spec_summary": "Standard 40mm NATO RD40 threaded multi-gas canister certified against all known chemical warfare agents, radioactive fallout, and viral aerosols.",
       "offline_specs": "Category: CBRN & Radiological Defense | Priority: Life-Critical | Rating: 5-Star | ASIN: B07P8Z3R7N | Spec: Standard 40mm NATO RD40 threaded multi-gas canister certified against all known chemical warfare agents, radioactive fallout, and viral aerosols.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B07P8Z3R7N?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B07P8Z3R7N?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B07P8Z3R7N.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_radex_geiger",
@@ -444,7 +463,8 @@
       "importance_rating": 5,
       "spec_summary": "Fast-responding Geiger-Muller tube detecting ambient Beta, Gamma, and X-ray radiation rates with acoustic hazard alarms.",
       "offline_specs": "Category: CBRN & Radiological Defense | Priority: Life-Critical | Rating: 5-Star | ASIN: B01NAIJR1G | Spec: Fast-responding Geiger-Muller tube detecting ambient Beta, Gamma, and X-ray radiation rates with acoustic hazard alarms.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B01NAIJR1G?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B01NAIJR1G?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B01NAIJR1G.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_hazmat_suit",
@@ -457,7 +477,8 @@
       "importance_rating": 4,
       "spec_summary": "Tear-resistant polymer-coated nonwoven fabric barrier resisting light chemical splash and radioactive dry fallout particulate.",
       "offline_specs": "Category: CBRN & Radiological Defense | Priority: Field Ops | Rating: 4-Star | ASIN: B007PBKLLW | Spec: Tear-resistant polymer-coated nonwoven fabric barrier resisting light chemical splash and radioactive dry fallout particulate.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B007PBKLLW?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B007PBKLLW?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B007PBKLLW.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_cbrn_gloves",
@@ -470,7 +491,8 @@
       "importance_rating": 4,
       "spec_summary": "Impermeable butyl gloves offering operational dexterity and complete barrier protection against nerve agents and caustic acids.",
       "offline_specs": "Category: CBRN & Radiological Defense | Priority: Field Ops | Rating: 4-Star | ASIN: B004F3L7M8 | Spec: Impermeable butyl gloves offering operational dexterity and complete barrier protection against nerve agents and caustic acids.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B004F3L7M8?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B004F3L7M8?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B004F3L7M8.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_nukalert_meter",
@@ -483,7 +505,8 @@
       "importance_rating": 5,
       "spec_summary": "Patent-tested 24/7 continuous radiation detector chirping chirping alarm rates from 100 mR/hr to 50+ R/hr without on/off switch.",
       "offline_specs": "Category: CBRN & Radiological Defense | Priority: Life-Critical | Rating: 5-Star | ASIN: B0007VO90S | Spec: Patent-tested 24/7 continuous radiation detector chirping chirping alarm rates from 100 mR/hr to 50+ R/hr without on/off switch.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B0007VO90S?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B0007VO90S?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B0007VO90S.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_potassium_permanganate",
@@ -496,7 +519,8 @@
       "importance_rating": 4,
       "spec_summary": "Versatile chemical agent: water antiseptic at micro-dilution, friction fire initiator with glycerin, and surface disinfectant.",
       "offline_specs": "Category: CBRN & Radiological Defense | Priority: Sustainability | Rating: 4-Star | ASIN: B08922C3L4 | Spec: Versatile chemical agent: water antiseptic at micro-dilution, friction fire initiator with glycerin, and surface disinfectant.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B08922C3L4?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B08922C3L4?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B08922C3L4.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_mylar_bags",
@@ -509,7 +533,8 @@
       "importance_rating": 5,
       "spec_summary": "Military-grade puncture-resistant 7-mil aluminum barrier bags paired with high-capacity 2,000cc iron oxygen absorbers for 25+ year food stability.",
       "offline_specs": "Category: Emergency Food & Long-Term Rations | Priority: Sustainability | Rating: 5-Star | ASIN: B089CVRPK3 | Spec: Military-grade puncture-resistant 7-mil aluminum barrier bags paired with high-capacity 2,000cc iron oxygen absorbers for 25+ year food stability.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B089CVRPK3?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B089CVRPK3?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B089CVRPK3.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_readywise_72h_kit",
@@ -522,7 +547,8 @@
       "importance_rating": 4,
       "spec_summary": "Nutrient-dense emergency ration bucket providing 32 servings of freeze-dried and dehydrated meals. 1,800-2,000 kcal/day.",
       "offline_specs": "Category: Emergency Food & Long-Term Rations | Priority: Life-Critical | Rating: 4-Star | ASIN: B00G8S15B6 | Spec: Nutrient-dense emergency ration bucket providing 32 servings of freeze-dried and dehydrated meals. 1,800-2,000 kcal/day.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B00G8S15B6?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B00G8S15B6?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B00G8S15B6.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_mountain_house_bucket",
@@ -535,7 +561,8 @@
       "importance_rating": 5,
       "spec_summary": "Top-tier freeze-dried meals with proven 30-year shelf life taste guarantee. Requires only boiling or cold ambient water.",
       "offline_specs": "Category: Emergency Food & Long-Term Rations | Priority: Sustainability | Rating: 5-Star | ASIN: B07H8H75W5 | Spec: Top-tier freeze-dried meals with proven 30-year shelf life taste guarantee. Requires only boiling or cold ambient water.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B07H8H75W5?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B07H8H75W5?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B07H8H75W5.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_datrex_3600",
@@ -548,7 +575,8 @@
       "importance_rating": 5,
       "spec_summary": "USCG-approved dense baked ration bars formulated to not provoke thirst. 5-year hermetic vacuum foil packaging.",
       "offline_specs": "Category: Emergency Food & Long-Term Rations | Priority: Life-Critical | Rating: 5-Star | ASIN: B001CS54E2 | Spec: USCG-approved dense baked ration bars formulated to not provoke thirst. 5-year hermetic vacuum foil packaging.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B001CS54E2?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B001CS54E2?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B001CS54E2.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_heirloom_seed_vault",
@@ -561,7 +589,8 @@
       "importance_rating": 5,
       "spec_summary": "Non-hybrid, non-GMO 15,000+ seed reserve sealed in moisture-proof Mylar for multi-year food sovereignty and seed replanting.",
       "offline_specs": "Category: Emergency Food & Long-Term Rations | Priority: Sustainability | Rating: 5-Star | ASIN: B00LPX2T8S | Spec: Non-hybrid, non-GMO 15,000+ seed reserve sealed in moisture-proof Mylar for multi-year food sovereignty and seed replanting.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B00LPX2T8S?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B00LPX2T8S?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B00LPX2T8S.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_iron_absorbers_100",
@@ -574,7 +603,8 @@
       "importance_rating": 4,
       "spec_summary": "Fast-acting food grade iron-powder oxygen scavengers preventing mold, weevil hatching, and oxidation in 1-gallon mylar bags.",
       "offline_specs": "Category: Emergency Food & Long-Term Rations | Priority: Sustainability | Rating: 4-Star | ASIN: B00BLZ6Z1W | Spec: Fast-acting food grade iron-powder oxygen scavengers preventing mold, weevil hatching, and oxidation in 1-gallon mylar bags.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B00BLZ6Z1W?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B00BLZ6Z1W?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B00BLZ6Z1W.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_sos_emergency_ration",
@@ -587,7 +617,8 @@
       "importance_rating": 4,
       "spec_summary": "High-energy non-thirst provoking survival rations wrapped in sub-zero and desert-heat resistant foil.",
       "offline_specs": "Category: Emergency Food & Long-Term Rations | Priority: Life-Critical | Rating: 4-Star | ASIN: B004KA8V2W | Spec: High-energy non-thirst provoking survival rations wrapped in sub-zero and desert-heat resistant foil.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B004KA8V2W?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B004KA8V2W?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B004KA8V2W.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_honey_powder",
@@ -600,7 +631,8 @@
       "importance_rating": 4,
       "spec_summary": "100% natural shelf-stable honey powder packed in enamel-lined steel can with 30-year shelf life for glucose replenishment.",
       "offline_specs": "Category: Emergency Food & Long-Term Rations | Priority: Sustainability | Rating: 4-Star | ASIN: B0096GLM62 | Spec: 100% natural shelf-stable honey powder packed in enamel-lined steel can with 30-year shelf life for glucose replenishment.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B0096GLM62?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B0096GLM62?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B0096GLM62.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_peanut_butter_powder",
@@ -613,7 +645,8 @@
       "importance_rating": 4,
       "spec_summary": "High-protein, low-fat dehydrated peanut powder with 5-year storage stability without oil rancidity.",
       "offline_specs": "Category: Emergency Food & Long-Term Rations | Priority: Sustainability | Rating: 4-Star | ASIN: B01KKEECLS | Spec: High-protein, low-fat dehydrated peanut powder with 5-year storage stability without oil rancidity.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B01KKEECLS?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B01KKEECLS?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B01KKEECLS.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_crank_radio",
@@ -626,7 +659,8 @@
       "importance_rating": 4,
       "spec_summary": "Autonomous multi-band emergency communications receiver featuring NOAA weather alerts, hand-crank dynamo, solar charging cell, 5,000mAh battery.",
       "offline_specs": "Category: Off-Grid Power & Solar Hardware | Priority: Field Ops | Rating: 4-Star | ASIN: B08CZFWJVT | Spec: Autonomous multi-band emergency communications receiver featuring NOAA weather alerts, hand-crank dynamo, solar charging cell, 5,000mAh battery.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B08CZFWJVT?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B08CZFWJVT?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B08CZFWJVT.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_goalzero_nomad",
@@ -639,7 +673,8 @@
       "importance_rating": 5,
       "spec_summary": "Rugged weather-resistant 20-watt solar charger with built-in dynamic restart and USB power management.",
       "offline_specs": "Category: Off-Grid Power & Solar Hardware | Priority: Field Ops | Rating: 5-Star | ASIN: B084Z1XF4K | Spec: Rugged weather-resistant 20-watt solar charger with built-in dynamic restart and USB power management.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B084Z1XF4K?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B084Z1XF4K?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B084Z1XF4K.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_anker_solix_bank",
@@ -652,7 +687,8 @@
       "importance_rating": 5,
       "spec_summary": "Heavy-duty power reserve with PowerIQ 3.0 technology capable of rapid charging radios, tactical tablets, and navigation units.",
       "offline_specs": "Category: Off-Grid Power & Solar Hardware | Priority: Field Ops | Rating: 5-Star | ASIN: B0BYP2F3SG | Spec: Heavy-duty power reserve with PowerIQ 3.0 technology capable of rapid charging radios, tactical tablets, and navigation units.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B0BYP2F3SG?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B0BYP2F3SG?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B0BYP2F3SG.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_ecoflow_river2",
@@ -665,7 +701,8 @@
       "importance_rating": 5,
       "spec_summary": "Rapid-charging LiFePO4 battery generator delivering 3,000+ cycles to 80% capacity with 300W AC outlet.",
       "offline_specs": "Category: Off-Grid Power & Solar Hardware | Priority: Sustainability | Rating: 5-Star | ASIN: B0B8MV3P7T | Spec: Rapid-charging LiFePO4 battery generator delivering 3,000+ cycles to 80% capacity with 300W AC outlet.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B0B8MV3P7T?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B0B8MV3P7T?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B0B8MV3P7T.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_eneloop_pro_kit",
@@ -678,7 +715,8 @@
       "importance_rating": 4,
       "spec_summary": "High-capacity 2550mAh Ni-MH batteries engineered for extreme low temperature (-4°F) performance.",
       "offline_specs": "Category: Off-Grid Power & Solar Hardware | Priority: Field Ops | Rating: 4-Star | ASIN: B00JHKSMJU | Spec: High-capacity 2550mAh Ni-MH batteries engineered for extreme low temperature (-4°F) performance.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B00JHKSMJU?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B00JHKSMJU?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B00JHKSMJU.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_renogy_100w_panel",
@@ -691,7 +729,8 @@
       "importance_rating": 5,
       "spec_summary": "Grade-A monocrystalline silicon solar module with corrosion-resistant aluminum frame for bunker and cabin microgrids.",
       "offline_specs": "Category: Off-Grid Power & Solar Hardware | Priority: Sustainability | Rating: 5-Star | ASIN: B07GF5JY35 | Spec: Grade-A monocrystalline silicon solar module with corrosion-resistant aluminum frame for bunker and cabin microgrids.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B07GF5JY35?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B07GF5JY35?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B07GF5JY35.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_biolite_campstove",
@@ -704,7 +743,8 @@
       "importance_rating": 4,
       "spec_summary": "Thermoelectric generator that burns wood sticks to cook meals while generating 3W of usable electricity into a 3200mAh battery.",
       "offline_specs": "Category: Off-Grid Power & Solar Hardware | Priority: Sustainability | Rating: 4-Star | ASIN: B0872MBH67 | Spec: Thermoelectric generator that burns wood sticks to cook meals while generating 3W of usable electricity into a 3200mAh battery.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B0872MBH67?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B0872MBH67?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B0872MBH67.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_mc4_crimping_kit",
@@ -717,7 +757,8 @@
       "importance_rating": 4,
       "spec_summary": "Field electrician assembly kit for custom off-grid PV solar array wire fabrication and emergency panel repairs.",
       "offline_specs": "Category: Off-Grid Power & Solar Hardware | Priority: Field Ops | Rating: 4-Star | ASIN: B08B5R3B39 | Spec: Field electrician assembly kit for custom off-grid PV solar array wire fabrication and emergency panel repairs.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B08B5R3B39?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B08B5R3B39?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B08B5R3B39.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_baofeng_uv5r",
@@ -730,7 +771,8 @@
       "importance_rating": 5,
       "spec_summary": "Programmable dual-band transceivers supporting emergency repeaters, NOAA weather monitor, and cross-band CTCSS/DCS.",
       "offline_specs": "Category: Tactical Comms & Emergency Signaling | Priority: Field Ops | Rating: 5-Star | ASIN: B074XPB313 | Spec: Programmable dual-band transceivers supporting emergency repeaters, NOAA weather monitor, and cross-band CTCSS/DCS.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B074XPB313?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B074XPB313?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B074XPB313.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_garmin_inreach",
@@ -743,7 +785,8 @@
       "importance_rating": 5,
       "spec_summary": "100% global Iridium satellite network two-way messaging, interactive SOS dispatch, and TracBack routing without cell signal.",
       "offline_specs": "Category: Tactical Comms & Emergency Signaling | Priority: Life-Critical | Rating: 5-Star | ASIN: B09PQV95P8 | Spec: 100% global Iridium satellite network two-way messaging, interactive SOS dispatch, and TracBack routing without cell signal.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B09PQV95P8?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B09PQV95P8?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B09PQV95P8.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_acr_resqlink",
@@ -756,7 +799,8 @@
       "importance_rating": 5,
       "spec_summary": "Military-grade 406 MHz satellite distress beacon directly linked to Cospas-Sarsat SAR international rescue infrastructure.",
       "offline_specs": "Category: Tactical Comms & Emergency Signaling | Priority: Life-Critical | Rating: 5-Star | ASIN: B07R7Q8Z9F | Spec: Military-grade 406 MHz satellite distress beacon directly linked to Cospas-Sarsat SAR international rescue infrastructure.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B07R7Q8Z9F?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B07R7Q8Z9F?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B07R7Q8Z9F.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_storm_whistle",
@@ -769,7 +813,8 @@
       "importance_rating": 4,
       "spec_summary": "Patented harmonic chamber acoustic device audibly penetrating fog, rubble, and tree cover up to 0.5 miles; sounds underwater.",
       "offline_specs": "Category: Tactical Comms & Emergency Signaling | Priority: Life-Critical | Rating: 4-Star | ASIN: B0007U1T3E | Spec: Patented harmonic chamber acoustic device audibly penetrating fog, rubble, and tree cover up to 0.5 miles; sounds underwater.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B0007U1T3E?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B0007U1T3E?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B0007U1T3E.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_signal_mirror",
@@ -782,7 +827,8 @@
       "importance_rating": 4,
       "spec_summary": "Reflective laminated acrylic mirror with center retro-reflective mesh aimer visible up to 20 miles to search aircraft.",
       "offline_specs": "Category: Tactical Comms & Emergency Signaling | Priority: Field Ops | Rating: 4-Star | ASIN: B000RZQI6W | Spec: Reflective laminated acrylic mirror with center retro-reflective mesh aimer visible up to 20 miles to search aircraft.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B000RZQI6W?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B000RZQI6W?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B000RZQI6W.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_cyalume_snaplight",
@@ -795,7 +841,8 @@
       "importance_rating": 4,
       "spec_summary": "Submersible, non-sparking 360-degree chemiluminescent light source producing 12 hours of safe tactical illumination.",
       "offline_specs": "Category: Tactical Comms & Emergency Signaling | Priority: Field Ops | Rating: 4-Star | ASIN: B004NBZ7E4 | Spec: Submersible, non-sparking 360-degree chemiluminescent light source producing 12 hours of safe tactical illumination.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B004NBZ7E4?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B004NBZ7E4?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B004NBZ7E4.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_nagoya_antenna",
@@ -808,7 +855,8 @@
       "importance_rating": 4,
       "spec_summary": "Tuned dual-band whip antenna boosting handheld transceiver transmit/receive gain by +2.15 dBi.",
       "offline_specs": "Category: Tactical Comms & Emergency Signaling | Priority: Field Ops | Rating: 4-Star | ASIN: B00KC4PW52 | Spec: Tuned dual-band whip antenna boosting handheld transceiver transmit/receive gain by +2.15 dBi.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B00KC4PW52?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B00KC4PW52?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B00KC4PW52.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_faraday_bag",
@@ -821,7 +869,8 @@
       "importance_rating": 5,
       "spec_summary": "Titanium and conductive copper-lined military enclosure blocking RF, WiFi, Bluetooth, GPS, and catastrophic EMP blast pulses.",
       "offline_specs": "Category: Tactical Comms & Emergency Signaling | Priority: Field Ops | Rating: 5-Star | ASIN: B079D9D99F | Spec: Titanium and conductive copper-lined military enclosure blocking RF, WiFi, Bluetooth, GPS, and catastrophic EMP blast pulses.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B079D9D99F?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B079D9D99F?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B079D9D99F.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_swiss_safe_blanket",
@@ -834,7 +883,8 @@
       "importance_rating": 5,
       "spec_summary": "Dual-sided aluminized space blankets reflecting 90% body heat to prevent hypothermia in traumatic shock victims.",
       "offline_specs": "Category: Shelter & Thermal Protection | Priority: Life-Critical | Rating: 5-Star | ASIN: B01BW4KWW8 | Spec: Dual-sided aluminized space blankets reflecting 90% body heat to prevent hypothermia in traumatic shock victims.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B01BW4KWW8?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B01BW4KWW8?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B01BW4KWW8.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_sol_escape_bivvy",
@@ -847,7 +897,8 @@
       "importance_rating": 5,
       "spec_summary": "Waterproof and windproof emergency sleeping bag crafted with proprietary breathable spun-bonded olefin that prevents internal condensation.",
       "offline_specs": "Category: Shelter & Thermal Protection | Priority: Life-Critical | Rating: 5-Star | ASIN: B0075ZSN7M | Spec: Waterproof and windproof emergency sleeping bag crafted with proprietary breathable spun-bonded olefin that prevents internal condensation.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B0075ZSN7M?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B0075ZSN7M?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B0075ZSN7M.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_snugpak_ionosphere",
@@ -860,7 +911,8 @@
       "importance_rating": 4,
       "spec_summary": "Low-profile olive drab shelter engineered with 5000mm hydrostatic head polyurethane flysheet and DAC featherlite aluminum poles.",
       "offline_specs": "Category: Shelter & Thermal Protection | Priority: Field Ops | Rating: 4-Star | ASIN: B003U9C5U2 | Spec: Low-profile olive drab shelter engineered with 5000mm hydrostatic head polyurethane flysheet and DAC featherlite aluminum poles.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B003U9C5U2?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B003U9C5U2?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B003U9C5U2.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_aquaquest_tarp",
@@ -873,7 +925,8 @@
       "importance_rating": 5,
       "spec_summary": "Heavyweight 70D nylon with double TPU coating and 20,000mm waterhead rating. 19 reinforced tie-out webbing loops.",
       "offline_specs": "Category: Shelter & Thermal Protection | Priority: Sustainability | Rating: 5-Star | ASIN: B004R33UZE | Spec: Heavyweight 70D nylon with double TPU coating and 20,000mm waterhead rating. 19 reinforced tie-out webbing loops.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B004R33UZE?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B004R33UZE?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B004R33UZE.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_woobie_poncho_liner",
@@ -886,7 +939,8 @@
       "importance_rating": 4,
       "spec_summary": "Ripstop nylon shell with synthetic polyester batt fill providing unmatched insulation-to-weight ratio in wet field environments.",
       "offline_specs": "Category: Shelter & Thermal Protection | Priority: Field Ops | Rating: 4-Star | ASIN: B07N8N9K68 | Spec: Ripstop nylon shell with synthetic polyester batt fill providing unmatched insulation-to-weight ratio in wet field environments.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B07N8N9K68?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B07N8N9K68?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B07N8N9K68.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_thermarest_zlite",
@@ -899,7 +953,8 @@
       "importance_rating": 4,
       "spec_summary": "Reflective ThermaCapture coating capturing radiant heat with puncture-proof closed-cell dual-density foam structure.",
       "offline_specs": "Category: Shelter & Thermal Protection | Priority: Field Ops | Rating: 4-Star | ASIN: B004534DAC | Spec: Reflective ThermaCapture coating capturing radiant heat with puncture-proof closed-cell dual-density foam structure.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B004534DAC?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B004534DAC?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B004534DAC.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_tactical_bivvy_bag",
@@ -912,7 +967,8 @@
       "importance_rating": 4,
       "spec_summary": "Heavy-duty 26um mylar envelope with sealed seam construction for instant hypothermia isolation.",
       "offline_specs": "Category: Shelter & Thermal Protection | Priority: Life-Critical | Rating: 4-Star | ASIN: B07C378Y36 | Spec: Heavy-duty 26um mylar envelope with sealed seam construction for instant hypothermia isolation.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B07C378Y36?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B07C378Y36?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B07C378Y36.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_heatsheets_tarp",
@@ -925,7 +981,8 @@
       "importance_rating": 4,
       "spec_summary": "Grommeted heavy-duty reflector tarp for building lean-to survival shelters, ground cloths, and radiator baffles.",
       "offline_specs": "Category: Shelter & Thermal Protection | Priority: Field Ops | Rating: 4-Star | ASIN: B000GCRW42 | Spec: Grommeted heavy-duty reflector tarp for building lean-to survival shelters, ground cloths, and radiator baffles.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B000GCRW42?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B000GCRW42?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B000GCRW42.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_tent_repair_tape",
@@ -938,7 +995,8 @@
       "importance_rating": 4,
       "spec_summary": "Ultra-aggressive weatherproof adhesive tape for instant field repair of torn shelter tarps, rain gear, and packs.",
       "offline_specs": "Category: Shelter & Thermal Protection | Priority: Field Ops | Rating: 4-Star | ASIN: B000FKMIU6 | Spec: Ultra-aggressive weatherproof adhesive tape for instant field repair of torn shelter tarps, rain gear, and packs.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B000FKMIU6?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B000FKMIU6?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B000FKMIU6.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_swedish_firesteel",
@@ -951,7 +1009,8 @@
       "importance_rating": 5,
       "spec_summary": "Magnesium-ferrocerium rod emitting 5,400°F (2,980°C) sparks in any altitude, torrential rain, or gale-force winds. 12,000 strikes.",
       "offline_specs": "Category: Firecraft & Thermal Ignition Tools | Priority: Life-Critical | Rating: 5-Star | ASIN: B00440VI80 | Spec: Magnesium-ferrocerium rod emitting 5,400°F (2,980°C) sparks in any altitude, torrential rain, or gale-force winds. 12,000 strikes.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B00440VI80?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B00440VI80?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B00440VI80.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_uco_titan_matches",
@@ -964,7 +1023,8 @@
       "importance_rating": 5,
       "spec_summary": "Giant 4.1-inch wooden matches burning up to 25 seconds even after being completely submerged in water or buried in dirt.",
       "offline_specs": "Category: Firecraft & Thermal Ignition Tools | Priority: Life-Critical | Rating: 5-Star | ASIN: B00P0L9B72 | Spec: Giant 4.1-inch wooden matches burning up to 25 seconds even after being completely submerged in water or buried in dirt.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B00P0L9B72?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B00P0L9B72?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B00P0L9B72.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_fatwood_sticks",
@@ -977,7 +1037,8 @@
       "importance_rating": 4,
       "spec_summary": "100% natural resin-saturated pitch pine kindling igniting instantly with a single spark from ferro rods.",
       "offline_specs": "Category: Firecraft & Thermal Ignition Tools | Priority: Sustainability | Rating: 4-Star | ASIN: B01DCRK80A | Spec: 100% natural resin-saturated pitch pine kindling igniting instantly with a single spark from ferro rods.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B01DCRK80A?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B01DCRK80A?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B01DCRK80A.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_fresnel_lens_pack",
@@ -990,7 +1051,8 @@
       "importance_rating": 4,
       "spec_summary": "Pocket-sized flexible optical PVC magnifying lens focusing solar rays into 1,000°F pinpoint combustion ember.",
       "offline_specs": "Category: Firecraft & Thermal Ignition Tools | Priority: Sustainability | Rating: 4-Star | ASIN: B07K6Q17F5 | Spec: Pocket-sized flexible optical PVC magnifying lens focusing solar rays into 1,000°F pinpoint combustion ember.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B07K6Q17F5?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B07K6Q17F5?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B07K6Q17F5.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_ust_blastmatch",
@@ -1003,7 +1065,8 @@
       "importance_rating": 4,
       "spec_summary": "Spring-loaded one-handed ferro rod system designed for injured operators with injured limb capacity.",
       "offline_specs": "Category: Firecraft & Thermal Ignition Tools | Priority: Field Ops | Rating: 4-Star | ASIN: B002APM4S4 | Spec: Spring-loaded one-handed ferro rod system designed for injured operators with injured limb capacity.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B002APM4S4?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B002APM4S4?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B002APM4S4.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_solo_stove_lite",
@@ -1016,7 +1079,8 @@
       "importance_rating": 4,
       "spec_summary": "Double-wall secondary combustion gasifier stove generating intense smokeless flame using twigs, pinecones, and dry biomass.",
       "offline_specs": "Category: Firecraft & Thermal Ignition Tools | Priority: Sustainability | Rating: 4-Star | ASIN: B00C3DFDUK | Spec: Double-wall secondary combustion gasifier stove generating intense smokeless flame using twigs, pinecones, and dry biomass.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B00C3DFDUK?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B00C3DFDUK?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B00C3DFDUK.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_tinderquik_tabs",
@@ -1029,7 +1093,8 @@
       "importance_rating": 4,
       "spec_summary": "Wax-treated cotton fibers that fluff into instant flash tinder igniting from microscopic sparks.",
       "offline_specs": "Category: Firecraft & Thermal Ignition Tools | Priority: Field Ops | Rating: 4-Star | ASIN: B004R1J3Z2 | Spec: Wax-treated cotton fibers that fluff into instant flash tinder igniting from microscopic sparks.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B004R1J3Z2?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B004R1J3Z2?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B004R1J3Z2.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_zippo_emergency_kit",
@@ -1042,7 +1107,8 @@
       "importance_rating": 4,
       "spec_summary": "O-ring sealed floating cylinder storing waxed spark tinders and ergonomic flint wheel striker.",
       "offline_specs": "Category: Firecraft & Thermal Ignition Tools | Priority: Field Ops | Rating: 4-Star | ASIN: B079C1K37V | Spec: O-ring sealed floating cylinder storing waxed spark tinders and ergonomic flint wheel striker.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B079C1K37V?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B079C1K37V?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B079C1K37V.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_suunto_mc2",
@@ -1055,7 +1121,8 @@
       "importance_rating": 5,
       "spec_summary": "Globally balanced needle system with declination adjustment scale, clinometer, and sighting notch mirror.",
       "offline_specs": "Category: Tactical Navigation & Optical Systems | Priority: Field Ops | Rating: 5-Star | ASIN: B000FEXZMW | Spec: Globally balanced needle system with declination adjustment scale, clinometer, and sighting notch mirror.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B000FEXZMW?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B000FEXZMW?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B000FEXZMW.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_cammenga_tritium",
@@ -1068,7 +1135,8 @@
       "importance_rating": 5,
       "spec_summary": "Heavy cast aluminum frame with micro-curie tritium gas vials providing 10+ years continuous glow navigation in zero ambient light.",
       "offline_specs": "Category: Tactical Navigation & Optical Systems | Priority: Life-Critical | Rating: 5-Star | ASIN: B0016S849A | Spec: Heavy cast aluminum frame with micro-curie tritium gas vials providing 10+ years continuous glow navigation in zero ambient light.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B0016S849A?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B0016S849A?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B0016S849A.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_vortex_solo",
@@ -1081,7 +1149,8 @@
       "importance_rating": 4,
       "spec_summary": "Fully multi-coated glass with rubber armor, nitrogen purging, and O-ring sealing for perimeter threat scouting.",
       "offline_specs": "Category: Tactical Navigation & Optical Systems | Priority: Field Ops | Rating: 4-Star | ASIN: B002K88C3O | Spec: Fully multi-coated glass with rubber armor, nitrogen purging, and O-ring sealing for perimeter threat scouting.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B002K88C3O?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B002K88C3O?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B002K88C3O.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_pace_count_beads",
@@ -1094,7 +1163,8 @@
       "importance_rating": 4,
       "spec_summary": "Double-strand calculation beads accurately measuring field distance pacing in darkness and low-visibility terrain.",
       "offline_specs": "Category: Tactical Navigation & Optical Systems | Priority: Field Ops | Rating: 4-Star | ASIN: B00K6EAM06 | Spec: Double-strand calculation beads accurately measuring field distance pacing in darkness and low-visibility terrain.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B00K6EAM06?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B00K6EAM06?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B00K6EAM06.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_military_protractor",
@@ -1107,7 +1177,8 @@
       "importance_rating": 4,
       "spec_summary": "Precision slotted transparent template for plotting 1:24,000 and 1:50,000 topographic maps down to 10-meter accuracy.",
       "offline_specs": "Category: Tactical Navigation & Optical Systems | Priority: Field Ops | Rating: 4-Star | ASIN: B001F0PBVU | Spec: Precision slotted transparent template for plotting 1:24,000 and 1:50,000 topographic maps down to 10-meter accuracy.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B001F0PBVU?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B001F0PBVU?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B001F0PBVU.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_bushnell_nightvision",
@@ -1120,7 +1191,8 @@
       "importance_rating": 5,
       "spec_summary": "Digital 1080p optical sensor with built-in IR illuminator detecting targets up to 1,000 feet in pitch darkness.",
       "offline_specs": "Category: Tactical Navigation & Optical Systems | Priority: Field Ops | Rating: 5-Star | ASIN: B07GQ5XGB9 | Spec: Digital 1080p optical sensor with built-in IR illuminator detecting targets up to 1,000 feet in pitch darkness.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B07GQ5XGB9?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B07GQ5XGB9?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B07GQ5XGB9.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_streamlight_protac",
@@ -1133,7 +1205,8 @@
       "importance_rating": 5,
       "spec_summary": "Ten-Tap programmable flashlight operating flexibly on either standard AA alkaline or high-output CR123A lithium.",
       "offline_specs": "Category: Tactical Navigation & Optical Systems | Priority: Field Ops | Rating: 5-Star | ASIN: B01G75P1SC | Spec: Ten-Tap programmable flashlight operating flexibly on either standard AA alkaline or high-output CR123A lithium.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B01G75P1SC?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B01G75P1SC?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B01G75P1SC.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_rite_in_the_rain",
@@ -1146,7 +1219,8 @@
       "importance_rating": 4,
       "spec_summary": "Patented polydura water-shedding paper allowing notes and map tracings in driving rain, mud, and perspiration.",
       "offline_specs": "Category: Tactical Navigation & Optical Systems | Priority: Sustainability | Rating: 4-Star | ASIN: B0016H2M78 | Spec: Patented polydura water-shedding paper allowing notes and map tracings in driving rain, mud, and perspiration.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B0016H2M78?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B0016H2M78?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B0016H2M78.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_glo_toob_beacon",
@@ -1159,7 +1233,8 @@
       "importance_rating": 4,
       "spec_summary": "Indestructible 3,500-meter depth submersible 360-degree LED beacon with continuous strobe and tactical signal modes.",
       "offline_specs": "Category: Tactical Navigation & Optical Systems | Priority: Field Ops | Rating: 4-Star | ASIN: B0068D25E6 | Spec: Indestructible 3,500-meter depth submersible 360-degree LED beacon with continuous strobe and tactical signal modes.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B0068D25E6?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B0068D25E6?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B0068D25E6.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_leatherman_wave",
@@ -1172,7 +1247,8 @@
       "importance_rating": 5,
       "spec_summary": "18 locking tools including 420HC knives, aggressive wood saw, bit driver, and precision needle-nose pliers.",
       "offline_specs": "Category: Breaching, Cutting & Mechanical Multi-Tools | Priority: Field Ops | Rating: 5-Star | ASIN: B079MJ6P4P | Spec: 18 locking tools including 420HC knives, aggressive wood saw, bit driver, and precision needle-nose pliers.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B079MJ6P4P?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B079MJ6P4P?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B079MJ6P4P.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_mora_garberg",
@@ -1185,7 +1261,8 @@
       "importance_rating": 5,
       "spec_summary": "3.2mm thick heavy full-tang Swedish carbon steel blade with ground 90-degree spine for striking ferrocerium rods.",
       "offline_specs": "Category: Breaching, Cutting & Mechanical Multi-Tools | Priority: Life-Critical | Rating: 5-Star | ASIN: B079D89828 | Spec: 3.2mm thick heavy full-tang Swedish carbon steel blade with ground 90-degree spine for striking ferrocerium rods.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B079D89828?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B079D89828?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B079D89828.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_silky_gomboy",
@@ -1198,7 +1275,8 @@
       "importance_rating": 5,
       "spec_summary": "Impulse-hardened Japanese MIRAI-ME teeth cutting smoothly on the pull stroke through logs and deadfall shelter timber.",
       "offline_specs": "Category: Breaching, Cutting & Mechanical Multi-Tools | Priority: Sustainability | Rating: 5-Star | ASIN: B0014C80GG | Spec: Impulse-hardened Japanese MIRAI-ME teeth cutting smoothly on the pull stroke through logs and deadfall shelter timber.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B0014C80GG?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B0014C80GG?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B0014C80GG.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_estwing_axe",
@@ -1211,7 +1289,8 @@
       "importance_rating": 4,
       "spec_summary": "Solid one-piece forged American steel axe engineered without welds or weak wood joints for lifelong structural chopping.",
       "offline_specs": "Category: Breaching, Cutting & Mechanical Multi-Tools | Priority: Sustainability | Rating: 4-Star | ASIN: B00047F130 | Spec: Solid one-piece forged American steel axe engineered without welds or weak wood joints for lifelong structural chopping.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B00047F130?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B00047F130?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B00047F130.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_halligan_pry_bar",
@@ -1224,7 +1303,8 @@
       "importance_rating": 5,
       "spec_summary": "Standard tactical urban breaching tool featuring fork, adz, and pike for forced entry through reinforced security doors.",
       "offline_specs": "Category: Breaching, Cutting & Mechanical Multi-Tools | Priority: Field Ops | Rating: 5-Star | ASIN: B00TY69R24 | Spec: Standard tactical urban breaching tool featuring fork, adz, and pike for forced entry through reinforced security doors.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B00TY69R24?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B00TY69R24?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B00TY69R24.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_knipex_pliers",
@@ -1237,7 +1317,8 @@
       "importance_rating": 4,
       "spec_summary": "Self-locking induction-hardened gripping jaws (61 HRC) capable of holding pipes and sheared hex bolts without slipping.",
       "offline_specs": "Category: Breaching, Cutting & Mechanical Multi-Tools | Priority: Field Ops | Rating: 4-Star | ASIN: B000X4OG94 | Spec: Self-locking induction-hardened gripping jaws (61 HRC) capable of holding pipes and sheared hex bolts without slipping.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B000X4OG94?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B000X4OG94?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B000X4OG94.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_paracord_titan",
@@ -1250,7 +1331,8 @@
       "importance_rating": 4,
       "spec_summary": "Mil-spec 550 paracord featuring integrated 25 lb monofilament fishing line, waterproof waxed jute, and copper snare wire.",
       "offline_specs": "Category: Breaching, Cutting & Mechanical Multi-Tools | Priority: Field Ops | Rating: 4-Star | ASIN: B01D21HNY8 | Spec: Mil-spec 550 paracord featuring integrated 25 lb monofilament fishing line, waterproof waxed jute, and copper snare wire.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B01D21HNY8?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B01D21HNY8?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B01D21HNY8.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_folding_shovel",
@@ -1263,7 +1345,8 @@
       "importance_rating": 4,
       "spec_summary": "3-way folding high-carbon steel spade with serrated edge for entrenching fallout shelters, digging drainage, and latrines.",
       "offline_specs": "Category: Breaching, Cutting & Mechanical Multi-Tools | Priority: Field Ops | Rating: 4-Star | ASIN: B0038A054C | Spec: 3-way folding high-carbon steel spade with serrated edge for entrenching fallout shelters, digging drainage, and latrines.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B0038A054C?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B0038A054C?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B0038A054C.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_folding_wire_saw",
@@ -1276,7 +1359,8 @@
       "importance_rating": 4,
       "spec_summary": "Flexible 8-strand interwoven stainless steel wire blade for cutting timber, pvc, and bone in confined emergency spaces.",
       "offline_specs": "Category: Breaching, Cutting & Mechanical Multi-Tools | Priority: Field Ops | Rating: 4-Star | ASIN: B004U9D2P2 | Spec: Flexible 8-strand interwoven stainless steel wire blade for cutting timber, pvc, and bone in confined emergency spaces.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B004U9D2P2?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B004U9D2P2?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B004U9D2P2.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_sabre_pepper_gel",
@@ -1289,7 +1373,8 @@
       "importance_rating": 5,
       "spec_summary": "Maximum strength cross-fire red pepper gel reaching 18 feet without wind blowback; includes UV marking dye.",
       "offline_specs": "Category: Personal Defense & Perimeter Security | Priority: Life-Critical | Rating: 5-Star | ASIN: B004NKSPR6 | Spec: Maximum strength cross-fire red pepper gel reaching 18 feet without wind blowback; includes UV marking dye.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B004NKSPR6?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B004NKSPR6?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B004NKSPR6.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_perimeter_trip_alarm",
@@ -1302,7 +1387,8 @@
       "importance_rating": 5,
       "spec_summary": "Solid 6061 aircraft aluminum perimeter warning device triggering 12-gauge blank or flare when tripwire is breached.",
       "offline_specs": "Category: Personal Defense & Perimeter Security | Priority: Life-Critical | Rating: 5-Star | ASIN: B0892B1ZZZ | Spec: Solid 6061 aircraft aluminum perimeter warning device triggering 12-gauge blank or flare when tripwire is breached.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B0892B1ZZZ?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B0892B1ZZZ?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B0892B1ZZZ.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_tactical_pen",
@@ -1315,7 +1401,8 @@
       "importance_rating": 4,
       "spec_summary": "CNC machined anti-rust aircraft aluminum casing with ultra-hard tungsten carbide tip capable of shattering vehicle glass.",
       "offline_specs": "Category: Personal Defense & Perimeter Security | Priority: Field Ops | Rating: 4-Star | ASIN: B01C2M8O5C | Spec: CNC machined anti-rust aircraft aluminum casing with ultra-hard tungsten carbide tip capable of shattering vehicle glass.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B01C2M8O5C?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B01C2M8O5C?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B01C2M8O5C.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_door_security_bar",
@@ -1328,7 +1415,8 @@
       "importance_rating": 4,
       "spec_summary": "Rugged 20-gauge steel telescoping bar with pivoting rubber foot resisting up to 350 lbs of forced door entry.",
       "offline_specs": "Category: Personal Defense & Perimeter Security | Priority: Field Ops | Rating: 4-Star | ASIN: B0002ZPY48 | Spec: Rugged 20-gauge steel telescoping bar with pivoting rubber foot resisting up to 350 lbs of forced door entry.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B0002ZPY48?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B0002ZPY48?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B0002ZPY48.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_motion_sensor_alarm",
@@ -1341,7 +1429,8 @@
       "importance_rating": 4,
       "spec_summary": "Weatherproof passive infrared (PIR) perimeter detectors sounding chime or flashing alert up to 500 feet from receiver.",
       "offline_specs": "Category: Personal Defense & Perimeter Security | Priority: Sustainability | Rating: 4-Star | ASIN: B0797W165C | Spec: Weatherproof passive infrared (PIR) perimeter detectors sounding chime or flashing alert up to 500 feet from receiver.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B0797W165C?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B0797W165C?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B0797W165C.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_kevlar_sleeves",
@@ -1354,7 +1443,8 @@
       "importance_rating": 4,
       "spec_summary": "ANSI cut-level 4 protective sleeves shielding radial and ulnar arteries against broken window glass and edged attacks.",
       "offline_specs": "Category: Personal Defense & Perimeter Security | Priority: Field Ops | Rating: 4-Star | ASIN: B007PBKLU8 | Spec: ANSI cut-level 4 protective sleeves shielding radial and ulnar arteries against broken window glass and edged attacks.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B007PBKLU8?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B007PBKLU8?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B007PBKLU8.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_covert_lockpick",
@@ -1367,7 +1457,8 @@
       "importance_rating": 4,
       "spec_summary": "Cold-rolled American 301 stainless steel lockpicks in compact tactical case for emergency urban egress through padlocks.",
       "offline_specs": "Category: Personal Defense & Perimeter Security | Priority: Field Ops | Rating: 4-Star | ASIN: B07K6Q17F9 | Spec: Cold-rolled American 301 stainless steel lockpicks in compact tactical case for emergency urban egress through padlocks.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B07K6Q17F9?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B07K6Q17F9?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B07K6Q17F9.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_tripwire_kevlar",
@@ -1380,7 +1471,8 @@
       "importance_rating": 4,
       "spec_summary": "Non-reflective olive drab micro-cord virtually invisible in leaf litter for perimeter alarm and early-warning trip line setups.",
       "offline_specs": "Category: Personal Defense & Perimeter Security | Priority: Field Ops | Rating: 4-Star | ASIN: B01DCRK80C | Spec: Non-reflective olive drab micro-cord virtually invisible in leaf litter for perimeter alarm and early-warning trip line setups.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B01DCRK80C?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B01DCRK80C?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B01DCRK80C.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_reliance_toilet",
@@ -1393,7 +1485,8 @@
       "importance_rating": 5,
       "spec_summary": "Rugged 5-gallon snap-on bucket toilet with ergonomic seat and sealing lid for sanitary human waste isolation.",
       "offline_specs": "Category: Sanitation, Hygiene & Biosecurity | Priority: Sustainability | Rating: 5-Star | ASIN: B000FIAPXO | Spec: Rugged 5-gallon snap-on bucket toilet with ergonomic seat and sealing lid for sanitary human waste isolation.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B000FIAPXO?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B000FIAPXO?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B000FIAPXO.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_waste_gel_packs",
@@ -1406,7 +1499,8 @@
       "importance_rating": 4,
       "spec_summary": "Super-absorbent polymer powder solidifying liquid human waste within minutes and neutralizing odors via natural lemongrass scent.",
       "offline_specs": "Category: Sanitation, Hygiene & Biosecurity | Priority: Sustainability | Rating: 4-Star | ASIN: B07R7Q8Z9G | Spec: Super-absorbent polymer powder solidifying liquid human waste within minutes and neutralizing odors via natural lemongrass scent.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B07R7Q8Z9G?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B07R7Q8Z9G?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B07R7Q8Z9G.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_camp_soap_campuds",
@@ -1419,7 +1513,8 @@
       "importance_rating": 4,
       "spec_summary": "Concentrated all-natural biodegradable cleanser effective in cold water and saltwater for dishes, gear, skin, and clothing.",
       "offline_specs": "Category: Sanitation, Hygiene & Biosecurity | Priority: Sustainability | Rating: 4-Star | ASIN: B0007U1T3F | Spec: Concentrated all-natural biodegradable cleanser effective in cold water and saltwater for dishes, gear, skin, and clothing.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B0007U1T3F?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B0007U1T3F?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B0007U1T3F.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_3m_n95_masks",
@@ -1432,7 +1527,8 @@
       "importance_rating": 5,
       "spec_summary": "NIOSH-approved 3-panel flat-fold respirator filtering 95% of non-oil based airborne dust, silica, and wildfire particulates.",
       "offline_specs": "Category: Sanitation, Hygiene & Biosecurity | Priority: Life-Critical | Rating: 5-Star | ASIN: B095FJ36W2 | Spec: NIOSH-approved 3-panel flat-fold respirator filtering 95% of non-oil based airborne dust, silica, and wildfire particulates.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B095FJ36W2?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B095FJ36W2?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B095FJ36W2.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_nitrile_heavy_duty",
@@ -1445,7 +1541,8 @@
       "importance_rating": 4,
       "spec_summary": "Industrial-grade chemical, oil, and pathogen barrier gloves with aggressive tactile diamond texture for wet field operations.",
       "offline_specs": "Category: Sanitation, Hygiene & Biosecurity | Priority: Field Ops | Rating: 4-Star | ASIN: B00MGSGN7C | Spec: Industrial-grade chemical, oil, and pathogen barrier gloves with aggressive tactile diamond texture for wet field operations.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B00MGSGN7C?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B00MGSGN7C?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B00MGSGN7C.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_commode_liners",
@@ -1458,7 +1555,8 @@
       "importance_rating": 4,
       "spec_summary": "Puncture-resistant leak-proof double-envelope bags designed to fit 5-gallon emergency toilets with odor-blocking seal.",
       "offline_specs": "Category: Sanitation, Hygiene & Biosecurity | Priority: Sustainability | Rating: 4-Star | ASIN: B0024O0W94 | Spec: Puncture-resistant leak-proof double-envelope bags designed to fit 5-gallon emergency toilets with odor-blocking seal.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B0024O0W94?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B0024O0W94?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B0024O0W94.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_body_wipes_combat",
@@ -1471,7 +1569,8 @@
       "importance_rating": 4,
       "spec_summary": "Thick textured cleansing wipes enriched with aloe vera and vitamin E for waterless hygiene maintenance in field deployments.",
       "offline_specs": "Category: Sanitation, Hygiene & Biosecurity | Priority: Field Ops | Rating: 4-Star | ASIN: B079D89827 | Spec: Thick textured cleansing wipes enriched with aloe vera and vitamin E for waterless hygiene maintenance in field deployments.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B079D89827?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B079D89827?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B079D89827.01._SCLZZZZZZZ_.jpg"
     },
     {
       "id": "gear_chlorine_bleach_pen",
@@ -1484,7 +1583,8 @@
       "importance_rating": 4,
       "spec_summary": "Effervescent chlorine tablets for hospital-grade surface bio-sanitation and pathogen sterilization without liquid splash risk.",
       "offline_specs": "Category: Sanitation, Hygiene & Biosecurity | Priority: Life-Critical | Rating: 4-Star | ASIN: B07PBWMBP4 | Spec: Effervescent chlorine tablets for hospital-grade surface bio-sanitation and pathogen sterilization without liquid splash risk.",
-      "affiliate_url_template": "https://www.amazon.com/dp/B07PBWMBP4?tag=aegissurvival-20"
+      "affiliate_url_template": "https://www.amazon.com/dp/B07PBWMBP4?tag=aegissurvival-20",
+      "image_url": "https://images-na.ssl-images-amazon.com/images/P/B07PBWMBP4.01._SCLZZZZZZZ_.jpg"
     }
   ],
   "ration_formulas": {

@@ -1,10 +1,14 @@
 package com.antigravity.survival.ui.screens
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowForwardIos
@@ -14,10 +18,14 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.antigravity.survival.R
 import com.antigravity.survival.data.entity.CategoryEntity
 import com.antigravity.survival.ui.components.FirstLaunchDisclaimerDialog
 import com.antigravity.survival.ui.components.LegalAndPrivacyDialog
@@ -26,7 +34,6 @@ import com.antigravity.survival.ui.components.openPrivacyPolicy
 import com.antigravity.survival.ui.theme.*
 import com.antigravity.survival.ui.viewmodel.SurvivalViewModel
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
     viewModel: SurvivalViewModel,
@@ -45,56 +52,139 @@ fun HomeScreen(
 
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = {
-                    Column {
-                        Text(
-                            text = "Aegis Survival",
-                            fontWeight = FontWeight.Bold,
-                            color = TextPrimary,
-                            fontSize = 19.sp
-                        )
-                        Text(
-                            text = "Field Manual & Emergency Preparedness • Offline",
-                            color = TextSecondary,
-                            fontSize = 11.sp
-                        )
+            Surface(
+                color = DarkSurface,
+                border = BorderStroke(1.dp, DarkBorder),
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .statusBarsPadding()
+                        .padding(start = 16.dp, end = 16.dp, top = 12.dp, bottom = 10.dp)
+                ) {
+                    // Top Row: Tactical Emblem + Title & Subtitle + Top Bar Actions
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.SpaceBetween
+                    ) {
+                        // Left: Insignia + Brand Title with zero crowding
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.weight(1f)
+                        ) {
+                            Icon(
+                                painter = painterResource(id = R.drawable.ic_aegis_emblem),
+                                contentDescription = "Aegis Tactical Insignia",
+                                tint = Color.Unspecified,
+                                modifier = Modifier
+                                    .size(42.dp)
+                                    .clip(RoundedCornerShape(8.dp))
+                            )
+                            Spacer(modifier = Modifier.width(12.dp))
+                            Column {
+                                Row(verticalAlignment = Alignment.CenterVertically) {
+                                    Text(
+                                        text = "Aegis Survival",
+                                        fontWeight = FontWeight.ExtraBold,
+                                        color = TextPrimary,
+                                        fontSize = 19.sp,
+                                        letterSpacing = 0.5.sp
+                                    )
+                                    Spacer(modifier = Modifier.width(8.dp))
+                                    Box(
+                                        modifier = Modifier
+                                            .clip(RoundedCornerShape(4.dp))
+                                            .background(TacticalGreen.copy(alpha = 0.15f))
+                                            .padding(horizontal = 5.dp, vertical = 2.dp)
+                                    ) {
+                                        Text(
+                                            text = "OFFLINE",
+                                            color = TacticalGreen,
+                                            fontWeight = FontWeight.Bold,
+                                            fontSize = 9.sp,
+                                            letterSpacing = 0.5.sp
+                                        )
+                                    }
+                                }
+                                Spacer(modifier = Modifier.height(2.dp))
+                                Text(
+                                    text = "Field Manual & Emergency Preparedness • Offline",
+                                    color = TextSecondary,
+                                    fontSize = 11.5.sp,
+                                    lineHeight = 15.sp,
+                                    maxLines = 1
+                                )
+                            }
+                        }
+
+                        // Right: Primary Top Actions (Compact, cleanly padded)
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(4.dp)
+                        ) {
+                            IconButton(
+                                onClick = onStoreClick,
+                                modifier = Modifier.size(38.dp)
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Default.ShoppingCart,
+                                    contentDescription = "Emergency Gear Store",
+                                    tint = TacticalGreen,
+                                    modifier = Modifier.size(20.dp)
+                                )
+                            }
+                            IconButton(
+                                onClick = { showLegalDialog = true },
+                                modifier = Modifier.size(38.dp)
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Default.Info,
+                                    contentDescription = "Medical & Legal Disclaimer",
+                                    tint = TextSecondary,
+                                    modifier = Modifier.size(20.dp)
+                                )
+                            }
+                        }
                     }
-                },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = DarkSurface
-                ),
-                actions = {
-                    IconButton(onClick = { showLegalDialog = true }) {
-                        Icon(
-                            imageVector = Icons.Default.Info,
-                            contentDescription = "Medical & Legal Disclaimer",
-                            tint = TextSecondary
+
+                    Spacer(modifier = Modifier.height(10.dp))
+
+                    // Secondary Quick-Command Action Row (All 4 features accessible with 1 tap, zero crowding!)
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .horizontalScroll(rememberScrollState()),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        QuickActionPill(
+                            label = "Emergency HUD",
+                            icon = Icons.Default.Warning,
+                            accentColor = DangerRed,
+                            onClick = onEmergencyHudClick
                         )
-                    }
-                    IconButton(onClick = onStoreClick) {
-                        Icon(
-                            imageVector = Icons.Default.ShoppingCart,
-                            contentDescription = "Emergency Gear Store",
-                            tint = TacticalGreen
+                        QuickActionPill(
+                            label = "Gear Store (100)",
+                            icon = Icons.Default.ShoppingCart,
+                            accentColor = TacticalGreen,
+                            onClick = onStoreClick
                         )
-                    }
-                    IconButton(onClick = onCalculatorClick) {
-                        Icon(
-                            imageVector = Icons.Default.Calculate,
-                            contentDescription = "Ration Calculator",
-                            tint = TacticalCyan
+                        QuickActionPill(
+                            label = "Ration Calculator",
+                            icon = Icons.Default.Calculate,
+                            accentColor = TacticalCyan,
+                            onClick = onCalculatorClick
                         )
-                    }
-                    IconButton(onClick = onEmergencyHudClick) {
-                        Icon(
-                            imageVector = Icons.Default.Warning,
-                            contentDescription = "Emergency HUD",
-                            tint = DangerRed
+                        QuickActionPill(
+                            label = "Doctrine & Legal",
+                            icon = Icons.Default.Gavel,
+                            accentColor = HazardAmber,
+                            onClick = { showLegalDialog = true }
                         )
                     }
                 }
-            )
+            }
         },
         containerColor = AmoledBlack
     ) { paddingValues ->
@@ -378,6 +468,40 @@ fun CategoryCard(
                 contentDescription = null,
                 tint = TextSecondary,
                 modifier = Modifier.size(15.dp)
+            )
+        }
+    }
+}
+
+@Composable
+fun QuickActionPill(
+    label: String,
+    icon: ImageVector,
+    accentColor: Color,
+    onClick: () -> Unit
+) {
+    Surface(
+        onClick = onClick,
+        shape = RoundedCornerShape(20.dp),
+        color = DarkCard,
+        border = BorderStroke(1.dp, accentColor.copy(alpha = 0.4f))
+    ) {
+        Row(
+            modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(
+                imageVector = icon,
+                contentDescription = null,
+                tint = accentColor,
+                modifier = Modifier.size(14.dp)
+            )
+            Spacer(modifier = Modifier.width(6.dp))
+            Text(
+                text = label,
+                fontSize = 11.5.sp,
+                fontWeight = FontWeight.Bold,
+                color = TextPrimary
             )
         }
     }

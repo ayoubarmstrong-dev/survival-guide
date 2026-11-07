@@ -103,6 +103,9 @@ object JsonDataLoader {
                     val imgAsset = obj.optString("image_asset", "").let {
                         if (it.isBlank() || it == "null") null else it
                     }
+                    val imgUrl = obj.optString("image_url", "").let {
+                        if (it.isBlank() || it == "null") null else it
+                    }
                     val price = if (obj.has("estimated_price_usd")) obj.optDouble("estimated_price_usd") else null
                     val category = obj.optString("category", "Tactical Gear")
                     val priorityTier = obj.optString("priority_tier", "Field Ops")
@@ -119,7 +122,8 @@ object JsonDataLoader {
                             imageAsset = imgAsset,
                             importanceRating = obj.optInt("importance_rating", 5),
                             category = category,
-                            priorityTier = priorityTier
+                            priorityTier = priorityTier,
+                            imageUrl = imgUrl
                         )
                     )
                 }

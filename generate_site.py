@@ -1238,14 +1238,20 @@ for g in gear_list:
     price_val = f"${g.get('estimated_price_usd'):.2f}" if g.get("estimated_price_usd") else "View Amazon"
     stars = "★" * g.get("importance_rating", 5)
     asin_tag = f'<span style="color: var(--text-dim); font-size: 12px;">ASIN: {g.get("amazon_asin")}</span>' if g.get("amazon_asin") else ""
+    img_tag = f'<img src="{g.get("image_url")}" alt="{g.get("name")}" style="width: 80px; height: 80px; object-fit: contain; border-radius: 6px; background: rgba(0,0,0,0.3); border: 1px solid var(--border); padding: 4px; margin-right: 14px; flex-shrink: 0;" loading="lazy">' if g.get("image_url") else ""
     gear_catalog_items += f"""
     <div class="article-card" style="border-left: 4px solid var(--primary);">
       <div class="card-meta">
         <span style="color: var(--amber); font-weight: 700; font-size: 13px;">{stars} ({g.get('importance_rating', 5)}-Star Critical)</span>
         <span class="gear-price-pill">{price_val}</span>
       </div>
-      <h3 class="card-title" style="font-size: 20px;">{g.get('name')}</h3>
-      <p class="card-desc" style="font-size: 14px; line-height: 1.6;">{g.get('spec_summary', '')}</p>
+      <div style="display: flex; align-items: flex-start; margin-top: 10px;">
+        {img_tag}
+        <div style="flex: 1;">
+          <h3 class="card-title" style="font-size: 18px; margin-bottom: 6px;">{g.get('name')}</h3>
+          <p class="card-desc" style="font-size: 13.5px; line-height: 1.5; margin-bottom: 0;">{g.get('spec_summary', '')}</p>
+        </div>
+      </div>
       <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 14px; border-top: 1px solid var(--border);">
         {asin_tag}
         <a href="{g.get('affiliate_url_template', '#')}" target="_blank" rel="nofollow noopener sponsored" class="btn-amazon-cta">

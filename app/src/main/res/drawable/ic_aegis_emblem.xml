@@ -1,0 +1,50 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Outer Tactical Shield Background -->
+    <path
+        android:fillColor="#161B22"
+        android:strokeColor="#2EA043"
+        android:strokeWidth="3.5"
+        android:strokeLineJoin="round"
+        android:pathData="M50,8 L85,24 L85,52 C85,74 69,89 50,96 C31,89 15,74 15,52 L15,24 Z" />
+
+    <!-- Inner Shield Accent Rim -->
+    <path
+        android:fillColor="#0D1117"
+        android:strokeColor="#4E7055"
+        android:strokeWidth="1.5"
+        android:pathData="M50,15 L79,29 L79,51 C79,69 66,82 50,88 C34,82 21,69 21,51 L21,29 Z" />
+
+    <!-- Stylized Hazard & Radiation Trefoil Core (Non-photographic vector) -->
+    <!-- Center Core Dot -->
+    <path
+        android:fillColor="#D29922"
+        android:pathData="M50,50m-6,0a6,6 0 1,0 12,0a6,6 0 1,0 -12,0" />
+
+    <!-- Top Blade / Trefoil Wing -->
+    <path
+        android:fillColor="#D29922"
+        android:pathData="M43,41 C45,34 55,34 57,41 L63,30 C56,25 44,25 37,30 Z" />
+
+    <!-- Bottom Left Blade -->
+    <path
+        android:fillColor="#D29922"
+        android:pathData="M41,55 C37,51 42,43 46,40 L35,34 C29,41 31,53 38,60 Z" />
+
+    <!-- Bottom Right Blade -->
+    <path
+        android:fillColor="#D29922"
+        android:pathData="M59,55 C63,51 58,43 54,40 L65,34 C71,41 69,53 62,60 Z" />
+
+    <!-- Tactical Cross Hair / Center Accent -->
+    <path
+        android:strokeColor="#2EA043"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M50,68 L50,75 M50,25 L50,28" />
+
+</vector>

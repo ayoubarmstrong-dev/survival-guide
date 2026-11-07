@@ -18,6 +18,8 @@ import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.OpenInBrowser
 import androidx.compose.material.icons.filled.RadioButtonUnchecked
+import androidx.compose.material.icons.filled.Shield
+import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -31,6 +33,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
+import coil.compose.SubcomposeAsyncImage
 import coil.decode.SvgDecoder
 import coil.request.ImageRequest
 import com.antigravity.survival.data.entity.AffiliateGearEntity
@@ -441,10 +444,15 @@ fun GearCard(
     gear: AffiliateGearEntity,
     onOpenLink: (String) -> Unit
 ) {
+    val context = LocalContext.current
+
     Card(
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(containerColor = DarkCard),
-        shape = RoundedCornerShape(10.dp)
+        shape = RoundedCornerShape(10.dp),
+        border = CardDefaults.outlinedCardBorder().copy(
+            brush = androidx.compose.ui.graphics.SolidColor(DarkBorder)
+        )
     ) {
         Column(
             modifier = Modifier
@@ -453,32 +461,101 @@ fun GearCard(
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
+                verticalAlignment = Alignment.Top
             ) {
-                Text(
-                    text = gear.nameEn,
-                    fontWeight = FontWeight.Bold,
-                    color = TextPrimary,
-                    fontSize = 15.sp,
-                    modifier = Modifier.weight(1f)
+                // Product Thumbnail
+                val imageModel = gear.imageUrl ?: gear.imageAsset
+                SubcomposeAsyncImage(
+                    model = ImageRequest.Builder(context)
+                        .data(imageModel)
+                        .crossfade(true)
+                        .build(),
+                    contentDescription = gear.nameEn,
+                    loading = {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .background(DarkSurface),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            CircularProgressIndicator(
+                                color = TacticalGreen,
+                                strokeWidth = 2.dp,
+                                modifier = Modifier.size(16.dp)
+                            )
+                        }
+                    },
+                    error = {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .background(DarkSurface),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.Shield,
+                                contentDescription = null,
+                                tint = TacticalOlive,
+                                modifier = Modifier.size(24.dp)
+                            )
+                        }
+                    },
+                    contentScale = ContentScale.Fit,
+                    modifier = Modifier
+                        .size(76.dp)
+                        .clip(RoundedCornerShape(8.dp))
+                        .background(DarkSurface)
+                        .border(1.dp, DarkBorder, RoundedCornerShape(8.dp))
+                        .padding(4.dp)
                 )
-                if (gear.estimatedPriceUsd != null) {
+
+                Spacer(modifier = Modifier.width(12.dp))
+
+                Column(modifier = Modifier.weight(1f)) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.Top
+                    ) {
+                        Text(
+                            text = gear.nameEn,
+                            fontWeight = FontWeight.Bold,
+                            color = TextPrimary,
+                            fontSize = 14.5.sp,
+                            modifier = Modifier.weight(1f)
+                        )
+                        if (gear.estimatedPriceUsd != null) {
+                            Text(
+                                text = "$${String.format(java.util.Locale.US, "%.2f", gear.estimatedPriceUsd)}",
+                                fontWeight = FontWeight.Bold,
+                                color = TacticalGreen,
+                                fontSize = 14.sp
+                            )
+                        }
+                    }
+
+                    Spacer(modifier = Modifier.height(4.dp))
+
                     Text(
-                        text = "$${gear.estimatedPriceUsd}",
+                        text = "● ${gear.priorityTier.uppercase()}",
+                        fontSize = 10.sp,
                         fontWeight = FontWeight.Bold,
-                        color = TacticalGreen,
-                        fontSize = 15.sp
+                        color = when (gear.priorityTier) {
+                            "Life-Critical" -> DangerRed
+                            "Sustainability" -> TacticalGreen
+                            else -> HazardAmber
+                        }
                     )
                 }
             }
 
-            Spacer(modifier = Modifier.height(6.dp))
+            Spacer(modifier = Modifier.height(8.dp))
 
             Text(
                 text = gear.specSummaryAr,
-                color = TextPrimary,
-                fontSize = 13.sp
+                color = TextSecondary,
+                fontSize = 12.5.sp,
+                lineHeight = 17.sp
             )
 
             Spacer(modifier = Modifier.height(10.dp))
@@ -490,13 +567,13 @@ fun GearCard(
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Icon(
-                    imageVector = Icons.Default.OpenInBrowser,
+                    imageVector = Icons.Default.ShoppingCart,
                     contentDescription = null,
-                    modifier = Modifier.size(18.dp)
+                    modifier = Modifier.size(16.dp)
                 )
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
-                    text = "View Gear Specifications & Acquisition Link",
+                    text = "Check Price on Amazon",
                     fontSize = 13.sp,
                     fontWeight = FontWeight.Bold
                 )
