@@ -1,0 +1,28 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <path
+        android:fillColor="#161B22"
+        android:pathData="M8,16 A8,8 0 0,1 16,8 L80,8 A8,8 0 0,1 88,16 L88,80 A8,8 0 0,1 80,88 L16,88 A8,8 0 0,1 8,80 Z" />
+    <path
+        android:fillColor="#0D1117"
+        android:strokeColor="#F85149"
+        android:strokeWidth="1.5"
+        android:pathData="M48,16 L76,28 L76,56 C76,70 64,80 48,84 C32,80 20,70 20,56 L20,28 Z" />
+    <!-- Tactical Trauma Cross -->
+    <path
+        android:fillColor="#F85149"
+        android:pathData="M43,34 L53,34 L53,45 L64,45 L64,55 L53,55 L53,66 L43,66 L43,55 L32,55 L32,45 L43,45 Z" />
+    <!-- White Inner Cross Inset -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M46,38 L50,38 L50,47 L59,47 L59,51 L50,51 L50,60 L46,60 L46,51 L37,51 L37,47 L46,47 Z" />
+    <!-- Corner Accents -->
+    <path
+        android:strokeColor="#F85149"
+        android:strokeWidth="2"
+        android:strokeLineCap="square"
+        android:pathData="M12,20 L12,12 L20,12 M76,12 L84,12 L84,20 M84,76 L84,84 L76,84 M20,84 L12,84 L12,76" />
+</vector>

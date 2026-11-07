@@ -1,0 +1,65 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+
+    <!-- Dark Tactical Background Base -->
+    <path
+        android:fillColor="#161B22"
+        android:pathData="M8,16 A8,8 0 0,1 16,8 L80,8 A8,8 0 0,1 88,16 L88,80 A8,8 0 0,1 80,88 L16,88 A8,8 0 0,1 8,80 Z" />
+
+    <!-- Tactical Hexagonal / Shield Outer Contour -->
+    <path
+        android:fillColor="#0D1117"
+        android:strokeColor="#30363D"
+        android:strokeWidth="1.5"
+        android:pathData="M48,16 L76,28 L76,56 C76,70 64,80 48,84 C32,80 20,70 20,56 L20,28 Z" />
+
+    <!-- Inner Shield Accent -->
+    <path
+        android:fillColor="#161B22"
+        android:strokeColor="#2EA043"
+        android:strokeWidth="1.5"
+        android:pathData="M48,22 L70,32 L70,54 C70,65 60,73 48,77 C36,73 26,65 26,54 L26,32 Z" />
+
+    <!-- Tactical Grid / Reticle Lines -->
+    <path
+        android:strokeColor="#21262D"
+        android:strokeWidth="1"
+        android:pathData="M24,48 L72,48 M48,24 L48,72" />
+
+    <!-- Center Tactical Hardware / Gear Symbol -->
+    <!-- Gear Ring -->
+    <path
+        android:strokeColor="#4E7055"
+        android:strokeWidth="2.5"
+        android:pathData="M48,48m-12,0a12,12 0 1,0 24,0a12,12 0 1,0 -24,0" />
+
+    <!-- Gear Teeth Accents -->
+    <path
+        android:fillColor="#4E7055"
+        android:pathData="M46,32 L50,32 L50,36 L46,36 Z
+                         M46,60 L50,60 L50,64 L46,64 Z
+                         M32,46 L32,50 L36,50 L36,46 Z
+                         M60,46 L60,50 L64,50 L64,46 Z
+                         M37,37 L40,37 L39,41 L36,40 Z
+                         M56,56 L59,57 L58,60 L55,60 Z
+                         M37,59 L40,56 L41,59 L38,60 Z
+                         M56,37 L59,40 L57,41 L55,38 Z" />
+
+    <!-- Center Target / Star Core -->
+    <path
+        android:fillColor="#D29922"
+        android:pathData="M48,44 L50,47 L53,48 L50,49 L48,52 L46,49 L43,48 L46,47 Z" />
+
+    <!-- Tactical Corner Brackets -->
+    <path
+        android:strokeColor="#2EA043"
+        android:strokeWidth="2"
+        android:strokeLineCap="square"
+        android:pathData="M12,20 L12,12 L20,12
+                         M76,12 L84,12 L84,20
+                         M84,76 L84,84 L76,84
+                         M20,84 L12,84 L12,76" />
+</vector>

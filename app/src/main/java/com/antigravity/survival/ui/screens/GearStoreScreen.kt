@@ -5,6 +5,7 @@ import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.net.Uri
 import androidx.browser.customtabs.CustomTabsIntent
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -31,12 +32,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.SubcomposeAsyncImage
 import coil.request.CachePolicy
 import coil.request.ImageRequest
+import com.antigravity.survival.R
 import com.antigravity.survival.data.entity.AffiliateGearEntity
 import com.antigravity.survival.ui.components.openPrivacyPolicy
 import com.antigravity.survival.ui.theme.*
@@ -114,59 +118,88 @@ fun GearStoreScreen(
             }
         },
         topBar = {
-            TopAppBar(
-                title = {
-                    Column {
-                        Text(
-                            text = "Tactical Gear Catalog (100 Core)",
-                            fontWeight = FontWeight.Bold,
-                            color = TextPrimary,
-                            fontSize = 17.sp
-                        )
-                        Text(
-                            text = "12 Mission Tiers • Offline-Ready Field Hardware",
-                            color = TextSecondary,
-                            fontSize = 11.sp
-                        )
-                    }
-                },
-                navigationIcon = {
-                    IconButton(onClick = onBackClick) {
-                        Icon(
-                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = "Back",
-                            tint = TextPrimary
-                        )
-                    }
-                },
-                actions = {
-                    IconButton(onClick = { openPrivacyPolicy(context) }) {
-                        Icon(
-                            imageVector = Icons.Default.Security,
-                            contentDescription = "Privacy Policy & Disclosure",
-                            tint = TacticalCyan
-                        )
-                    }
-                    IconButton(onClick = {
-                        viewModel.syncGearRemote()
-                        scope.launch {
-                            snackbarHostState.showSnackbar(
-                                if (isOnline(context)) "Syncing 100-item catalog with remote GitHub endpoint..."
-                                else "Offline: Serving cached hardware specifications"
+            Surface(
+                color = DarkSurface,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                TopAppBar(
+                    modifier = Modifier.statusBarsPadding(),
+                    windowInsets = WindowInsets(0, 0, 0, 0),
+                    title = {
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(end = 4.dp),
+                            verticalArrangement = Arrangement.Center
+                        ) {
+                            Text(
+                                text = "Tactical Gear Catalog (100 Core)",
+                                fontWeight = FontWeight.Bold,
+                                color = TextPrimary,
+                                fontSize = 15.5.sp,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis
+                            )
+                            Spacer(modifier = Modifier.height(2.dp))
+                            Text(
+                                text = "12 Mission Tiers • Offline-Ready Field Hardware",
+                                color = TextSecondary,
+                                fontSize = 11.sp,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis
                             )
                         }
-                    }) {
-                        Icon(
-                            imageVector = Icons.Default.Refresh,
-                            contentDescription = "Sync Catalog",
-                            tint = TacticalGreen
-                        )
-                    }
-                },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = DarkSurface
+                    },
+                    navigationIcon = {
+                        IconButton(
+                            onClick = onBackClick,
+                            modifier = Modifier.size(40.dp)
+                        ) {
+                            Icon(
+                                imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                                contentDescription = "Back",
+                                tint = TextPrimary
+                            )
+                        }
+                    },
+                    actions = {
+                        IconButton(
+                            onClick = { openPrivacyPolicy(context) },
+                            modifier = Modifier.size(38.dp)
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.Security,
+                                contentDescription = "Privacy Policy & Disclosure",
+                                tint = TacticalCyan,
+                                modifier = Modifier.size(20.dp)
+                            )
+                        }
+                        IconButton(
+                            onClick = {
+                                viewModel.syncGearRemote()
+                                scope.launch {
+                                    snackbarHostState.showSnackbar(
+                                        if (isOnline(context)) "Syncing 100-item catalog with remote GitHub endpoint..."
+                                        else "Offline: Serving cached hardware specifications"
+                                    )
+                                }
+                            },
+                            modifier = Modifier.size(38.dp)
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.Refresh,
+                                contentDescription = "Sync Catalog",
+                                tint = TacticalGreen,
+                                modifier = Modifier.size(20.dp)
+                            )
+                        }
+                        Spacer(modifier = Modifier.width(4.dp))
+                    },
+                    colors = TopAppBarDefaults.topAppBarColors(
+                        containerColor = DarkSurface
+                    )
                 )
-            )
+            }
         },
         containerColor = AmoledBlack
     ) { paddingValues ->
@@ -465,8 +498,11 @@ fun EnhancedProductCard(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.Top
             ) {
-                // Coil Cached Product Image Thumbnail with loading/error states
+                // Tactical Fallback Drawable for core survival categories & hardware
+                val fallbackDrawableRes = getTacticalFallbackRes(gear)
                 val imageModel = gear.imageUrl ?: gear.imageAsset
+
+                // Coil Cached Product Image Thumbnail with explicit placeholder & error states
                 SubcomposeAsyncImage(
                     model = ImageRequest.Builder(context)
                         .data(imageModel)
@@ -482,26 +518,27 @@ fun EnhancedProductCard(
                                 .background(DarkSurface),
                             contentAlignment = Alignment.Center
                         ) {
-                            CircularProgressIndicator(
-                                color = TacticalGreen,
-                                strokeWidth = 2.dp,
-                                modifier = Modifier.size(18.dp)
+                            Image(
+                                painter = painterResource(id = fallbackDrawableRes),
+                                contentDescription = gear.nameEn,
+                                modifier = Modifier.fillMaxSize(),
+                                contentScale = ContentScale.Fit
                             )
                         }
                     },
                     error = {
-                        // Tactical fallback placeholder with shield emblem
+                        // Tactical fallback vector placeholder (Water, Medical, CBRN, Food, Comms, Shelter, Hardware)
                         Box(
                             modifier = Modifier
                                 .fillMaxSize()
                                 .background(DarkSurface),
                             contentAlignment = Alignment.Center
                         ) {
-                            Icon(
-                                imageVector = Icons.Default.Security,
-                                contentDescription = null,
-                                tint = TacticalOlive,
-                                modifier = Modifier.size(32.dp)
+                            Image(
+                                painter = painterResource(id = fallbackDrawableRes),
+                                contentDescription = gear.nameEn,
+                                modifier = Modifier.fillMaxSize(),
+                                contentScale = ContentScale.Fit
                             )
                         }
                     },
@@ -642,5 +679,43 @@ private fun openStoreUrl(context: Context, url: String) {
     } catch (e: Exception) {
         val intent = android.content.Intent(android.content.Intent.ACTION_VIEW, Uri.parse(url))
         context.startActivity(intent)
+    }
+}
+
+/**
+ * Resolves local offline tactical vector drawables for core survival hardware
+ * to ensure rich visual representations even before initial network fetch or when fully offline.
+ */
+fun getTacticalFallbackRes(gear: AffiliateGearEntity): Int {
+    val cat = gear.category.lowercase()
+    val id = gear.id.lowercase()
+    return when {
+        cat.contains("water") || id.contains("water") || id.contains("sawyer") ||
+                id.contains("aquatabs") || id.contains("lifestraw") || id.contains("grayl") ||
+                id.contains("katadyn") || id.contains("platypus") -> R.drawable.ic_gear_water
+
+        cat.contains("trauma") || cat.contains("medical") || cat.contains("first aid") ||
+                id.contains("tourniquet") || id.contains("quikclot") || id.contains("gauze") ||
+                id.contains("trauma") || id.contains("burntec") || id.contains("chest_seal") ||
+                id.contains("israeli") -> R.drawable.ic_gear_medical
+
+        cat.contains("cbrn") || cat.contains("radiation") || cat.contains("respiratory") ||
+                id.contains("potassium") || id.contains("geiger") || id.contains("radex") ||
+                id.contains("hazmat") || id.contains("mask") || id.contains("mira") ||
+                id.contains("iosat") -> R.drawable.ic_gear_cbrn
+
+        cat.contains("food") || cat.contains("nutrition") || cat.contains("ration") ||
+                id.contains("mylar") || id.contains("readywise") || id.contains("ration") ||
+                id.contains("mountain") || id.contains("absorber") -> R.drawable.ic_gear_food
+
+        cat.contains("power") || cat.contains("comms") || cat.contains("communication") ||
+                id.contains("radio") || id.contains("battery") || id.contains("solar") ||
+                id.contains("crank") || id.contains("baofeng") -> R.drawable.ic_gear_comms
+
+        cat.contains("shelter") || cat.contains("warmth") || cat.contains("bivvy") ||
+                id.contains("blanket") || id.contains("tarp") || id.contains("tent") ||
+                id.contains("sleeping") || id.contains("bivy") -> R.drawable.ic_gear_shelter
+
+        else -> R.drawable.ic_tactical_gear_placeholder
     }
 }

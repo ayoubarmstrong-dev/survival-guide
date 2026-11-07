@@ -5,6 +5,7 @@ import android.net.Uri
 import android.util.Log
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -29,13 +30,16 @@ import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
 import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import coil.compose.SubcomposeAsyncImage
 import coil.decode.SvgDecoder
+import coil.request.CachePolicy
 import coil.request.ImageRequest
+import com.antigravity.survival.R
 import com.antigravity.survival.data.entity.AffiliateGearEntity
 import com.antigravity.survival.data.entity.ChecklistEntity
 import com.antigravity.survival.ui.theme.*
@@ -463,12 +467,15 @@ fun GearCard(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.Top
             ) {
-                // Product Thumbnail
+                // Product Thumbnail with Tactical Category Fallback
+                val fallbackDrawableRes = getTacticalFallbackRes(gear)
                 val imageModel = gear.imageUrl ?: gear.imageAsset
                 SubcomposeAsyncImage(
                     model = ImageRequest.Builder(context)
                         .data(imageModel)
                         .crossfade(true)
+                        .diskCachePolicy(CachePolicy.ENABLED)
+                        .memoryCachePolicy(CachePolicy.ENABLED)
                         .build(),
                     contentDescription = gear.nameEn,
                     loading = {
@@ -478,10 +485,11 @@ fun GearCard(
                                 .background(DarkSurface),
                             contentAlignment = Alignment.Center
                         ) {
-                            CircularProgressIndicator(
-                                color = TacticalGreen,
-                                strokeWidth = 2.dp,
-                                modifier = Modifier.size(16.dp)
+                            Image(
+                                painter = painterResource(id = fallbackDrawableRes),
+                                contentDescription = gear.nameEn,
+                                modifier = Modifier.fillMaxSize(),
+                                contentScale = ContentScale.Fit
                             )
                         }
                     },
@@ -492,11 +500,11 @@ fun GearCard(
                                 .background(DarkSurface),
                             contentAlignment = Alignment.Center
                         ) {
-                            Icon(
-                                imageVector = Icons.Default.Shield,
-                                contentDescription = null,
-                                tint = TacticalOlive,
-                                modifier = Modifier.size(24.dp)
+                            Image(
+                                painter = painterResource(id = fallbackDrawableRes),
+                                contentDescription = gear.nameEn,
+                                modifier = Modifier.fillMaxSize(),
+                                contentScale = ContentScale.Fit
                             )
                         }
                     },

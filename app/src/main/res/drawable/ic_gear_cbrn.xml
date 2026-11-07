@@ -1,0 +1,33 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <path
+        android:fillColor="#161B22"
+        android:pathData="M8,16 A8,8 0 0,1 16,8 L80,8 A8,8 0 0,1 88,16 L88,80 A8,8 0 0,1 80,88 L16,88 A8,8 0 0,1 8,80 Z" />
+    <path
+        android:fillColor="#0D1117"
+        android:strokeColor="#D29922"
+        android:strokeWidth="1.5"
+        android:pathData="M48,16 L76,28 L76,56 C76,70 64,80 48,84 C32,80 20,70 20,56 L20,28 Z" />
+    <!-- Radiation Hazard Trefoil Core -->
+    <path
+        android:fillColor="#D29922"
+        android:pathData="M48,50m-5,0a5,5 0 1,0 10,0a5,5 0 1,0 -10,0" />
+    <path
+        android:fillColor="#D29922"
+        android:pathData="M42,42 C44,36 52,36 54,42 L60,32 C53,27 43,27 36,32 Z" />
+    <path
+        android:fillColor="#D29922"
+        android:pathData="M40,54 C36,50 41,43 45,40 L35,35 C30,42 31,52 38,59 Z" />
+    <path
+        android:fillColor="#D29922"
+        android:pathData="M56,54 C60,50 55,43 51,40 L61,35 C66,42 65,52 58,59 Z" />
+    <!-- Corner Accents -->
+    <path
+        android:strokeColor="#D29922"
+        android:strokeWidth="2"
+        android:strokeLineCap="square"
+        android:pathData="M12,20 L12,12 L20,12 M76,12 L84,12 L84,20 M84,76 L84,84 L76,84 M20,84 L12,84 L12,76" />
+</vector>
